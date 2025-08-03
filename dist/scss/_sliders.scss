@@ -1,0 +1,51 @@
+.arrow-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0px, -50%) rotate(90deg);
+    z-index: 10;
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+    &:hover {
+        color: var(--color-red);
+    }
+}
+.arrow-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0px, -50%) rotate(-90deg);
+    z-index: 10;
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+    &:hover {
+        color: var(--color-red);
+    }
+}
+
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-button-lock {
+    display: none;
+}
+.swiper-button-disabled {
+    display: none;
+}
+.swiper-pagination-lock {
+    display: none;
+}
+.swiper-slide-active {
+    z-index: 2;
+}
