@@ -1,0 +1,68 @@
+.main-publication {
+    .post__content {
+        margin: 20px 0px 0px 0px;
+    }
+    .posts {
+        padding: 60px 0px 40px 0px;
+        @media (max-width: 768px) {
+            padding: 20px 0px 40px 0px;
+        }
+    }
+}
+
+.post-comments {
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .share-thoughts__content {
+        width: calc(100% - 50px);
+        margin: 0px 0px 40px 50px;
+        @media (max-width: 992px) {
+            width: 100%;
+            margin: 0px 0px 45px 0px;
+        }
+    }
+    .post__content {
+        position: relative;
+        margin: 15px 0px 0px 50px;
+        @media (max-width: 992px) {
+            margin: 20px 0px 0px 0px;
+        }
+    }
+    // .post-comments__body
+
+    &__body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0px 0px 0px 50px;
+        @media (max-width: 992px) {
+            margin: 0px 0px 0px 0px;
+        }
+    }
+
+    // .post-comments__comment
+
+    &__comment {
+    }
+
+    // .post-comments__button
+
+    &__button {
+        margin: 30px 0px 0px 0px;
+        background-color: var(--color-grey);
+        border: 1px solid var(--color-grey);
+        color: var(--color-base);
+        transition:
+            color 0.3s,
+            border 0.3s,
+            background-color 0.3s;
+        &:hover {
+            color: var(--color-base);
+            border: 1px solid var(--color-black);
+            background-color: var(--color-black);
+        }
+    }
+}

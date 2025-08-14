@@ -16,11 +16,25 @@
   flex-grow: 1;
   flex-shrink: 1;
   padding-left: 200px;
+  padding-top: 100px;
   @media (max-width: 1400px) {
     padding-left: 100px;
   }
   @media (max-width: 992px) {
     padding-left: 0px;
+    padding-bottom: 77px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 77px;
+  }
+  @media (max-width: 480px) {
+    padding-top: 69px;
+  }
+  &.main-publication {
+    padding-left: 100px;
+    @media (max-width: 992px) {
+      padding-left: 0px;
+    }
   }
 }
 
