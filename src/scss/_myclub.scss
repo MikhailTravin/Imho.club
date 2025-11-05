@@ -1,0 +1,301 @@
+
+
+.top-block-myclub {
+    // .top-block-myclub__nav
+
+    &__nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 0px;
+        @media (max-width: 992px) {
+            flex-wrap: nowrap;
+            margin: 0px -10px;
+            gap: 0px;
+            padding: 0px 10px;
+            width: calc(100% + 20px);
+            overflow: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    // .top-block-myclub__title
+
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex: 0 0 auto;
+        font-weight: 400;
+        height: 40px;
+        padding: 5px 10px;
+        font-size: 14px;
+        white-space: nowrap;
+        border-radius: 10px;
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+        &:hover {
+            color: var(--color-red);
+        }
+        &.active {
+            background-color: var(--color-light-gray);
+            span {
+                background: var(--color-red);
+                border: 1px solid var(--color-red);
+                color: var(--color-base);
+            }
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--color-black);
+            border-radius: 10px;
+            padding: 2px 4px;
+            height: 20px;
+            min-width: 20px;
+            font-weight: 400;
+            font-size: 11px;
+            color: var(--color-black);
+        }
+    }
+}
+.center-block-myclub {
+    display: flex;
+    gap: 10px;
+    // .center-block-myclub__search
+
+    &__search {
+        flex: 1 1 auto;
+        border: 1px solid var(--color-grey);
+        border-radius: 10px;
+        margin: 0px 0px 0px 0px;
+        width: 100%;
+        padding: 0px 0px 0px 10px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        input {
+            font-size: 14px;
+            width: 100%;
+            font-weight: 400;
+            background: transparent;
+            padding: 5px 10px 5px 6px;
+            &::placeholder {
+                color: #7e7e7e;
+            }
+        }
+        .center-block-myclub__search-icon {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            transition: color 0.3s;
+            svg {
+                fill: var(--color-black);
+            }
+        }
+    }
+
+    // .center-block-myclub__filter
+
+    &__filter {
+        flex: 0 0 97px;
+        position: relative;
+        @media (max-width: 480px) {
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+        }
+        &.active {
+            .center-block-myclub__dropdown {
+                opacity: 1;
+                pointer-events: auto;
+                z-index: 1;
+            }
+        }
+    }
+
+    // .center-block-myclub__filter-button
+
+    &__filter-button {
+        cursor: pointer;
+        border: 1px solid var(--color-grey);
+        border-radius: 10px;
+        padding: 5px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        gap: 6px;
+        padding: 8px 10px;
+        min-width: 0;
+        width: 100%;
+        max-width: 160px;
+        @media (max-width: 480px) {
+            padding: 0px 0px 0px 0px;
+        }
+        span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            width: 100%;
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    // .center-block-myclub__dropdown
+
+    &__dropdown {
+        position: absolute;
+        transition: opacity 0.3s;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+        background: var(--color-base);
+        left: 7px;
+        top: 100%;
+        width: 320px;
+        border-radius: 10px;
+        @media (max-width: 1200px) {
+            right: 0;
+            left: auto;
+        }
+        @media (max-width: 768px) {
+            position: fixed;
+            top: auto;
+            height: auto;
+            bottom: 0;
+            width: 100%;
+            padding: 0px 0px 0px 0px;
+            margin: 50px 0px 0px 0px;
+            z-index: 151;
+        }
+    }
+
+    // .center-block-myclub__inputs
+
+    &__inputs {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
+        border-bottom: 1px solid var(--color-grey);
+        input {
+            background: var(--color-blue-grey);
+
+            font-weight: 400;
+            font-size: 16px;
+            color: var(--color-black);
+        }
+    }
+
+    // .center-block-myclub__input
+
+    &__input {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        border-radius: 4px;
+        height: 44px;
+        background: var(--color-blue-grey);
+        padding: 0px 10px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            background-size: 100%;
+            background-image: url("../img/icon/calendar.svg");
+        }
+    }
+
+    // .center-block-myclub__buttons
+
+    &__buttons {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 10px 10px 10px;
+        .button-red {
+            min-height: 39px;
+            padding: 5px 10px;
+        }
+        .button {
+            min-height: 39px;
+            padding: 5px 10px;
+        }
+    }
+
+    // .center-block-myclub__select
+
+    &__select {
+        flex: 0 0 143px;
+        @media (max-width: 768px) {
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+        }
+        .select1 {
+            width: 143px;
+            height: 40px;
+            @media (max-width: 768px) {
+                width: 40px;
+            }
+        }
+        .select1__title {
+            font-size: 14px;
+            padding: 8px 10px;
+            border: 1px solid var(--color-grey);
+            border-radius: 10px;
+            @media (max-width: 768px) {
+                width: 40px;
+                height: 40px;
+            }
+            img {
+                width: 20px;
+                height: 20px;
+            }
+            span {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+        .select1__options {
+            width: 143px;
+        }
+    }
+}
+
+input[type="date"] {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-black);
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+

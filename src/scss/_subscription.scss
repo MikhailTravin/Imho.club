@@ -1,0 +1,31 @@
+.block-subscription {
+    .right-all-publication__content {
+        gap: 30px;
+    }
+    .right-all-publication__body {
+        gap: 20px;
+        @media (max-width: 992px) {
+            margin: 0px -10px;
+            width: calc(100% + 20px);
+        }
+    }
+    .right-all-publication__top {
+        align-items: start;
+    }
+    .right-all-publication__column {
+        border-bottom: 1px solid var(--color-grey);
+        padding: 20px 24px 15px 20px;
+        @media (max-width: 992px) {
+            padding: 20px 10px 16px 10px;
+        }
+    }
+    .right-all-publication__bottom {
+        align-items: start;
+        justify-content: space-between;
+        gap: 16px 20px;
+        @media (max-width: 600px) {
+            flex-direction: column;
+            justify-content: start;
+        }
+    }
+}

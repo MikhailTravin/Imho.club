@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Пункты управления меню</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        <main class="main">
+
+            <div class="menu-controls">
+                <div style="display: flex; flex-direction: column; align-items: start; gap:40px" class="container">
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Открытая публикация (не подписан на автора публикации)
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="20">
+                                                    <use xlink:href="img/sprite.svg#user-plus"></use>
+                                                </svg>
+                                            </div>
+                                            Подписаться
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/bookmark.svg" alt="">
+                                            </div>
+                                            Добавить в Закладки
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть публикацию
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="12">
+                                                    <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Главная страница, превью заметки
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть заметку
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="24" height="24">
+                                                    <use xlink:href="img/sprite.svg#eye-show"></use>
+                                                </svg>
+                                            </div>
+                                            Показать автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="24" height="24">
+                                                    <use xlink:href="img/sprite.svg#blacklisted-remove">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                            Из чёрного списка
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Главная страница, карусель публикаций
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/bookmark.svg" alt="">
+                                            </div>
+                                            Добавить в Закладки
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="12">
+                                                    <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Главная страница, превью заметки
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть заметку
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="12">
+                                                    <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#blacklisted"></use>
+                                                </svg>
+                                            </div>
+                                            В черный список
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Открытая заметка
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть заметку
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="12">
+                                                    <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#blacklisted"></use>
+                                                </svg>
+                                            </div>
+                                            В черный список
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Комментарий под заметкой
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#blacklisted"></use>
+                                                </svg>
+                                            </div>
+                                            В черный список
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Превью публикации в Ленте публикаций
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/bookmark.svg" alt="">
+                                            </div>
+                                            Добавить в Закладки
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть публикацию
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="12">
+                                                    <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Превью публикации в разделе “Все публикации и авторы”
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/bookmark.svg" alt="">
+                                            </div>
+                                            Добавить в Закладки
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть публикацию
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="12">
+                                                    <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Открытая публикация (подписан на автора публикации)
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/bookmark.svg" alt="">
+                                            </div>
+                                            Добавить в Закладки
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть публикацию
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="12">
+                                                    <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                </svg>
+                                            </div>
+                                            Скрыть автора
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Комментарии под публикацией
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink1.svg" alt="">
+                                            </div>
+                                            Скопировать ссылку
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#blacklisted"></use>
+                                                </svg>
+                                            </div>
+                                            В черный список
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <svg aria-hidden="true" width="22" height="22">
+                                                    <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                </svg>
+                                            </div>
+                                            Сообщить о нарушении
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Обзор, последние публикации
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/pen2.svg" alt="">
+                                            </div>
+                                            Редактировать
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink2.svg" alt="">
+                                            </div>
+                                            Копировать URL
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/pin.svg" alt="">
+                                            </div>
+                                            Закрепить
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/arrow2.svg" alt="">
+                                            </div>
+                                            Снять с публикации
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap:10px"
+                        class="menu-controls__column">
+                        <p style="color: #cd5045;">
+                            Обзор, черновики
+                        </p>
+                        <div class="dots">
+                            <svg aria-hidden="true" width="16" height="4">
+                                <use xlink:href="img/sprite.svg#dots"></use>
+                            </svg>
+                            <div class="dropdown">
+                                <div class="dropdown__menu-content">
+                                    <div class="dropdown__top">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/send.svg" alt="">
+                                            </div>
+                                            Опубликовать
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/pen2.svg" alt="">
+                                            </div>
+                                            Редактировать
+                                        </button>
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/copylink2.svg" alt="">
+                                            </div>
+                                            Дублировать
+                                        </button>
+                                    </div>
+                                    <div class="dropdown__bottom">
+                                        <button type="button">
+                                            <div class="dropdown__icon">
+                                                <img src="img/icon/trash.svg" alt="">
+                                            </div>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

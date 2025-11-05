@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Лента публикаций</title>
+    <title>Просмотр заметки</title>
     {% include 'blocks/head.njk' %}
 </head>
 
@@ -14,9 +14,7 @@
                     <a href="#" class="header__logo">
                         <img src="img/icon/logo.svg" alt="">
                     </a>
-                    <div class="header__title">
-                        <span>Лента публикаций</span>
-                    </div>
+                    <div class="header__title"></div>
                 </div>
                 <form data-popup="#search1" class="header__search">
                     <button type="button" class="header__search-icon">
@@ -469,7 +467,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="_active">
+                            <a href="#">
                                 <svg class="link" aria-hidden="true" width="32" height="32">
                                     <use xlink:href="img/sprite.svg#public"></use>
                                 </svg>
@@ -490,7 +488,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <span>Публикации</span>
+                                <span>Лента публикаций</span>
                             </a>
                         </li>
                         <li>
@@ -501,7 +499,7 @@
                                 <svg class="link-active" aria-hidden="true" width="32" height="32">
                                     <use xlink:href="img/sprite.svg#author-active"></use>
                                 </svg>
-                                <span>Все авторы</span>
+                                <span>Все публикации и авторы</span>
                             </a>
                         </li>
                         <li>
@@ -552,101 +550,427 @@
                 </nav>
             </div>
         </div>
-        <main class="main main-publication">
-
-            <div class="block-publication">
-                <div class="container2">
-                    <div class="block-publication__content">
-                        <div class="block-publication__text">
-                            <p>
-                                Мы выводим публикации согласно вашим интересам. Настройки интересов вы можете выполнить
-                                в разделе <a href="#">«Мои интересы»</a> настроек профиля
-                            </p>
-                            <button type="button" class="block-publication__text-close">
-                                <svg aria-hidden="true" width="12" height="12">
-                                    <use xlink:href="img/sprite.svg#close"></use>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="block-publication__body">
-                            <div class="block-publication__top">
-                                <div class="block-publication__left">
-                                    <div class="buttons">
-                                        <a href="#" class="buttons__title _active">Все</a>
-                                        <a href="#" class="buttons__title">Платные</a>
-                                        <a href="#" class="buttons__title">Закладки</a>
+        <main class="main viewnote">
+            <div class="back">
+                <svg aria-hidden="true" width="14" height="8">
+                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                </svg>
+            </div>
+            <div class="posts">
+                <div class="container">
+                    <div class="posts__content">
+                        <div class="posts__post post">
+                            <div class="post__header">
+                                <div class="post__left">
+                                    <div class="post__avatar">
+                                        <img loading="lazy" src="img/avatar2.webp" alt="">
                                     </div>
-                                    <a href="#" class="setting-icon">
-                                        <img src="img/icon/settings.svg" alt="">
-                                        <span>Управление подписками</span>
-                                    </a>
-                                </div>
-                                <div class="block-publication__right">
-                                    <a href="#" class="setting-icon">
-                                        <img src="img/icon/settings.svg" alt="">
-                                        <span>Управление подписками</span>
-                                    </a>
-                                    <div class="select1">
-                                        <div class="select1__title">
-                                            <span>По интересам</span>
-                                            <svg aria-hidden="true" width="10" height="7">
-                                                <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    <div class="post__titles">
+                                        <div class="post__name">
+                                            <span>София Кэри</span>
+                                            <svg aria-hidden="true" width="15" height="16">
+                                                <use xlink:href="img/sprite.svg#star"></use>
                                             </svg>
                                         </div>
-                                        <div class="select1__options">
-                                            <div class="options__item">
-                                                <input hidden="" id="o_1" class="options__input" checked="" type="radio"
-                                                    value="1" name="option">
-                                                <label for="o_1" class="options__label">
-                                                    <span class="options__text">По интересам</span>
-                                                    <span class="options__icon">
-                                                        <img src="img/icon/chek1.svg" alt="">
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="options__item">
-                                                <input hidden="" id="o_2" class="options__input" type="radio" value="2"
-                                                    name="option">
-                                                <label for="o_2" class="options__label">
-                                                    <span class="options__text">Недавние</span>
-                                                    <span class="options__icon"><img src="img/icon/chek1.svg"
-                                                            alt=""></span>
-                                                </label>
+                                    </div>
+                                </div>
+                                <div class="post__right ">
+                                    <button type="button" class="post__subscribe">Подписаться</button>
+                                    <div class="dots">
+                                        <svg aria-hidden="true" width="16" height="4">
+                                            <use xlink:href="img/sprite.svg#dots"></use>
+                                        </svg>
+                                        <div class="dropdown">
+                                            <div class="dropdown__menu-content">
+                                                <div class="dropdown__top">
+                                                    <button type="button">
+                                                        <div class="dropdown__icon">
+                                                            <svg aria-hidden="true" width="22" height="20">
+                                                                <use xlink:href="img/sprite.svg#user-plus"></use>
+                                                            </svg>
+                                                        </div>
+                                                        Подписаться
+                                                    </button>
+                                                    <button type="button">
+                                                        <div class="dropdown__icon">
+                                                            <svg aria-hidden="true" width="22" height="22">
+                                                                <use xlink:href="img/sprite.svg#copylink2"></use>
+                                                            </svg>
+                                                        </div>
+                                                        Скопировать ссылку
+                                                    </button>
+                                                    <button type="button">
+                                                        <div class="dropdown__icon">
+                                                            <img src="img/icon/bookmark.svg" alt="">
+                                                        </div>
+                                                        Добавить в Закладки
+                                                    </button>
+                                                    <button type="button">
+                                                        <div class="dropdown__icon">
+                                                            <svg aria-hidden="true" width="22" height="22">
+                                                                <use xlink:href="img/sprite.svg#eye-off"></use>
+                                                            </svg>
+                                                        </div>
+                                                        Скрыть публикацию
+                                                    </button>
+                                                </div>
+                                                <div class="dropdown__bottom">
+                                                    <button type="button">
+                                                        <div class="dropdown__icon">
+                                                            <svg aria-hidden="true" width="22" height="12">
+                                                                <use xlink:href="img/sprite.svg#eye-closed"></use>
+                                                            </svg>
+                                                        </div>
+                                                        Скрыть автора
+                                                    </button>
+                                                    <button type="button">
+                                                        <div class="dropdown__icon">
+                                                            <svg aria-hidden="true" width="22" height="22">
+                                                                <use xlink:href="img/sprite.svg#blacklisted"></use>
+                                                            </svg>
+                                                        </div>
+                                                        В черный список
+                                                    </button>
+                                                    <button type="button">
+                                                        <div class="dropdown__icon">
+                                                            <svg aria-hidden="true" width="22" height="22">
+                                                                <use xlink:href="img/sprite.svg#octagon-alert"></use>
+                                                            </svg>
+                                                        </div>
+                                                        Сообщить о нарушении
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!--Блок если нет публикаций
-                            <div class="block-publication__empty">
+                            <div class="post__content">
                                 <p>
-                                    Ничего нет. Но вы можете посмотреть полный список публикаций и авторов по кнопке
-                                    ниже
+                                    Подборка портретов, которые я сняла за эти годы ❤️ Я действительно люблю
+                                    фотографировать людей
                                 </p>
-                                <a href="#" class="button">Все публикации и авторы</a>
+                                <div class="post__sliders">
+                                    <div class="post__slider swiper">
+                                        <div class="post__wrapper swiper-wrapper">
+                                            <a href="img/image/image6.webp" data-fancybox="gallery1"
+                                                class="post__slide swiper-slide">
+                                                <img loading="lazy" src="img/image/image6.webp" alt="">
+                                                <div class="post__slide-bg">
+                                                    <svg aria-hidden="true" width="40" height="39">
+                                                        <use xlink:href="img/sprite.svg#search"></use>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                            <a href="img/image/image7.webp" data-fancybox="gallery1"
+                                                class="post__slide swiper-slide">
+                                                <img loading="lazy" src="img/image/image7.webp" alt="">
+                                                <div class="post__slide-bg">
+                                                    <svg aria-hidden="true" width="40" height="39">
+                                                        <use xlink:href="img/sprite.svg#search"></use>
+                                                    </svg>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="post__arrow-prev arrow-prev">
+                                        <svg aria-hidden="true" width="15" height="8">
+                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="post__arrow-next arrow-next">
+                                        <svg aria-hidden="true" width="15" height="8">
+                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="post__footer">
+                                    <div class="post__like post-icon">
+                                        <div class="post__like-icon">
+                                            <svg aria-hidden="true" width="21" height="20">
+                                                <use xlink:href="img/sprite.svg#heart"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="post__like-active">
+                                            <img src="img/icon/heart-active.svg" alt="">
+                                        </div>
+                                        <div class="post__like-active2">
+                                            <img src="img/icon/heart-active2.svg" alt="">
+                                        </div>
+                                        <span>50</span>
+                                    </div>
+                                    <div class="post__comment post-icon">
+                                        <svg aria-hidden="true" width="20" height="19">
+                                            <use xlink:href="img/sprite.svg#chat"></use>
+                                        </svg>
+                                        <span>2</span>
+                                    </div>
+                                    <div class="post__reset post-icon">
+                                        <svg aria-hidden="true" width="20" height="20">
+                                            <use xlink:href="img/sprite.svg#copylink"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="post__data">
+                                        8 мая в 22:57
+                                    </div>
+                                </div>
                             </div>
-                            -->
-                            <div class="block-publication__bottom">
-                                <div class="left-tabs-history__column">
-                                    <div class="left-tabs-history__item">
+                        </div>
+                        <div class="comments-view-publication__top">
+                            <div class="comments-view-publication__total">
+                                <span>15 комментариев</span>
+                            </div>
+                            <div class="select1">
+                                <div class="select1__title">
+                                    <img src="img/icon/arrow-down-up.svg" alt="">
+                                    <span>Популярные сверху</span>
+                                </div>
+                                <div class="select1__options">
+                                    <div class="options__item">
+                                        <input hidden id="o_1" class="options__input" checked type="radio" value="1"
+                                            name="option">
+                                        <label for="o_1" class="options__label">
+                                            <span class="options__text">Популярные сверху</span>
+                                            <span class="options__icon">
+                                                <img src="img/icon/chek1.svg" alt="">
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="options__item">
+                                        <input hidden id="o_2" class="options__input" type="radio" value="2"
+                                            name="option">
+                                        <label for="o_2" class="options__label">
+                                            <span class="options__text">Новые сверху</span>
+                                            <span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+                                        </label>
+                                    </div>
+                                    <div class="options__item">
+                                        <input hidden id="o_3" class="options__input" type="radio" value="3"
+                                            name="option">
+                                        <label for="o_3" class="options__label">
+                                            <span class="options__text">Старые сверху</span>
+                                            <span class="options__icon">
+                                                <img src="img/icon/chek1.svg" alt="">
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="share-thoughts">
+                            <a href="#" data-popup="#comment" class="share-thoughts__content">
+                                <div class="share-thoughts__image">
+                                    <img loading="lazy" src="img/avatar.webp" alt="">
+                                </div>
+                                <span>Оставить комментарий</span>
+                            </a>
+                        </div>
+                        <div class="post-comments">
+                            <div class="post-comments__body">
+                                <div class="post-comments-delete">
+                                    <div class="post-comments-delete__top">
+                                        <div class="post-comments-delete__title">Комментарий удалён</div>
+                                        <button type="button"
+                                            class="post-comments-delete__btn-restore">Восстановить</button>
+                                    </div>
+                                    <div class="post-comments-delete__bottom">
+                                        Комментарий скроется автоматически после перезагрузки страницы или можно скрыть
+                                        самостоятельно без обновления ленты.
+                                        <button type="button" class="post-comments-delete__btn-hide">Скрыть
+                                            сейчас</button>
+                                    </div>
+                                </div>
+                                <div class="post-comments__comment">
+                                    <div class="posts__post post">
+                                        <div class="post__header">
+                                            <div class="post__left">
+                                                <div class="post__avatar">
+                                                    <img loading="lazy" src="img/avatar3.webp" alt="">
+                                                </div>
+                                                <div class="post__titles">
+                                                    <div class="post__name">
+                                                        <span>Чулан историй</span>
+                                                        <svg aria-hidden="true" width="15" height="16">
+                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span>РА Фридман</span>
+                                                </div>
+                                            </div>
+                                            <div class="post__right without-text">
+                                                <div class="post__comment-icon">
+                                                    <a href="#" data-popup="#edit" class="post__icon">
+                                                        <svg aria-hidden="true" width="20" height="20">
+                                                            <use xlink:href="img/sprite.svg#pen"></use>
+                                                        </svg>
+                                                    </a>
+                                                    <button type="button" class="post__icon">
+                                                        <svg aria-hidden="true" width="18" height="20">
+                                                            <use xlink:href="img/sprite.svg#delete"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post__content">
+                                            <p>
+                                                Его журнал был таким впечатляющим. Я тоже купил себе небольшой
+                                                фотопринтер
+                                                после того, как встретил его, увидев фотографии в его записях в журнале
+                                            </p>
+                                            <div class="post__footer">
+                                                <div class="post__like post-icon">
+                                                    <div class="post__like-icon">
+                                                        <svg aria-hidden="true" width="21" height="20">
+                                                            <use xlink:href="img/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="post__like-active">
+                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                    </div>
+                                                    <div class="post__like-active2">
+                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                    </div>
+                                                    <span>50</span>
+                                                </div>
+                                                <div class="post__comment post-icon">
+                                                    <svg aria-hidden="true" width="20" height="19">
+                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                    </svg>
+                                                    <span>2</span>
+                                                </div>
+                                                <div class="post__reset post-icon">
+                                                    <svg aria-hidden="true" width="20" height="20">
+                                                        <use xlink:href="img/sprite.svg#copylink"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="post__data">
+                                                    8 мая в 22:57
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-comments__comment">
+                                    <div class="posts__post post">
+                                        <div class="post__header">
+                                            <div class="post__left">
+                                                <div class="post__avatar">
+                                                    <img loading="lazy" src="img/avatar3.webp" alt="">
+                                                </div>
+                                                <div class="post__titles">
+                                                    <div class="post__name">
+                                                        <span>Андрей Ким</span>
+                                                        <svg aria-hidden="true" width="15" height="16">
+                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post__right without-text">
+                                                <div class="dots">
+                                                    <svg aria-hidden="true" width="16" height="4">
+                                                        <use xlink:href="img/sprite.svg#dots"></use>
+                                                    </svg>
+                                                    <div class="dropdown">
+                                                        <div class="dropdown__menu-content">
+                                                            <div class="dropdown__top">
+                                                                <button type="button">
+                                                                    <div class="dropdown__icon">
+                                                                        <svg aria-hidden="true" width="22" height="22">
+                                                                            <use xlink:href="img/sprite.svg#copylink2">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    Скопировать ссылку
+                                                                </button>
+                                                            </div>
+                                                            <div class="dropdown__bottom">
+                                                                <button type="button">
+                                                                    <div class="dropdown__icon">
+                                                                        <svg aria-hidden="true" width="22" height="22">
+                                                                            <use
+                                                                                xlink:href="img/sprite.svg#blacklisted">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    В черный список
+                                                                </button>
+                                                                <button type="button">
+                                                                    <div class="dropdown__icon">
+                                                                        <svg aria-hidden="true" width="22" height="22">
+                                                                            <use
+                                                                                xlink:href="img/sprite.svg#octagon-alert">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    Сообщить о нарушении
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post__content">
+                                            <p>
+                                                Его журнал был таким впечатляющим. Я тоже купил себе небольшой
+                                                фотопринтер
+                                                после того, как встретил его, увидев фотографии в его записях в журнале
+                                            </p>
+                                            <div class="post__footer">
+                                                <div class="post__like post-icon">
+                                                    <div class="post__like-icon">
+                                                        <svg aria-hidden="true" width="21" height="20">
+                                                            <use xlink:href="img/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="post__like-active">
+                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                    </div>
+                                                    <div class="post__like-active2">
+                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                    </div>
+                                                    <span>50</span>
+                                                </div>
+                                                <div class="post__comment post-icon">
+                                                    <svg aria-hidden="true" width="20" height="19">
+                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                    </svg>
+                                                    <span>2</span>
+                                                </div>
+                                                <div class="post__reset post-icon">
+                                                    <svg aria-hidden="true" width="20" height="20">
+                                                        <use xlink:href="img/sprite.svg#copylink"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="post__data">
+                                                    8 мая в 22:57
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-comments__comment">
+                                    <div class="posts__post post">
                                         <div class="post__header">
                                             <div class="post__left">
                                                 <div class="post__avatar">
                                                     <img loading="lazy" src="img/avatar2.webp" alt="">
                                                 </div>
-                                                <a href="#" class="post__titles">
+                                                <div class="post__titles">
                                                     <div class="post__name">
-                                                        <span>Вместе с Софи Кэри</span>
+                                                        <span>София Кэри</span>
+                                                        <svg aria-hidden="true" width="15" height="16">
+                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                        </svg>
                                                     </div>
-                                                    <span>Софи Кэри</span>
-                                                </a>
+                                                </div>
                                             </div>
-                                            <div class="post__right">
-                                                <button type="button" class="post__subscribe">Подписаться</button>
+                                            <div class="post__right without-text">
                                                 <div class="dots">
                                                     <svg aria-hidden="true" width="16" height="4">
-                                                        <use xlink:href="img/sprite.svg#dots">
-                                                        </use>
+                                                        <use xlink:href="img/sprite.svg#dots"></use>
                                                     </svg>
                                                     <div class="dropdown">
                                                         <div class="dropdown__menu-content">
@@ -721,79 +1045,88 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="left-tabs-history__descr">
-                                            <a href="#" class="left-tabs-history__titles">
-                                                <div class="left-tabs-history__title">
-                                                    Grow: как Джо Хаттон переосмыслила йогу
-                                                    для
-                                                    реальной
-                                                    жизни
+                                        <div class="post__content">
+                                            <p>
+                                                О боже! Райан сфотографировал его на днях, но понятия не имел, кто это!
+                                            </p>
+                                            <div class="post__sliders">
+                                                <div class="post__slider swiper">
+                                                    <div class="post__wrapper swiper-wrapper">
+                                                        <a href="img/image/image6.webp" data-fancybox="gallery1"
+                                                            class="post__slide swiper-slide">
+                                                            <img loading="lazy" src="img/image/image6.webp" alt="">
+                                                            <div class="post__slide-bg">
+                                                                <svg aria-hidden="true" width="40" height="39">
+                                                                    <use xlink:href="img/sprite.svg#search"></use>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                                <p>
-                                                    Серия интервью Grow создана для того,
-                                                    чтобы
-                                                    рассказать о том, как писатели стали
-                                                    независимыми и
-                                                    расширили свою аудиторию.
-                                                </p>
-                                                <div class="left-tabs-history__text">
-                                                    ~ 3м чтения
-                                                </div>
-                                            </a>
-                                            <div class="left-tabs-history__pic">
-                                                <img src="img/image/image11.webp" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="post__footer noclick">
-                                            <div class="post__like post-icon _active">
-                                                <div class="post__like-icon">
-                                                    <svg aria-hidden="true" width="21" height="20">
-                                                        <use xlink:href="img/sprite.svg#heart">
-                                                        </use>
+                                                <div class="post__arrow-prev arrow-prev">
+                                                    <svg aria-hidden="true" width="15" height="8">
+                                                        <use xlink:href="img/sprite.svg#arrow1"></use>
                                                     </svg>
                                                 </div>
-                                                <div class="post__like-active">
-                                                    <img src="img/icon/heart-active.svg" alt="">
+                                                <div class="post__arrow-next arrow-next">
+                                                    <svg aria-hidden="true" width="15" height="8">
+                                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                                    </svg>
                                                 </div>
-                                                <div class="post__like-active2">
-                                                    <img src="img/icon/heart-active2.svg" alt="">
+                                            </div>
+                                            <div class="post__footer">
+                                                <div class="post__like post-icon">
+                                                    <div class="post__like-icon">
+                                                        <svg aria-hidden="true" width="21" height="20">
+                                                            <use xlink:href="img/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="post__like-active">
+                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                    </div>
+                                                    <div class="post__like-active2">
+                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                    </div>
+                                                    <span>50</span>
                                                 </div>
-                                                <span>50</span>
-                                            </div>
-                                            <div class="post__comment post-icon">
-                                                <svg aria-hidden="true" width="20" height="19">
-                                                    <use xlink:href="img/sprite.svg#chat">
-                                                    </use>
-                                                </svg>
-                                                <span>2</span>
-                                            </div>
-                                            <div class="post__data">
-                                                03.05.2025
+                                                <div class="post__comment post-icon">
+                                                    <svg aria-hidden="true" width="20" height="19">
+                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                    </svg>
+                                                    <span>2</span>
+                                                </div>
+                                                <div class="post__reset post-icon">
+                                                    <svg aria-hidden="true" width="20" height="20">
+                                                        <use xlink:href="img/sprite.svg#copylink"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="post__data">
+                                                    Сегодня в 15:40
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="left-tabs-history__column">
-                                    <div class="left-tabs-history__item">
+                                <div class="post-comments__comment">
+                                    <div class="posts__post post">
                                         <div class="post__header">
                                             <div class="post__left">
                                                 <div class="post__avatar">
-                                                    <img loading="lazy" src="img/avatar2.webp" alt="">
+                                                    <img loading="lazy" src="img/avatar3.webp" alt="">
                                                 </div>
-                                                <a href="#" class="post__titles">
+                                                <div class="post__titles">
                                                     <div class="post__name">
-                                                        <span>Вместе с Софи Кэри</span>
+                                                        <span>Александр Константинович</span>
+                                                        <svg aria-hidden="true" width="15" height="16">
+                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                        </svg>
                                                     </div>
-                                                    <span>Софи Кэри</span>
-                                                </a>
+                                                </div>
                                             </div>
-                                            <div class="post__right">
-                                                <button type="button" class="post__subscribe _active">Вы
-                                                    подписаны</button>
+                                            <div class="post__right without-text">
                                                 <div class="dots">
                                                     <svg aria-hidden="true" width="16" height="4">
-                                                        <use xlink:href="img/sprite.svg#dots">
-                                                        </use>
+                                                        <use xlink:href="img/sprite.svg#dots"></use>
                                                     </svg>
                                                     <div class="dropdown">
                                                         <div class="dropdown__menu-content">
@@ -807,31 +1140,17 @@
                                                                     </div>
                                                                     Скопировать ссылку
                                                                 </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <img src="img/icon/bookmark.svg" alt="">
-                                                                    </div>
-                                                                    Добавить в Закладки
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use xlink:href="img/sprite.svg#eye-off">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Скрыть публикацию
-                                                                </button>
                                                             </div>
                                                             <div class="dropdown__bottom">
                                                                 <button type="button">
                                                                     <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="12">
-                                                                            <use xlink:href="img/sprite.svg#eye-closed">
+                                                                        <svg aria-hidden="true" width="22" height="22">
+                                                                            <use
+                                                                                xlink:href="img/sprite.svg#blacklisted">
                                                                             </use>
                                                                         </svg>
                                                                     </div>
-                                                                    Скрыть автора
+                                                                    В черный список
                                                                 </button>
                                                                 <button type="button">
                                                                     <div class="dropdown__icon">
@@ -849,68 +1168,787 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="left-tabs-history__descr">
-                                            <a href="#" class="left-tabs-history__titles">
-                                                <div class="left-tabs-history__title">
-                                                    Grow: как Джо Хаттон переосмыслила йогу
-                                                    для
-                                                    реальной
-                                                    жизни
+                                        <div class="post__content">
+                                            <p>
+                                                Подождите-ка! Где они встретились?
+                                            </p>
+                                            <div class="post__footer">
+                                                <div class="post__like post-icon">
+                                                    <div class="post__like-icon">
+                                                        <svg aria-hidden="true" width="21" height="20">
+                                                            <use xlink:href="img/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="post__like-active">
+                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                    </div>
+                                                    <div class="post__like-active2">
+                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                    </div>
+                                                    <span>50</span>
                                                 </div>
-                                                <p>
-                                                    Серия интервью Grow создана для того,
-                                                    чтобы
-                                                    рассказать о том, как писатели стали
-                                                    независимыми и
-                                                    расширили свою аудиторию.
-                                                </p>
-                                                <div class="left-tabs-history__text">
-                                                    ~ 3м чтения
+                                                <div class="post__comment post-icon">
+                                                    <svg aria-hidden="true" width="20" height="19">
+                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                    </svg>
+                                                    <span>2</span>
                                                 </div>
-                                            </a>
-                                            <div class="left-tabs-history__pic">
-                                                <img src="img/image/image11.webp" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="post__footer noclick">
-                                            <div class="post__like post-icon">
-                                                <div class="post__like-icon">
-                                                    <svg aria-hidden="true" width="21" height="20">
-                                                        <use xlink:href="img/sprite.svg#heart">
-                                                        </use>
+                                                <div class="post__reset post-icon">
+                                                    <svg aria-hidden="true" width="20" height="20">
+                                                        <use xlink:href="img/sprite.svg#copylink"></use>
                                                     </svg>
                                                 </div>
-                                                <div class="post__like-active">
-                                                    <img src="img/icon/heart-active.svg" alt="">
+                                                <div class="post__data">
+                                                    8 мая в 22:57
                                                 </div>
-                                                <div class="post__like-active2">
-                                                    <img src="img/icon/heart-active2.svg" alt="">
+                                            </div>
+                                            <div class="post-subcomments">
+                                                <div class="post-subcomments__column">
+                                                    <div class="posts__post post">
+                                                        <div class="post__header">
+                                                            <div class="post__left">
+                                                                <div class="post__avatar">
+                                                                    <img loading="lazy" src="img/avatar3.webp" alt="">
+                                                                </div>
+                                                                <div class="post__titles">
+                                                                    <div class="post__name">
+                                                                        <span>Андрей Ким</span>
+                                                                        <svg aria-hidden="true" width="15" height="16">
+                                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post__right without-text">
+                                                                <div class="dots">
+                                                                    <svg aria-hidden="true" width="16" height="4">
+                                                                        <use xlink:href="img/sprite.svg#dots"></use>
+                                                                    </svg>
+                                                                    <div class="dropdown">
+                                                                        <div class="dropdown__menu-content">
+                                                                            <div class="dropdown__top">
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#copylink2">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    Скопировать ссылку
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="dropdown__bottom">
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#blacklisted">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    В черный список
+                                                                                </button>
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#octagon-alert">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    Сообщить о нарушении
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post__content">
+                                                            <div class="post-answer">
+                                                                <div class="post-answer__name">
+                                                                    @ Александр Константинович
+                                                                </div>
+                                                                <p>
+                                                                    Где они встретились?
+                                                                </p>
+                                                            </div>
+                                                            <p>
+                                                                Отличное фото!
+                                                            </p>
+                                                            <div class="post__footer">
+                                                                <div class="post__like post-icon">
+                                                                    <div class="post__like-icon">
+                                                                        <svg aria-hidden="true" width="21" height="20">
+                                                                            <use xlink:href="img/sprite.svg#heart">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="post__like-active">
+                                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                                    </div>
+                                                                    <div class="post__like-active2">
+                                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                                    </div>
+                                                                    <span>50</span>
+                                                                </div>
+                                                                <div class="post__comment post-icon">
+                                                                    <svg aria-hidden="true" width="20" height="19">
+                                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                                    </svg>
+                                                                    <span>2</span>
+                                                                </div>
+                                                                <div class="post__reset post-icon">
+                                                                    <svg aria-hidden="true" width="20" height="20">
+                                                                        <use xlink:href="img/sprite.svg#copylink"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="post__data">
+                                                                    8 мая в 22:57
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <span>50</span>
+                                                <div class="post-subcomments__column">
+                                                    <div class="posts__post post">
+                                                        <div class="post__header">
+                                                            <div class="post__left">
+                                                                <div class="post__avatar">
+                                                                    <img loading="lazy" src="img/avatar.webp" alt="">
+                                                                </div>
+                                                                <div class="post__titles">
+                                                                    <div class="post__name">
+                                                                        <span>Андрей Ким</span>
+                                                                        <svg aria-hidden="true" width="15" height="16">
+                                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post__right without-text">
+                                                                <div class="dots">
+                                                                    <svg aria-hidden="true" width="16" height="4">
+                                                                        <use xlink:href="img/sprite.svg#dots"></use>
+                                                                    </svg>
+                                                                    <div class="dropdown">
+                                                                        <div class="dropdown__menu-content">
+                                                                            <div class="dropdown__top">
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#copylink2">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    Скопировать ссылку
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="dropdown__bottom">
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#blacklisted">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    В черный список
+                                                                                </button>
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#octagon-alert">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    Сообщить о нарушении
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post__content">
+                                                            <p>
+                                                                А мне кажется в торговом центре
+                                                            </p>
+                                                            <div class="post__footer">
+                                                                <div class="post__like post-icon">
+                                                                    <div class="post__like-icon">
+                                                                        <svg aria-hidden="true" width="21" height="20">
+                                                                            <use xlink:href="img/sprite.svg#heart">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="post__like-active">
+                                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                                    </div>
+                                                                    <div class="post__like-active2">
+                                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                                    </div>
+                                                                    <span>50</span>
+                                                                </div>
+                                                                <div class="post__comment post-icon">
+                                                                    <svg aria-hidden="true" width="20" height="19">
+                                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                                    </svg>
+                                                                    <span>2</span>
+                                                                </div>
+                                                                <div class="post__reset post-icon">
+                                                                    <svg aria-hidden="true" width="20" height="20">
+                                                                        <use xlink:href="img/sprite.svg#copylink"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="post__data">
+                                                                    8 мая в 22:57
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="post-subcomments__column">
+                                                    <div class="posts__post post">
+                                                        <div class="post__header">
+                                                            <div class="post__left">
+                                                                <div class="post__avatar">
+                                                                    <img loading="lazy" src="img/avatar3.webp" alt="">
+                                                                </div>
+                                                                <div class="post__titles">
+                                                                    <div class="post__name">
+                                                                        <span>Андрей Ким</span>
+                                                                        <svg aria-hidden="true" width="15" height="16">
+                                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="post__right without-text">
+                                                                <div class="dots">
+                                                                    <svg aria-hidden="true" width="16" height="4">
+                                                                        <use xlink:href="img/sprite.svg#dots"></use>
+                                                                    </svg>
+                                                                    <div class="dropdown">
+                                                                        <div class="dropdown__menu-content">
+                                                                            <div class="dropdown__top">
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#copylink2">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    Скопировать ссылку
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="dropdown__bottom">
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#blacklisted">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    В черный список
+                                                                                </button>
+                                                                                <button type="button">
+                                                                                    <div class="dropdown__icon">
+                                                                                        <svg aria-hidden="true"
+                                                                                            width="22" height="22">
+                                                                                            <use
+                                                                                                xlink:href="img/sprite.svg#octagon-alert">
+                                                                                            </use>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                    Сообщить о нарушении
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post__content">
+                                                            <p>
+                                                                Это определённо было на мосту
+                                                            </p>
+                                                            <div class="post__footer">
+                                                                <div class="post__like post-icon">
+                                                                    <div class="post__like-icon">
+                                                                        <svg aria-hidden="true" width="21" height="20">
+                                                                            <use xlink:href="img/sprite.svg#heart">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="post__like-active">
+                                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                                    </div>
+                                                                    <div class="post__like-active2">
+                                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                                    </div>
+                                                                    <span>50</span>
+                                                                </div>
+                                                                <div class="post__comment post-icon">
+                                                                    <svg aria-hidden="true" width="20" height="19">
+                                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                                    </svg>
+                                                                    <span>2</span>
+                                                                </div>
+                                                                <div class="post__reset post-icon">
+                                                                    <svg aria-hidden="true" width="20" height="20">
+                                                                        <use xlink:href="img/sprite.svg#copylink"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="post__data">
+                                                                    8 мая в 22:57
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="post__comment post-icon">
-                                                <svg aria-hidden="true" width="20" height="19">
-                                                    <use xlink:href="img/sprite.svg#chat">
-                                                    </use>
-                                                </svg>
-                                                <span>2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-comments__comment">
+                                    <div class="posts__post post">
+                                        <div class="post__header">
+                                            <div class="post__left">
+                                                <div class="post__avatar">
+                                                    <img loading="lazy" src="img/avatar3.webp" alt="">
+                                                </div>
+                                                <div class="post__titles">
+                                                    <div class="post__name">
+                                                        <span>Андрей Ким</span>
+                                                        <svg aria-hidden="true" width="15" height="16">
+                                                            <use xlink:href="img/sprite.svg#star"></use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="post__data">
-                                                03.05.2025
+                                            <div class="post__right without-text">
+                                                <div class="dots">
+                                                    <svg aria-hidden="true" width="16" height="4">
+                                                        <use xlink:href="img/sprite.svg#dots"></use>
+                                                    </svg>
+                                                    <div class="dropdown">
+                                                        <div class="dropdown__menu-content">
+                                                            <div class="dropdown__top">
+                                                                <button type="button">
+                                                                    <div class="dropdown__icon">
+                                                                        <svg aria-hidden="true" width="22" height="22">
+                                                                            <use xlink:href="img/sprite.svg#copylink2">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    Скопировать ссылку
+                                                                </button>
+                                                            </div>
+                                                            <div class="dropdown__bottom">
+                                                                <button type="button">
+                                                                    <div class="dropdown__icon">
+                                                                        <svg aria-hidden="true" width="22" height="22">
+                                                                            <use
+                                                                                xlink:href="img/sprite.svg#blacklisted">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    В черный список
+                                                                </button>
+                                                                <button type="button">
+                                                                    <div class="dropdown__icon">
+                                                                        <svg aria-hidden="true" width="22" height="22">
+                                                                            <use
+                                                                                xlink:href="img/sprite.svg#octagon-alert">
+                                                                            </use>
+                                                                        </svg>
+                                                                    </div>
+                                                                    Сообщить о нарушении
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post__content">
+                                            <p>
+                                                Отличное фото!
+                                            </p>
+                                            <div class="post__footer">
+                                                <div class="post__like post-icon">
+                                                    <div class="post__like-icon">
+                                                        <svg aria-hidden="true" width="21" height="20">
+                                                            <use xlink:href="img/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="post__like-active">
+                                                        <img src="img/icon/heart-active.svg" alt="">
+                                                    </div>
+                                                    <div class="post__like-active2">
+                                                        <img src="img/icon/heart-active2.svg" alt="">
+                                                    </div>
+                                                    <span>50</span>
+                                                </div>
+                                                <div class="post__comment post-icon">
+                                                    <svg aria-hidden="true" width="20" height="19">
+                                                        <use xlink:href="img/sprite.svg#chat"></use>
+                                                    </svg>
+                                                    <span>2</span>
+                                                </div>
+                                                <div class="post__reset post-icon">
+                                                    <svg aria-hidden="true" width="20" height="20">
+                                                        <use xlink:href="img/sprite.svg#copylink"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="post__data">
+                                                    8 мая в 22:57
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <a href="#" class="post-comments__button button">Показать больше комментариев</a>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <div class="text-selection-menu">
+                <button type="button" class="text-selection-menu__btn copy-btn">Копировать</button>
+                <button type="button" class="text-selection-menu__btn quote-btn">Цитировать</button>
+            </div>
         </main>
     </div>
-    {% include 'blocks/scripts.njk' %}
     {% include 'blocks/popups.njk' %}
+    <div id="comment" aria-hidden="true" class="popup">
+        <div class="popup-share-thoughts__error desct">
+            <img loading="lazy" src="img/icon/alert.svg" alt="">
+            В заметку нельзя добавить больше 6 изображений
+        </div>
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_2001_1770)">
+                            <path
+                                d="M7.06131 5.99992L11.7802 1.28107C11.8499 1.21142 11.9052 1.12871 11.9429 1.03767C11.9807 0.946635 12.0001 0.849051 12.0001 0.750501C12.0001 0.65195 11.9807 0.554366 11.9429 0.463327C11.9052 0.372288 11.8499 0.28958 11.7802 0.21993C11.7105 0.150208 11.6278 0.094898 11.5368 0.0571609C11.4457 0.0194238 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194238 10.9624 0.0571609C10.8714 0.094898 10.7887 0.150208 10.719 0.21993L6.00017 4.93878L1.28107 0.21993C1.21142 0.150208 1.12871 0.094898 1.03767 0.0571609C0.946635 0.0194238 0.849051 0 0.7505 0C0.65195 0 0.554366 0.0194238 0.463327 0.0571609C0.372288 0.094898 0.28958 0.150208 0.21993 0.21993C0.150208 0.28958 0.0948979 0.372288 0.0571609 0.463327C0.0194238 0.554366 0 0.65195 0 0.750501C0 0.849051 0.0194238 0.946635 0.0571609 1.03767C0.0948979 1.12871 0.150208 1.21142 0.21993 1.28107L4.93903 5.99992L0.21993 10.7188C0.150271 10.7884 0.0950175 10.8712 0.0573245 10.9622C0.0196316 11.0532 0.000237243 11.1508 0.000248856 11.2493C0.000260468 11.3478 0.0196778 11.4454 0.0573922 11.5364C0.0951066 11.6274 0.150379 11.7101 0.220055 11.7798C0.28973 11.8494 0.372444 11.9047 0.463473 11.9424C0.554502 11.9801 0.652064 11.9995 0.750589 11.9995C0.849113 11.9995 0.946671 11.98 1.03769 11.9423C1.12871 11.9046 1.21141 11.8493 1.28107 11.7797L6.00017 7.06081L10.719 11.7797C10.8656 11.9263 11.0577 11.9995 11.2496 11.9995C11.4415 11.9995 11.6336 11.9263 11.7802 11.7797C11.8499 11.71 11.9052 11.6273 11.9429 11.5363C11.9807 11.4452 12.0001 11.3476 12.0001 11.2491C12.0001 11.1505 11.9807 11.053 11.9429 10.9619C11.9052 10.8709 11.8499 10.7882 11.7802 10.7185L7.06131 5.99992Z"
+                                fill="white" fill-opacity="0.5" shape-rendering="crispEdges" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2001_1770" x="-2" y="-2" width="16" height="16"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2001_1770" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2001_1770"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+                <div class="citation">
+                    <p>
+                        Для цитирования выделите фрагмент
+                    </p>
+                    <button type="button" class="citation__close">
+                        <svg aria-hidden="true" width="12" height="12">
+                            <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <form class="popup__share-thoughts popup-share-thoughts">
+                    <div class="posts__post post">
+                        <div class="post__header">
+                            <div class="post__left">
+                                <div class="post__avatar">
+                                    <img loading="lazy" src="img/avatar2.webp" alt="">
+                                </div>
+                                <div class="post__titles">
+                                    <div class="post__name">
+                                        <span>София Кэри</span>
+                                        <svg aria-hidden="true" width="15" height="16">
+                                            <use xlink:href="img/sprite.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-simplebar class="post__content comment-view-publication">
+                            <p class="comment">
+                                привет.
+                            </p>
+                            <p class="comment">
+                                Я стала матерью, когда была подростком.
+                            </p>
+                            <p class="comment">
+                                и прежде чем я продолжу это письмо, я хочу сказать следующее: я знаю,
+                                что
+                                эта
+                                тема
+                                нелегка для всех. для некоторых материнство является источником боли, а
+                                не
+                                радости.
+                                некоторые потеряли детей. некоторые тоскуют по ним. некоторые отчуждены,
+                                скорбят
+                                или
+                                исцеляются от матерей, которые не могли любить их должным образом.
+                                некоторые
+                                несут в
+                                себе боль матери, которой больше нет. а некоторые все еще пытаются
+                                примириться с
+                                той
+                                версией материнства, которую они знали или никогда не имели.
+                            </p>
+                            <p class="comment">
+                                в этом эссе есть место для всего этого. речь идет не только о красоте
+                                материнства,
+                                но и о его бремени. об отсутстви... о переломах... о призраках, которые
+                                живут в
+                                облике матери или ребенка. независимо от того, являетесь ли вы матерью,
+                                были
+                                ли
+                                вы
+                                воспитаны матерью, потеряли ее или решили пойти совершенно другим путем,
+                                вас
+                                здесь
+                                видят. и вы не одиноки...
+                            </p>
+                            <p class="comment">
+                                Материнство не пришло ко мне в один миг. Оно пришло волнами: медленно,
+                                неумолимо,
+                                священно. Оно пришло через панику и молитвы. Через задержку дыхания,
+                                когда я
+                                держала
+                                в руках ее крошечное тело. Через тихое исчезновение той девочки, которой
+                                я
+                                была
+                                раньше, и это освободило место для чего-то нового. Материнство
+                                опустошило
+                                меня и
+                                посадило что-то на ее место. Что-то хрупкое, но более сильное, чем я
+                                когда-либо
+                                могла себе представить.
+                            </p>
+                            <p class="comment">
+                                Материнство не пришло ко мне в один миг. Оно пришло волнами: медленно,
+                                неумолимо,
+                                священно. Оно пришло через панику и молитвы. Через задержку дыхания,
+                                когда я
+                                держала
+                                в руках ее крошечное тело. Через тихое исчезновение той девочки, которой
+                                я
+                                была
+                                раньше, и это освободило место для чего-то нового. Материнство
+                                опустошило
+                                меня и
+                                посадило что-то на ее место. Что-то хрупкое, но более сильное, чем я
+                                когда-либо
+                                могла себе представить.
+                            </p>
+                            <!--
+                            <div class="post__sliders">
+                                <div class="post__slider swiper">
+                                    <div class="post__wrapper swiper-wrapper">
+                                        <a href="img/image/image6.webp" data-fancybox="gallery1"
+                                            class="post__slide swiper-slide">
+                                            <img loading="lazy" src="img/image/image6.webp" alt="">
+                                            <div class="post__slide-bg">
+                                                <svg aria-hidden="true" width="40" height="39">
+                                                    <use xlink:href="img/sprite.svg#search"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="img/image/image7.webp" data-fancybox="gallery1"
+                                            class="post__slide swiper-slide">
+                                            <img loading="lazy" src="img/image/image7.webp" alt="">
+                                            <div class="post__slide-bg">
+                                                <svg aria-hidden="true" width="40" height="39">
+                                                    <use xlink:href="img/sprite.svg#search"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="post__arrow-prev arrow-prev">
+                                    <svg aria-hidden="true" width="15" height="8">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                                <div class="post__arrow-next arrow-next">
+                                    <svg aria-hidden="true" width="15" height="8">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                    <div class="popup-share-thoughts__comment">
+                        <div class="popup-share-thoughts__top">
+                            <div class="popup-share-thoughts__image">
+                                <img loading="lazy" src="img/avatar.webp" alt="">
+                            </div>
+                            <div class="popup-share-thoughts__name">Оксана</div>
+                        </div>
+                        <div class="post-answer post-answer-citation">
+                            <button type="button" class="post-answer__close">
+                                <svg aria-hidden="true" width="12" height="12">
+                                    <use xlink:href="img/sprite.svg#close"></use>
+                                </svg>
+                            </button>
+                            <div class="post-answer__name">
+                                @ Александр Константинович
+                            </div>
+                            <p>
+                                Где они встретились?
+                            </p>
+                        </div>
+                        <div class="popup-share-thoughts__textarea">
+                            <textarea placeholder="Комментарий"></textarea>
+                        </div>
+                        <div class="previews"></div>
+                        <div class="previews-video"></div>
+                        <div class="popup-share-thoughts__error mob">
+                            <img loading="lazy" src="img/icon/alert.svg" alt="">
+                            В заметку нельзя добавить больше 6 изображений
+                        </div>
+                        <div class="popup-share-thoughts__bottom">
+                            <div class="popup-share-thoughts__files">
+                                <!-- Фото -->
+                                <div class="popup-share-thoughts__file">
+                                    <input type="file" accept="image/*">
+                                    <svg aria-hidden="true" width="20" height="20">
+                                        <use xlink:href="img/sprite.svg#pic"></use>
+                                    </svg>
+                                </div>
+
+                                <!-- Видео -->
+                                <div class="popup-share-thoughts__file">
+                                    <input type="file" accept="video/*">
+                                    <svg aria-hidden="true" width="20" height="20">
+                                        <use xlink:href="img/sprite.svg#video"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-share-thoughts__buttons">
+                            <button type="submit" class="popup-share-thoughts__public button-red">Опубликовать</button>
+                            <button type="button" data-close class="popup-share-thoughts__cancel button">
+                                <span>Отменить</span>
+                                <svg aria-hidden="true" width="7" height="9">
+                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="edit" aria-hidden="true" class="popup">
+        <div class="popup-share-thoughts__error desct">
+            <img loading="lazy" src="img/icon/alert.svg" alt="">
+            В заметку нельзя добавить больше 6 изображений
+        </div>
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_2001_1770)">
+                            <path
+                                d="M7.06131 5.99992L11.7802 1.28107C11.8499 1.21142 11.9052 1.12871 11.9429 1.03767C11.9807 0.946635 12.0001 0.849051 12.0001 0.750501C12.0001 0.65195 11.9807 0.554366 11.9429 0.463327C11.9052 0.372288 11.8499 0.28958 11.7802 0.21993C11.7105 0.150208 11.6278 0.094898 11.5368 0.0571609C11.4457 0.0194238 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194238 10.9624 0.0571609C10.8714 0.094898 10.7887 0.150208 10.719 0.21993L6.00017 4.93878L1.28107 0.21993C1.21142 0.150208 1.12871 0.094898 1.03767 0.0571609C0.946635 0.0194238 0.849051 0 0.7505 0C0.65195 0 0.554366 0.0194238 0.463327 0.0571609C0.372288 0.094898 0.28958 0.150208 0.21993 0.21993C0.150208 0.28958 0.0948979 0.372288 0.0571609 0.463327C0.0194238 0.554366 0 0.65195 0 0.750501C0 0.849051 0.0194238 0.946635 0.0571609 1.03767C0.0948979 1.12871 0.150208 1.21142 0.21993 1.28107L4.93903 5.99992L0.21993 10.7188C0.150271 10.7884 0.0950175 10.8712 0.0573245 10.9622C0.0196316 11.0532 0.000237243 11.1508 0.000248856 11.2493C0.000260468 11.3478 0.0196778 11.4454 0.0573922 11.5364C0.0951066 11.6274 0.150379 11.7101 0.220055 11.7798C0.28973 11.8494 0.372444 11.9047 0.463473 11.9424C0.554502 11.9801 0.652064 11.9995 0.750589 11.9995C0.849113 11.9995 0.946671 11.98 1.03769 11.9423C1.12871 11.9046 1.21141 11.8493 1.28107 11.7797L6.00017 7.06081L10.719 11.7797C10.8656 11.9263 11.0577 11.9995 11.2496 11.9995C11.4415 11.9995 11.6336 11.9263 11.7802 11.7797C11.8499 11.71 11.9052 11.6273 11.9429 11.5363C11.9807 11.4452 12.0001 11.3476 12.0001 11.2491C12.0001 11.1505 11.9807 11.053 11.9429 10.9619C11.9052 10.8709 11.8499 10.7882 11.7802 10.7185L7.06131 5.99992Z"
+                                fill="white" fill-opacity="0.5" shape-rendering="crispEdges" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2001_1770" x="-2" y="-2" width="16" height="16"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2001_1770" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2001_1770"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+                <form class="popup__share-thoughts popup-share-thoughts">
+                    <div class="popup-share-thoughts__top">
+                        <div class="popup-share-thoughts__image">
+                            <img loading="lazy" src="img/avatar.webp" alt="">
+                        </div>
+                        <div class="popup-share-thoughts__name">Оксана</div>
+                    </div>
+                    <div class="popup-share-thoughts__textarea">
+                        <textarea>Его журнал был таким впечатляющим. Я тоже купил себе небольшой фотопринтер после того, как встретил его, увидев фотографии в его записях в журнале
+                        </textarea>
+                    </div>
+                    <div class="previews"></div>
+                    <div class="previews-video"></div>
+                    <div class="popup-share-thoughts__error mob">
+                        <img loading="lazy" src="img/icon/alert.svg" alt="">
+                        В заметку нельзя добавить больше 6 изображений
+                    </div>
+                    <div class="popup-share-thoughts__bottom">
+                        <div class="popup-share-thoughts__files">
+                            <!-- Фото -->
+                            <div class="popup-share-thoughts__file">
+                                <input type="file" accept="image/*">
+                                <svg aria-hidden="true" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#pic"></use>
+                                </svg>
+                            </div>
+
+                            <!-- Видео -->
+                            <div class="popup-share-thoughts__file">
+                                <input type="file" accept="video/*">
+                                <svg aria-hidden="true" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#video"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="popup-share-thoughts__buttons">
+                            <button type="submit" class="popup-share-thoughts__public button-red">Сохранить</button>
+                            <button type="button" data-close class="popup-share-thoughts__cancel button">
+                                <span>Отменить</span>
+                                <svg aria-hidden="true" width="7" height="9">
+                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% include 'blocks/scripts.njk' %}
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Лента публикаций</title>
+    <title>Управление подписками</title>
     {% include 'blocks/head.njk' %}
 </head>
 
@@ -15,7 +15,6 @@
                         <img src="img/icon/logo.svg" alt="">
                     </a>
                     <div class="header__title">
-                        <span>Лента публикаций</span>
                     </div>
                 </div>
                 <form data-popup="#search1" class="header__search">
@@ -469,7 +468,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="_active">
+                            <a href="#">
                                 <svg class="link" aria-hidden="true" width="32" height="32">
                                     <use xlink:href="img/sprite.svg#public"></use>
                                 </svg>
@@ -552,354 +551,102 @@
                 </nav>
             </div>
         </div>
-        <main class="main main-publication">
+        <main class="main main-subscription">
 
-            <div class="block-publication">
+            <div class="block-subscription block1">
                 <div class="container2">
-                    <div class="block-publication__content">
-                        <div class="block-publication__text">
-                            <p>
-                                Мы выводим публикации согласно вашим интересам. Настройки интересов вы можете выполнить
-                                в разделе <a href="#">«Мои интересы»</a> настроек профиля
-                            </p>
-                            <button type="button" class="block-publication__text-close">
-                                <svg aria-hidden="true" width="12" height="12">
-                                    <use xlink:href="img/sprite.svg#close"></use>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="block-publication__body">
-                            <div class="block-publication__top">
-                                <div class="block-publication__left">
-                                    <div class="buttons">
-                                        <a href="#" class="buttons__title _active">Все</a>
-                                        <a href="#" class="buttons__title">Платные</a>
-                                        <a href="#" class="buttons__title">Закладки</a>
-                                    </div>
-                                    <a href="#" class="setting-icon">
-                                        <img src="img/icon/settings.svg" alt="">
-                                        <span>Управление подписками</span>
+                    <div class="right-all-publication__content">
+                        <h1 class="title3">Управление подписками</h1>
+                        <div class="right-all-publication__body">
+                            <div class="right-all-publication__column">
+                                <div class="right-all-publication__top">
+                                    <a href="#" class="right-all-publication__item">
+                                        <img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
+                                        <div class="right-all-publication__titles">
+                                            <div class="right-all-publication__name">Гиперпилот</div>
+                                            <div class="right-all-publication__subname">Джошуа</div>
+                                        </div>
                                     </a>
+                                    <button data-popup="#unsubscribe" type="button" class="button2">
+                                        Отписаться
+                                    </button>
                                 </div>
-                                <div class="block-publication__right">
-                                    <a href="#" class="setting-icon">
-                                        <img src="img/icon/settings.svg" alt="">
-                                        <span>Управление подписками</span>
-                                    </a>
-                                    <div class="select1">
-                                        <div class="select1__title">
-                                            <span>По интересам</span>
-                                            <svg aria-hidden="true" width="10" height="7">
-                                                <use xlink:href="img/sprite.svg#arrow1"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="select1__options">
-                                            <div class="options__item">
-                                                <input hidden="" id="o_1" class="options__input" checked="" type="radio"
-                                                    value="1" name="option">
-                                                <label for="o_1" class="options__label">
-                                                    <span class="options__text">По интересам</span>
-                                                    <span class="options__icon">
-                                                        <img src="img/icon/chek1.svg" alt="">
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="options__item">
-                                                <input hidden="" id="o_2" class="options__input" type="radio" value="2"
-                                                    name="option">
-                                                <label for="o_2" class="options__label">
-                                                    <span class="options__text">Недавние</span>
-                                                    <span class="options__icon"><img src="img/icon/chek1.svg"
-                                                            alt=""></span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="right-all-publication__bottom">
+                                    <ul>
+                                        <li>
+                                            <span>Выбран тариф:</span>
+                                            Бесплатная подписка
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            Бесплатно
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="button button3">Улучшить тариф</a>
                                 </div>
                             </div>
-                            <!--Блок если нет публикаций
-                            <div class="block-publication__empty">
-                                <p>
-                                    Ничего нет. Но вы можете посмотреть полный список публикаций и авторов по кнопке
-                                    ниже
-                                </p>
-                                <a href="#" class="button">Все публикации и авторы</a>
-                            </div>
-                            -->
-                            <div class="block-publication__bottom">
-                                <div class="left-tabs-history__column">
-                                    <div class="left-tabs-history__item">
-                                        <div class="post__header">
-                                            <div class="post__left">
-                                                <div class="post__avatar">
-                                                    <img loading="lazy" src="img/avatar2.webp" alt="">
-                                                </div>
-                                                <a href="#" class="post__titles">
-                                                    <div class="post__name">
-                                                        <span>Вместе с Софи Кэри</span>
-                                                    </div>
-                                                    <span>Софи Кэри</span>
-                                                </a>
-                                            </div>
-                                            <div class="post__right">
-                                                <button type="button" class="post__subscribe">Подписаться</button>
-                                                <div class="dots">
-                                                    <svg aria-hidden="true" width="16" height="4">
-                                                        <use xlink:href="img/sprite.svg#dots">
-                                                        </use>
-                                                    </svg>
-                                                    <div class="dropdown">
-                                                        <div class="dropdown__menu-content">
-                                                            <div class="dropdown__top">
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="20">
-                                                                            <use xlink:href="img/sprite.svg#user-plus">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Подписаться
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use xlink:href="img/sprite.svg#copylink2">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Скопировать ссылку
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <img src="img/icon/bookmark.svg" alt="">
-                                                                    </div>
-                                                                    Добавить в Закладки
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use xlink:href="img/sprite.svg#eye-off">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Скрыть публикацию
-                                                                </button>
-                                                            </div>
-                                                            <div class="dropdown__bottom">
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="12">
-                                                                            <use xlink:href="img/sprite.svg#eye-closed">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Скрыть автора
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use
-                                                                                xlink:href="img/sprite.svg#blacklisted">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    В черный список
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use
-                                                                                xlink:href="img/sprite.svg#octagon-alert">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Сообщить о нарушении
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="right-all-publication__column">
+                                <div class="right-all-publication__top">
+                                    <a href="#" class="right-all-publication__item">
+                                        <img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
+                                        <div class="right-all-publication__titles">
+                                            <div class="right-all-publication__name">Информационный бюллетень Джошуа
+                                                Читареллы</div>
+                                            <div class="right-all-publication__subname">Александр Константинович</div>
                                         </div>
-                                        <div class="left-tabs-history__descr">
-                                            <a href="#" class="left-tabs-history__titles">
-                                                <div class="left-tabs-history__title">
-                                                    Grow: как Джо Хаттон переосмыслила йогу
-                                                    для
-                                                    реальной
-                                                    жизни
-                                                </div>
-                                                <p>
-                                                    Серия интервью Grow создана для того,
-                                                    чтобы
-                                                    рассказать о том, как писатели стали
-                                                    независимыми и
-                                                    расширили свою аудиторию.
-                                                </p>
-                                                <div class="left-tabs-history__text">
-                                                    ~ 3м чтения
-                                                </div>
-                                            </a>
-                                            <div class="left-tabs-history__pic">
-                                                <img src="img/image/image11.webp" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="post__footer noclick">
-                                            <div class="post__like post-icon _active">
-                                                <div class="post__like-icon">
-                                                    <svg aria-hidden="true" width="21" height="20">
-                                                        <use xlink:href="img/sprite.svg#heart">
-                                                        </use>
-                                                    </svg>
-                                                </div>
-                                                <div class="post__like-active">
-                                                    <img src="img/icon/heart-active.svg" alt="">
-                                                </div>
-                                                <div class="post__like-active2">
-                                                    <img src="img/icon/heart-active2.svg" alt="">
-                                                </div>
-                                                <span>50</span>
-                                            </div>
-                                            <div class="post__comment post-icon">
-                                                <svg aria-hidden="true" width="20" height="19">
-                                                    <use xlink:href="img/sprite.svg#chat">
-                                                    </use>
-                                                </svg>
-                                                <span>2</span>
-                                            </div>
-                                            <div class="post__data">
-                                                03.05.2025
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </a>
+                                    <button data-popup="#unsubscribe2" type="button" class="button2">
+                                        Отписаться
+                                    </button>
                                 </div>
-                                <div class="left-tabs-history__column">
-                                    <div class="left-tabs-history__item">
-                                        <div class="post__header">
-                                            <div class="post__left">
-                                                <div class="post__avatar">
-                                                    <img loading="lazy" src="img/avatar2.webp" alt="">
-                                                </div>
-                                                <a href="#" class="post__titles">
-                                                    <div class="post__name">
-                                                        <span>Вместе с Софи Кэри</span>
-                                                    </div>
-                                                    <span>Софи Кэри</span>
-                                                </a>
-                                            </div>
-                                            <div class="post__right">
-                                                <button type="button" class="post__subscribe _active">Вы
-                                                    подписаны</button>
-                                                <div class="dots">
-                                                    <svg aria-hidden="true" width="16" height="4">
-                                                        <use xlink:href="img/sprite.svg#dots">
-                                                        </use>
-                                                    </svg>
-                                                    <div class="dropdown">
-                                                        <div class="dropdown__menu-content">
-                                                            <div class="dropdown__top">
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use xlink:href="img/sprite.svg#copylink2">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Скопировать ссылку
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <img src="img/icon/bookmark.svg" alt="">
-                                                                    </div>
-                                                                    Добавить в Закладки
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use xlink:href="img/sprite.svg#eye-off">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Скрыть публикацию
-                                                                </button>
-                                                            </div>
-                                                            <div class="dropdown__bottom">
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="12">
-                                                                            <use xlink:href="img/sprite.svg#eye-closed">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Скрыть автора
-                                                                </button>
-                                                                <button type="button">
-                                                                    <div class="dropdown__icon">
-                                                                        <svg aria-hidden="true" width="22" height="22">
-                                                                            <use
-                                                                                xlink:href="img/sprite.svg#octagon-alert">
-                                                                            </use>
-                                                                        </svg>
-                                                                    </div>
-                                                                    Сообщить о нарушении
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div class="right-all-publication__bottom">
+                                    <ul>
+                                        <li>
+                                            <span>Выбран тариф:</span>
+                                            Платный тариф
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            1700 руб./месяц
+                                        </li>
+                                        <li>
+                                            <span>Следующий платеж:</span>
+                                            29 сентября 2025 г.
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="button button3">Улучшить тариф</a>
+                                </div>
+                            </div>
+                            <div class="right-all-publication__column">
+                                <div class="right-all-publication__top">
+                                    <a href="#" class="right-all-publication__item">
+                                        <img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
+                                        <div class="right-all-publication__titles">
+                                            <div class="right-all-publication__name">Информационный бюллетень Джошуа
+                                                Читареллы</div>
+                                            <div class="right-all-publication__subname">Александр Константинович</div>
                                         </div>
-                                        <div class="left-tabs-history__descr">
-                                            <a href="#" class="left-tabs-history__titles">
-                                                <div class="left-tabs-history__title">
-                                                    Grow: как Джо Хаттон переосмыслила йогу
-                                                    для
-                                                    реальной
-                                                    жизни
-                                                </div>
-                                                <p>
-                                                    Серия интервью Grow создана для того,
-                                                    чтобы
-                                                    рассказать о том, как писатели стали
-                                                    независимыми и
-                                                    расширили свою аудиторию.
-                                                </p>
-                                                <div class="left-tabs-history__text">
-                                                    ~ 3м чтения
-                                                </div>
-                                            </a>
-                                            <div class="left-tabs-history__pic">
-                                                <img src="img/image/image11.webp" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="post__footer noclick">
-                                            <div class="post__like post-icon">
-                                                <div class="post__like-icon">
-                                                    <svg aria-hidden="true" width="21" height="20">
-                                                        <use xlink:href="img/sprite.svg#heart">
-                                                        </use>
-                                                    </svg>
-                                                </div>
-                                                <div class="post__like-active">
-                                                    <img src="img/icon/heart-active.svg" alt="">
-                                                </div>
-                                                <div class="post__like-active2">
-                                                    <img src="img/icon/heart-active2.svg" alt="">
-                                                </div>
-                                                <span>50</span>
-                                            </div>
-                                            <div class="post__comment post-icon">
-                                                <svg aria-hidden="true" width="20" height="19">
-                                                    <use xlink:href="img/sprite.svg#chat">
-                                                    </use>
-                                                </svg>
-                                                <span>2</span>
-                                            </div>
-                                            <div class="post__data">
-                                                03.05.2025
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </a>
+                                    <button data-popup="#unsubscribe" type="button" class="button2">
+                                        Отписаться
+                                    </button>
+                                </div>
+                                <div class="right-all-publication__bottom">
+                                    <ul>
+                                        <li>
+                                            <span>Выбран тариф:</span>
+                                            Креатор+
+                                        </li>
+                                        <li>
+                                            <span>Стоимость:</span>
+                                            1299 руб./месяц
+                                        </li>
+                                        <li>
+                                            <span>Следующий платеж:</span>
+                                            29 сентября 2026 г.
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="button button3">Улучшить тариф</a>
                                 </div>
                             </div>
                         </div>
@@ -909,8 +656,106 @@
 
         </main>
     </div>
-    {% include 'blocks/scripts.njk' %}
+    <div id="unsubscribe" aria-hidden="true" class="popup unsubscribe-popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_2001_1770)">
+                            <path
+                                d="M7.06131 5.99992L11.7802 1.28107C11.8499 1.21142 11.9052 1.12871 11.9429 1.03767C11.9807 0.946635 12.0001 0.849051 12.0001 0.750501C12.0001 0.65195 11.9807 0.554366 11.9429 0.463327C11.9052 0.372288 11.8499 0.28958 11.7802 0.21993C11.7105 0.150208 11.6278 0.094898 11.5368 0.0571609C11.4457 0.0194238 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194238 10.9624 0.0571609C10.8714 0.094898 10.7887 0.150208 10.719 0.21993L6.00017 4.93878L1.28107 0.21993C1.21142 0.150208 1.12871 0.094898 1.03767 0.0571609C0.946635 0.0194238 0.849051 0 0.7505 0C0.65195 0 0.554366 0.0194238 0.463327 0.0571609C0.372288 0.094898 0.28958 0.150208 0.21993 0.21993C0.150208 0.28958 0.0948979 0.372288 0.0571609 0.463327C0.0194238 0.554366 0 0.65195 0 0.750501C0 0.849051 0.0194238 0.946635 0.0571609 1.03767C0.0948979 1.12871 0.150208 1.21142 0.21993 1.28107L4.93903 5.99992L0.21993 10.7188C0.150271 10.7884 0.0950175 10.8712 0.0573245 10.9622C0.0196316 11.0532 0.000237243 11.1508 0.000248856 11.2493C0.000260468 11.3478 0.0196778 11.4454 0.0573922 11.5364C0.0951066 11.6274 0.150379 11.7101 0.220055 11.7798C0.28973 11.8494 0.372444 11.9047 0.463473 11.9424C0.554502 11.9801 0.652064 11.9995 0.750589 11.9995C0.849113 11.9995 0.946671 11.98 1.03769 11.9423C1.12871 11.9046 1.21141 11.8493 1.28107 11.7797L6.00017 7.06081L10.719 11.7797C10.8656 11.9263 11.0577 11.9995 11.2496 11.9995C11.4415 11.9995 11.6336 11.9263 11.7802 11.7797C11.8499 11.71 11.9052 11.6273 11.9429 11.5363C11.9807 11.4452 12.0001 11.3476 12.0001 11.2491C12.0001 11.1505 11.9807 11.053 11.9429 10.9619C11.9052 10.8709 11.8499 10.7882 11.7802 10.7185L7.06131 5.99992Z"
+                                fill="white" fill-opacity="0.5" shape-rendering="crispEdges" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2001_1770" x="-2" y="-2" width="16" height="16"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2001_1770" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2001_1770"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+                <div class="unsubscribe-popup__body">
+                    <div class="unsubscribe-popup__title">
+                        Вы действительно хотите отменить подписку на <span>Гиперпилот?</span>
+                    </div>
+                    <div class="unsubscribe-popup__buttons">
+                        <button data-close type="button" class="unsubscribe-popup__button button-red">Оставить
+                            подписку</button>
+                        <button type="button" class="unsubscribe-popup__button button">Отписаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="unsubscribe2" aria-hidden="true" class="popup unsubscribe-popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d_2001_1770)">
+                            <path
+                                d="M7.06131 5.99992L11.7802 1.28107C11.8499 1.21142 11.9052 1.12871 11.9429 1.03767C11.9807 0.946635 12.0001 0.849051 12.0001 0.750501C12.0001 0.65195 11.9807 0.554366 11.9429 0.463327C11.9052 0.372288 11.8499 0.28958 11.7802 0.21993C11.7105 0.150208 11.6278 0.094898 11.5368 0.0571609C11.4457 0.0194238 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194238 10.9624 0.0571609C10.8714 0.094898 10.7887 0.150208 10.719 0.21993L6.00017 4.93878L1.28107 0.21993C1.21142 0.150208 1.12871 0.094898 1.03767 0.0571609C0.946635 0.0194238 0.849051 0 0.7505 0C0.65195 0 0.554366 0.0194238 0.463327 0.0571609C0.372288 0.094898 0.28958 0.150208 0.21993 0.21993C0.150208 0.28958 0.0948979 0.372288 0.0571609 0.463327C0.0194238 0.554366 0 0.65195 0 0.750501C0 0.849051 0.0194238 0.946635 0.0571609 1.03767C0.0948979 1.12871 0.150208 1.21142 0.21993 1.28107L4.93903 5.99992L0.21993 10.7188C0.150271 10.7884 0.0950175 10.8712 0.0573245 10.9622C0.0196316 11.0532 0.000237243 11.1508 0.000248856 11.2493C0.000260468 11.3478 0.0196778 11.4454 0.0573922 11.5364C0.0951066 11.6274 0.150379 11.7101 0.220055 11.7798C0.28973 11.8494 0.372444 11.9047 0.463473 11.9424C0.554502 11.9801 0.652064 11.9995 0.750589 11.9995C0.849113 11.9995 0.946671 11.98 1.03769 11.9423C1.12871 11.9046 1.21141 11.8493 1.28107 11.7797L6.00017 7.06081L10.719 11.7797C10.8656 11.9263 11.0577 11.9995 11.2496 11.9995C11.4415 11.9995 11.6336 11.9263 11.7802 11.7797C11.8499 11.71 11.9052 11.6273 11.9429 11.5363C11.9807 11.4452 12.0001 11.3476 12.0001 11.2491C12.0001 11.1505 11.9807 11.053 11.9429 10.9619C11.9052 10.8709 11.8499 10.7882 11.7802 10.7185L7.06131 5.99992Z"
+                                fill="white" fill-opacity="0.5" shape-rendering="crispEdges" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2001_1770" x="-2" y="-2" width="16" height="16"
+                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feColorMatrix in="SourceAlpha" type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                <feOffset />
+                                <feGaussianBlur stdDeviation="1" />
+                                <feComposite in2="hardAlpha" operator="out" />
+                                <feColorMatrix type="matrix"
+                                    values="0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 1 0" />
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2001_1770" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2001_1770"
+                                    result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </button>
+                <div class="unsubscribe-popup__body">
+                    <div class="unsubscribe-popup__title">
+                        Вы действительно хотите отменить подписку на <span>Информационный бюллетень Джошуа
+                            Читареллы?</span>
+                    </div>
+                    <p>
+                        Текущая подписка будет действовать до даты окончания <span>09 сентября 2026 года</span>,
+                        после чего
+                        вы потеряете доступ к закрытым публикациям автора. Возобновить подписку можно в любой момент.
+                    </p>
+                    <div class="checkbox">
+                        <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                            name="form[]">
+                        <label for="c_1" class="checkbox__label">
+                            <span class="checkbox__icon">
+                                <img src="img/icon/chek1.svg" alt="">
+                            </span>
+                            <span class="checkbox__text">Остаться на бесплатном тарифе</span>
+                        </label>
+                    </div>
+                    <div class="unsubscribe-popup__buttons">
+                        <button data-close type="button" class="unsubscribe-popup__button button-red">Оставить
+                            подписку</button>
+                        <button type="button" class="unsubscribe-popup__button button">Отписаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
 </body>
 
 </html>

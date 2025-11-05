@@ -1,0 +1,68 @@
+.block-all-authors {
+    padding: 52px 0px 60px 0px;
+    @media (max-width: 768px) {
+        padding: 20px 0px;
+    }
+    .container {
+        max-width: 1385px;
+    }
+    .navigation-category {
+        margin: 0px 0px 20px 0px;
+    }
+    .navigation-category__arrow-next {
+        @media (max-width: 992px) {
+            display: none;
+        }
+    }
+    .navigation-category__slide {
+        @media (max-width: 768px) {
+            height: 31px;
+        }
+    }
+    .navigation-category__arrow-prev {
+        @media (max-width: 992px) {
+            display: none;
+        }
+    }
+
+    // .block-all-authors__content
+
+    &__content {
+        max-width: 803px;
+        margin: 0 auto;
+        padding: 46px 0px 0px 0px;
+        @media (max-width: 992px) {
+            max-width: 100%;
+            padding: 0px 0px 0px 0px;
+        }
+        .right-all-publication__content {
+            gap: 0px;
+        }
+        .right-all-publication__body {
+            gap: 15px;
+            @media (max-width: 992px) {
+                gap: 20px;
+            }
+        }
+        .right-all-publication__column {
+            padding: 20px;
+            border-bottom: 1px solid var(--color-grey);
+            @media (max-width: 992px) {
+                padding: 0px 0px 20px 0px;
+            }
+        }
+        .right-all-publication__top {
+            @media (max-width: 480px) {
+                flex-direction: column;
+                align-items: start;
+                width: 100%;
+                .button-red {
+                    width: 100%;
+                }
+                .button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
