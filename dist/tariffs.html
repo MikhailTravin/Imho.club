@@ -2,7 +2,7 @@
 <html lang="ru">
 
 	<head>
-		<title>Лента публикаций</title>
+		<title>Выбор тарифов</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +24,6 @@
 							<img src="img/icon/logo.svg" alt="">
 						</a>
 						<div class="header__title">
-							<span>Лента публикаций</span>
 						</div>
 					</div>
 					<form data-popup="#search1" class="header__search">
@@ -425,7 +424,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#" class="_active">
+								<a href="#">
 									<svg class="link" aria-hidden="true" width="32" height="32">
 										<use xlink:href="img/sprite.svg#public"></use>
 									</svg>
@@ -484,345 +483,274 @@
 					</nav>
 				</div>
 			</div>
-			<main class="main main-publication">
+			<main class="main main-tariffs">
 
-				<div class="block-publication">
-					<div class="container2">
-						<div class="block-publication__content">
-							<div class="block-publication__text">
-								<p>
-									Мы выводим публикации согласно вашим интересам. Настройки интересов вы можете выполнить
-									в разделе <a href="#">«Мои интересы»</a> настроек профиля
-								</p>
-								<button type="button" class="block-publication__text-close">
-									<svg aria-hidden="true" width="12" height="12">
-										<use xlink:href="img/sprite.svg#close"></use>
-									</svg>
-								</button>
-							</div>
-							<div class="block-publication__body">
-								<div class="block-publication__top">
-									<div class="block-publication__left">
-										<div class="buttons">
-											<a href="#" class="buttons__title _active">Все</a>
-											<a href="#" class="buttons__title">Платные</a>
-											<a href="#" class="buttons__title">Закладки</a>
-										</div>
-										<a href="#" class="setting-icon">
-											<img src="img/icon/settings.svg" alt="">
-											<span>Управление подписками</span>
-										</a>
-									</div>
-									<div class="block-publication__right">
-										<a href="#" class="setting-icon">
-											<img src="img/icon/settings.svg" alt="">
-											<span>Управление подписками</span>
-										</a>
-										<div class="select1">
-											<div class="select1__title">
-												<span>По интересам</span>
-												<svg aria-hidden="true" width="10" height="7">
-													<use xlink:href="img/sprite.svg#arrow1"></use>
-												</svg>
-											</div>
-											<div class="select1__options">
-												<div class="options__item">
-													<input hidden="" id="o_1" class="options__input" checked="" type="radio" value="1" name="option">
-													<label for="o_1" class="options__label">
-														<span class="options__text">По интересам</span>
-														<span class="options__icon">
-															<img src="img/icon/chek1.svg" alt="">
-														</span>
-													</label>
-												</div>
-												<div class="options__item">
-													<input hidden="" id="o_2" class="options__input" type="radio" value="2" name="option">
-													<label for="o_2" class="options__label">
-														<span class="options__text">Недавние</span>
-														<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--Блок если нет публикаций
-                            <div class="block-publication__empty">
-                                <p>
-                                    Ничего нет. Но вы можете посмотреть полный список публикаций и авторов по кнопке
-                                    ниже
-                                </p>
-                                <a href="#" class="button">Все публикации и авторы</a>
-                            </div>
-                            -->
-								<div class="block-publication__bottom">
-									<div class="left-tabs-history__column">
-										<div class="left-tabs-history__item">
-											<div class="post__header">
-												<div class="post__left">
-													<div class="post__avatar">
-														<img loading="lazy" src="img/avatar2.webp" alt="">
-													</div>
-													<a href="#" class="post__titles">
-														<div class="post__name">
-															<span>Вместе с Софи Кэри</span>
-														</div>
-														<span>Софи Кэри</span>
-													</a>
-												</div>
-												<div class="post__right">
-													<button type="button" class="post__subscribe">Подписаться</button>
-													<div class="dots">
-														<svg aria-hidden="true" width="16" height="4">
-															<use xlink:href="img/sprite.svg#dots">
-															</use>
-														</svg>
-														<div class="dropdown">
-															<div class="dropdown__menu-content">
-																<div class="dropdown__top">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="20">
-																				<use xlink:href="img/sprite.svg#user-plus">
-																				</use>
-																			</svg>
-																		</div>
-																		Подписаться
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#copylink2">
-																				</use>
-																			</svg>
-																		</div>
-																		Скопировать ссылку
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<img src="img/icon/bookmark.svg" alt="">
-																		</div>
-																		Добавить в Закладки
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#eye-off">
-																				</use>
-																			</svg>
-																		</div>
-																		Скрыть публикацию
-																	</button>
-																</div>
-																<div class="dropdown__bottom">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="12">
-																				<use xlink:href="img/sprite.svg#eye-closed">
-																				</use>
-																			</svg>
-																		</div>
-																		Скрыть автора
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#blacklisted">
-																				</use>
-																			</svg>
-																		</div>
-																		В черный список
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#octagon-alert">
-																				</use>
-																			</svg>
-																		</div>
-																		Сообщить о нарушении
-																	</button>
-																</div>
-															</div>
+				<div class="block-tariffs block1">
+					<div class="container">
+						<div class="block-tariffs__content">
+							<h1 class="title2">Выберите тариф</h1>
+							<div data-tabs class="tariffs-tabs">
+								<nav data-tabs-titles class="tariffs-tabs__navigation">
+									<button type="button" class="tariffs-tabs__title _tab-active">Ежемесячно</button>
+									<button type="button" class="tariffs-tabs__title">Ежегодно <span>(Выгода до
+											40%)</span></button>
+								</nav>
+								<div data-tabs-body class="tariffs-tabs__content">
+									<div class="tariffs-tabs__body">
+										<div class="tariffs-tabs__cards">
+											<div class="card-tariffs-tabs">
+												<div class="card-tariffs-tabs__item">
+													<div class="card-tariffs-tabs__top">
+														<div class="card-tariffs-tabs__title">Базовый</div>
+														<div class="card-tariffs-tabs__price">
+															0 ₽<span>/ в месяц</span>
 														</div>
 													</div>
+													<div class="card-tariffs-tabs__bottom">
+														<ul>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Публикации (текст, фото, видео)</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Публикации (текст, фото, видео)</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Лайки и комментарии</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Подписка на других пользователей (до 50)</span>
+															</li>
+														</ul>
+														<a href="#" class="card-tariffs-tabs__button btn-white disabled">Подписаться
+															бесплатно</a>
+													</div>
 												</div>
 											</div>
-											<div class="left-tabs-history__descr">
-												<a href="#" class="left-tabs-history__titles">
-													<div class="left-tabs-history__title">
-														Grow: как Джо Хаттон переосмыслила йогу
-														для
-														реальной
-														жизни
+											<div class="card-tariffs-tabs active">
+												<div class="card-tariffs-tabs__item">
+													<div class="card-tariffs-tabs__circle"></div>
+													<div class="card-tariffs-tabs__top">
+														<div class="card-tariffs-tabs__title">Профи</div>
+														<div class="card-tariffs-tabs__price">
+															499 ₽<span>/ в месяц</span>
+														</div>
 													</div>
-													<p>
-														Серия интервью Grow создана для того,
-														чтобы
-														рассказать о том, как писатели стали
-														независимыми и
-														расширили свою аудиторию.
-													</p>
-													<div class="left-tabs-history__text">
-														~ 3м чтения
+													<div class="card-tariffs-tabs__bottom">
+														<ul>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Всё из тарифа Базовый</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Неограниченное число подписок</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Создание групп и сообществ</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Закреплённые посты</span>
+															</li>
+														</ul>
+														<a href="#" class="card-tariffs-tabs__button btn-red">Бесплатный
+															период 3 дня</a>
 													</div>
-												</a>
-												<div class="left-tabs-history__pic">
-													<img src="img/image/image11.webp" alt="">
 												</div>
 											</div>
-											<div class="post__footer noclick">
-												<div class="post__like post-icon _active">
-													<div class="post__like-icon">
-														<svg aria-hidden="true" width="21" height="20">
-															<use xlink:href="img/sprite.svg#heart">
-															</use>
-														</svg>
-													</div>
-													<div class="post__like-active">
-														<img src="img/icon/heart-active.svg" alt="">
-													</div>
-													<div class="post__like-active2">
-														<img src="img/icon/heart-active2.svg" alt="">
-													</div>
-													<span>50</span>
+											<div class="card-tariffs-tabs">
+												<div class="card-tariffs-tabs__badge">
+													<span>Ваш текущий тариф</span>
 												</div>
-												<div class="post__comment post-icon">
-													<svg aria-hidden="true" width="20" height="19">
-														<use xlink:href="img/sprite.svg#chat">
-														</use>
-													</svg>
-													<span>2</span>
-												</div>
-												<div class="post__data">
-													03.05.2025
+												<div class="card-tariffs-tabs__item">
+													<div class="card-tariffs-tabs__top">
+														<div class="card-tariffs-tabs__title">Креатор+</div>
+														<div class="card-tariffs-tabs__price">
+															1299 ₽<span>/ в месяц</span>
+														</div>
+													</div>
+													<div class="card-tariffs-tabs__bottom">
+														<ul>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Всё из тарифа Профи</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Монетизация контента (подписки, донаты, платный
+																	доступ)</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Промо-публикации и продвижение</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Расширенная аналитика аудитории</span>
+															</li>
+														</ul>
+														<a href="#" class="card-tariffs-tabs__button btn-red">Продлить</a>
+														<div class="card-tariffs-tabs__data">
+															Действителен до 30.08.2025
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="left-tabs-history__column">
-										<div class="left-tabs-history__item">
-											<div class="post__header">
-												<div class="post__left">
-													<div class="post__avatar">
-														<img loading="lazy" src="img/avatar2.webp" alt="">
+									<div class="tariffs-tabs__body">
+										<div class="tariffs-tabs__cards">
+											<div class="card-tariffs-tabs">
+												<div class="card-tariffs-tabs__item">
+													<div class="card-tariffs-tabs__top">
+														<div class="card-tariffs-tabs__title">Базовый</div>
+														<div class="card-tariffs-tabs__price">
+															0 ₽<span>/ в месяц</span>
+														</div>
 													</div>
-													<a href="#" class="post__titles">
-														<div class="post__name">
-															<span>Вместе с Софи Кэри</span>
-														</div>
-														<span>Софи Кэри</span>
-													</a>
-												</div>
-												<div class="post__right">
-													<button type="button" class="post__subscribe _active">Вы
-														подписаны</button>
-													<div class="dots">
-														<svg aria-hidden="true" width="16" height="4">
-															<use xlink:href="img/sprite.svg#dots">
-															</use>
-														</svg>
-														<div class="dropdown">
-															<div class="dropdown__menu-content">
-																<div class="dropdown__top">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#copylink2">
-																				</use>
-																			</svg>
-																		</div>
-																		Скопировать ссылку
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<img src="img/icon/bookmark.svg" alt="">
-																		</div>
-																		Добавить в Закладки
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#eye-off">
-																				</use>
-																			</svg>
-																		</div>
-																		Скрыть публикацию
-																	</button>
+													<div class="card-tariffs-tabs__bottom">
+														<ul>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
 																</div>
-																<div class="dropdown__bottom">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="12">
-																				<use xlink:href="img/sprite.svg#eye-closed">
-																				</use>
-																			</svg>
-																		</div>
-																		Скрыть автора
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#octagon-alert">
-																				</use>
-																			</svg>
-																		</div>
-																		Сообщить о нарушении
-																	</button>
+																<span>Публикации (текст, фото, видео)</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
 																</div>
-															</div>
-														</div>
+																<span>Публикации (текст, фото, видео)</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Лайки и комментарии</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Подписка на других пользователей (до 50)</span>
+															</li>
+														</ul>
+														<a href="#" class="card-tariffs-tabs__button btn-white">Подписаться
+															бесплатно</a>
 													</div>
 												</div>
 											</div>
-											<div class="left-tabs-history__descr">
-												<a href="#" class="left-tabs-history__titles">
-													<div class="left-tabs-history__title">
-														Grow: как Джо Хаттон переосмыслила йогу
-														для
-														реальной
-														жизни
+											<div class="card-tariffs-tabs active">
+												<div class="card-tariffs-tabs__item">
+													<div class="card-tariffs-tabs__circle"></div>
+													<div class="card-tariffs-tabs__sale">Скидка 20%</div>
+													<div class="card-tariffs-tabs__top">
+														<div class="card-tariffs-tabs__title">Профи</div>
+														<div class="card-tariffs-tabs__price">
+															4999 ₽<span>/ в месяц</span>
+														</div>
 													</div>
-													<p>
-														Серия интервью Grow создана для того,
-														чтобы
-														рассказать о том, как писатели стали
-														независимыми и
-														расширили свою аудиторию.
-													</p>
-													<div class="left-tabs-history__text">
-														~ 3м чтения
+													<div class="card-tariffs-tabs__bottom">
+														<ul>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Всё из тарифа Базовый</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Неограниченное число подписок</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Создание групп и сообществ</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Закреплённые посты</span>
+															</li>
+														</ul>
+														<a href="#" class="card-tariffs-tabs__button btn-red">Бесплатный
+															период 3 дня</a>
 													</div>
-												</a>
-												<div class="left-tabs-history__pic">
-													<img src="img/image/image11.webp" alt="">
 												</div>
 											</div>
-											<div class="post__footer noclick">
-												<div class="post__like post-icon">
-													<div class="post__like-icon">
-														<svg aria-hidden="true" width="21" height="20">
-															<use xlink:href="img/sprite.svg#heart">
-															</use>
-														</svg>
+											<div class="card-tariffs-tabs">
+												<div class="card-tariffs-tabs__item">
+													<div class="card-tariffs-tabs__sale">Скидка 20%</div>
+													<div class="card-tariffs-tabs__top">
+														<div class="card-tariffs-tabs__title">Креатор+</div>
+														<div class="card-tariffs-tabs__price">
+															12 999 ₽<span>/ в месяц</span>
+														</div>
 													</div>
-													<div class="post__like-active">
-														<img src="img/icon/heart-active.svg" alt="">
+													<div class="card-tariffs-tabs__bottom">
+														<ul>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Всё из тарифа Профи</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Монетизация контента (подписки, донаты, платный
+																	доступ)</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Промо-публикации и продвижение</span>
+															</li>
+															<li>
+																<div class="card-tariffs-tabs__icon">
+																	<img src="img/icon/arrow1.svg" alt="">
+																</div>
+																<span>Расширенная аналитика аудитории</span>
+															</li>
+														</ul>
+														<a href="#" class="card-tariffs-tabs__button btn-white">Вступить в
+															клуб</a>
 													</div>
-													<div class="post__like-active2">
-														<img src="img/icon/heart-active2.svg" alt="">
-													</div>
-													<span>50</span>
-												</div>
-												<div class="post__comment post-icon">
-													<svg aria-hidden="true" width="20" height="19">
-														<use xlink:href="img/sprite.svg#chat">
-														</use>
-													</svg>
-													<span>2</span>
-												</div>
-												<div class="post__data">
-													03.05.2025
 												</div>
 											</div>
 										</div>
@@ -835,10 +763,6 @@
 
 			</main>
 		</div>
-		<script src="js/swiper-10.2.0.min.js"></script>
-		<script src="js/fancybox.umd.js"></script>
-		<script src="js/simplebar.min.js"></script>
-		<script src="js/scripts.js"></script>
 		<div id="search1" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
@@ -1112,6 +1036,10 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/simplebar.min.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 
 </html>

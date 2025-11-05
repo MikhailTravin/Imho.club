@@ -2,7 +2,7 @@
 <html lang="ru">
 
 	<head>
-		<title>Лента публикаций</title>
+		<title>Мой клуб, обзор</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,49 +17,17 @@
 
 	<body class="preload mp">
 		<div class="main-wrapper-outer">
-			<header data-lp class="header">
+			<header data-lp class="header header-myclub">
 				<div class="header__contents">
 					<div class="header__left">
 						<a href="#" class="header__logo">
 							<img src="img/icon/logo.svg" alt="">
 						</a>
-						<div class="header__title">
-							<span>Лента публикаций</span>
-						</div>
 					</div>
-					<form data-popup="#search1" class="header__search">
-						<button type="button" class="header__search-icon">
-							<svg aria-hidden="true" width="20" height="21">
-								<use xlink:href="img/sprite.svg#search"></use>
-							</svg>
-						</button>
-						<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
-					</form>
+					<div class="header__title">
+						<span>Мой клуб</span>
+					</div>
 					<div class="header__right">
-						<div class="header__add add-header">
-							<button type="button" class="add-header__plus button-red">
-								<svg aria-hidden="true" width="22" height="21">
-									<use xlink:href="img/sprite.svg#plus"></use>
-								</svg>
-							</button>
-							<div class="add-header__body">
-								<div class="add-header__content">
-									<a href="#" data-popup="#share-thoughts" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#pencel"></use>
-										</svg>
-										<span>Добавить заметку</span>
-									</a>
-									<a href="#" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#public"></use>
-										</svg>
-										<span>Добавить публикацию</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="header__club button">Мой клуб</a>
 						<div class="header__notification notification-header">
 							<div class="notification-header__icon">
 								<svg aria-hidden="true" width="28" height="29">
@@ -404,7 +372,7 @@
 				</div>
 				<div class="shadow"></div>
 			</header>
-			<div class="sidebar">
+			<div class="sidebar sidebar-myclub">
 				<a href="#" class="sidebar__logo">
 					<img src="img/icon/logo.svg" alt="">
 				</a>
@@ -425,7 +393,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#" class="_active">
+								<a href="#">
 									<svg class="link" aria-hidden="true" width="32" height="32">
 										<use xlink:href="img/sprite.svg#public"></use>
 									</svg>
@@ -484,345 +452,940 @@
 					</nav>
 				</div>
 			</div>
-			<main class="main main-publication">
+			<main class="main main-myclub">
 
-				<div class="block-publication">
-					<div class="container2">
-						<div class="block-publication__content">
-							<div class="block-publication__text">
-								<p>
-									Мы выводим публикации согласно вашим интересам. Настройки интересов вы можете выполнить
-									в разделе <a href="#">«Мои интересы»</a> настроек профиля
-								</p>
-								<button type="button" class="block-publication__text-close">
-									<svg aria-hidden="true" width="12" height="12">
-										<use xlink:href="img/sprite.svg#close"></use>
-									</svg>
-								</button>
-							</div>
-							<div class="block-publication__body">
-								<div class="block-publication__top">
-									<div class="block-publication__left">
-										<div class="buttons">
-											<a href="#" class="buttons__title _active">Все</a>
-											<a href="#" class="buttons__title">Платные</a>
-											<a href="#" class="buttons__title">Закладки</a>
-										</div>
-										<a href="#" class="setting-icon">
-											<img src="img/icon/settings.svg" alt="">
-											<span>Управление подписками</span>
+				<div class="block-myclub">
+					<div class="container">
+						<div class="block-myclub__content">
+							<div class="navigation-category">
+								<div class="navigation-category__slider swiper">
+									<div class="navigation-category__wrapper swiper-wrapper">
+										<a href="#" data-filter="review" class="navigation-category__slide swiper-slide _active">
+											Обзор
 										</a>
-									</div>
-									<div class="block-publication__right">
-										<a href="#" class="setting-icon">
-											<img src="img/icon/settings.svg" alt="">
-											<span>Управление подписками</span>
+										<a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
+											Популярные
 										</a>
-										<div class="select1">
-											<div class="select1__title">
-												<span>По интересам</span>
-												<svg aria-hidden="true" width="10" height="7">
-													<use xlink:href="img/sprite.svg#arrow1"></use>
-												</svg>
-											</div>
-											<div class="select1__options">
-												<div class="options__item">
-													<input hidden="" id="o_1" class="options__input" checked="" type="radio" value="1" name="option">
-													<label for="o_1" class="options__label">
-														<span class="options__text">По интересам</span>
-														<span class="options__icon">
-															<img src="img/icon/chek1.svg" alt="">
-														</span>
-													</label>
-												</div>
-												<div class="options__item">
-													<input hidden="" id="o_2" class="options__input" type="radio" value="2" name="option">
-													<label for="o_2" class="options__label">
-														<span class="options__text">Недавние</span>
-														<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-													</label>
-												</div>
-											</div>
-										</div>
+										<a href="#" data-filter="subscribers" class="navigation-category__slide swiper-slide">
+											Подписчики
+										</a>
+										<a href="#" data-filter="statistics" class="navigation-category__slide swiper-slide">
+											Статистика
+										</a>
+										<a href="#" data-filter="UTM" class="navigation-category__slide swiper-slide">
+											UTM
+										</a>
+										<a href="#" data-filter="design" class="navigation-category__slide swiper-slide">
+											Дизайн
+										</a>
+										<a href="#" data-filter="settings" class="navigation-category__slide swiper-slide">
+											Настройки
+										</a>
 									</div>
 								</div>
-								<!--Блок если нет публикаций
-                            <div class="block-publication__empty">
-                                <p>
-                                    Ничего нет. Но вы можете посмотреть полный список публикаций и авторов по кнопке
-                                    ниже
-                                </p>
-                                <a href="#" class="button">Все публикации и авторы</a>
-                            </div>
-                            -->
-								<div class="block-publication__bottom">
-									<div class="left-tabs-history__column">
-										<div class="left-tabs-history__item">
-											<div class="post__header">
-												<div class="post__left">
-													<div class="post__avatar">
-														<img loading="lazy" src="img/avatar2.webp" alt="">
-													</div>
-													<a href="#" class="post__titles">
-														<div class="post__name">
-															<span>Вместе с Софи Кэри</span>
-														</div>
-														<span>Софи Кэри</span>
-													</a>
+							</div>
+							<div class="block-myclub__body">
+								<div class="block-myclub__heading">
+									<h1 class="title3">Обзор</h1>
+									<div class="block-myclub__buttons">
+										<a href="#" class="button">Мой сайт</a>
+										<a href="#" class="button-red">Новая публикация</a>
+									</div>
+								</div>
+								<div class="block-myclub__items">
+									<div class="block-myclub__columns">
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles">
+												<div class="block-myclub__title">
+													Сводные данные
 												</div>
-												<div class="post__right">
-													<button type="button" class="post__subscribe">Подписаться</button>
-													<div class="dots">
-														<svg aria-hidden="true" width="16" height="4">
-															<use xlink:href="img/sprite.svg#dots">
-															</use>
-														</svg>
-														<div class="dropdown">
-															<div class="dropdown__menu-content">
-																<div class="dropdown__top">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="20">
-																				<use xlink:href="img/sprite.svg#user-plus">
-																				</use>
-																			</svg>
-																		</div>
-																		Подписаться
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#copylink2">
-																				</use>
-																			</svg>
-																		</div>
-																		Скопировать ссылку
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<img src="img/icon/bookmark.svg" alt="">
-																		</div>
-																		Добавить в Закладки
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#eye-off">
-																				</use>
-																			</svg>
-																		</div>
-																		Скрыть публикацию
-																	</button>
+											</div>
+											<div class="info-myclub">
+												<div class="info-myclub__column">
+													<div class="info-myclub__items">
+														<div class="info-myclub__item">
+															<div class="info-myclub__titles">
+																<div class="info-myclub__title">Всего подписчиков</div>
+																<div class="info-myclub__icon">
+																	<img src="img/icon/info.svg" alt="">
+																	<div class="info-myclub__icon-text">
+																		Текущая сумма баланса
+																	</div>
 																</div>
-																<div class="dropdown__bottom">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="12">
-																				<use xlink:href="img/sprite.svg#eye-closed">
-																				</use>
-																			</svg>
-																		</div>
-																		Скрыть автора
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#blacklisted">
-																				</use>
-																			</svg>
-																		</div>
-																		В черный список
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#octagon-alert">
-																				</use>
-																			</svg>
-																		</div>
-																		Сообщить о нарушении
-																	</button>
+															</div>
+															<div class="info-myclub__text">
+																700
+															</div>
+														</div>
+														<div class="info-myclub__item">
+															<div class="info-myclub__titles">
+																<div class="info-myclub__title">Подписчиков на пробном
+																	периоде</div>
+																<div class="info-myclub__icon">
+																	<img src="img/icon/info.svg" alt="">
+																	<div class="info-myclub__icon-text">
+																		Текущая сумма баланса
+																	</div>
 																</div>
+															</div>
+															<div class="info-myclub__text">
+																10
+															</div>
+														</div>
+														<div class="info-myclub__item">
+															<div class="info-myclub__titles">
+																<div class="info-myclub__title">Платных подписчиков</div>
+																<div class="info-myclub__icon">
+																	<img src="img/icon/info.svg" alt="">
+																	<div class="info-myclub__icon-text">
+																		Текущая сумма баланса
+																	</div>
+																</div>
+															</div>
+															<div class="info-myclub__text">
+																70
+															</div>
+														</div>
+														<div class="info-myclub__item">
+															<div class="info-myclub__titles">
+																<div class="info-myclub__title">
+																	Просмотров за 30 дней
+																</div>
+																<div class="info-myclub__icon">
+																	<img src="img/icon/info.svg" alt="">
+																	<div class="info-myclub__icon-text">
+																		Текущая сумма баланса
+																	</div>
+																</div>
+															</div>
+															<div class="info-myclub__text">
+																150
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-											<div class="left-tabs-history__descr">
-												<a href="#" class="left-tabs-history__titles">
-													<div class="left-tabs-history__title">
-														Grow: как Джо Хаттон переосмыслила йогу
-														для
-														реальной
-														жизни
+												<div class="info-myclub__column">
+													<div class="info-myclub__items">
+														<div class="info-myclub__item">
+															<div class="info-myclub__titles">
+																<div class="info-myclub__title">Сейчас на счету (₽)</div>
+																<div class="info-myclub__icon">
+																	<img src="img/icon/info.svg" alt="">
+																	<div class="info-myclub__icon-text">
+																		Текущая сумма баланса
+																	</div>
+																</div>
+															</div>
+															<div class="info-myclub__text">
+																1500
+															</div>
+														</div>
+														<div class="info-myclub__item">
+															<div class="info-myclub__titles">
+																<div class="info-myclub__title">
+																	Выведено за 30 дней (₽)
+																</div>
+																<div class="info-myclub__icon">
+																	<img src="img/icon/info.svg" alt="">
+																	<div class="info-myclub__icon-text">
+																		Текущая сумма баланса
+																	</div>
+																</div>
+															</div>
+															<div class="info-myclub__text">
+																500
+															</div>
+														</div>
+														<div class="info-myclub__item">
+															<div class="info-myclub__titles">
+																<div class="info-myclub__title">Выведено всего (₽)</div>
+																<div class="info-myclub__icon">
+																	<img src="img/icon/info.svg" alt="">
+																	<div class="info-myclub__icon-text">
+																		Текущая сумма баланса
+																	</div>
+																</div>
+															</div>
+															<div class="info-myclub__text">
+																100 555
+															</div>
+														</div>
 													</div>
-													<p>
-														Серия интервью Grow создана для того,
-														чтобы
-														рассказать о том, как писатели стали
-														независимыми и
-														расширили свою аудиторию.
-													</p>
-													<div class="left-tabs-history__text">
-														~ 3м чтения
+													<div class="info-myclub__conversion">
+														<img src="img/icon/refresh.svg" alt="">
+														<span>
+															Все платежи и валюты автоматически конвертируются в рубли (₽)
+														</span>
 													</div>
-												</a>
-												<div class="left-tabs-history__pic">
-													<img src="img/image/image11.webp" alt="">
-												</div>
-											</div>
-											<div class="post__footer noclick">
-												<div class="post__like post-icon _active">
-													<div class="post__like-icon">
-														<svg aria-hidden="true" width="21" height="20">
-															<use xlink:href="img/sprite.svg#heart">
-															</use>
-														</svg>
-													</div>
-													<div class="post__like-active">
-														<img src="img/icon/heart-active.svg" alt="">
-													</div>
-													<div class="post__like-active2">
-														<img src="img/icon/heart-active2.svg" alt="">
-													</div>
-													<span>50</span>
-												</div>
-												<div class="post__comment post-icon">
-													<svg aria-hidden="true" width="20" height="19">
-														<use xlink:href="img/sprite.svg#chat">
-														</use>
-													</svg>
-													<span>2</span>
-												</div>
-												<div class="post__data">
-													03.05.2025
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="left-tabs-history__column">
-										<div class="left-tabs-history__item">
-											<div class="post__header">
-												<div class="post__left">
-													<div class="post__avatar">
-														<img loading="lazy" src="img/avatar2.webp" alt="">
-													</div>
-													<a href="#" class="post__titles">
-														<div class="post__name">
-															<span>Вместе с Софи Кэри</span>
-														</div>
-														<span>Софи Кэри</span>
-													</a>
+										<div class="block-myclub__column column-pin">
+											<div class="block-myclub__titles titless-button">
+												<div class="block-myclub__title">
+													Закреплённые публикации
 												</div>
-												<div class="post__right">
-													<button type="button" class="post__subscribe _active">Вы
-														подписаны</button>
-													<div class="dots">
-														<svg aria-hidden="true" width="16" height="4">
-															<use xlink:href="img/sprite.svg#dots">
-															</use>
-														</svg>
-														<div class="dropdown">
-															<div class="dropdown__menu-content">
-																<div class="dropdown__top">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#copylink2">
+												<a href="#" data-popup="#demonstration" class="block-myclub__button button">
+													Демонстрация
+												</a>
+											</div>
+											<div class="pin-block-publication">
+												<div class="pin-block-publication__column">
+													<div class="pin-block-publication__number">1</div>
+													<div class="pin-block-publication__item">
+														<a href="#" data-popup="#pin-publication" class="pin-block-publication__text">
+															<svg aria-hidden="true" width="16" height="16">
+																<use xlink:href="img/sprite.svg#plus"></use>
+															</svg>
+															<span>Закрепить публикацию</span>
+														</a>
+													</div>
+												</div>
+												<div class="pin-block-publication__column">
+													<div class="pin-block-publication__number">2</div>
+													<div class="pin-block-publication__item">
+														<div class="cards-block-myclub__card">
+															<div class="cards-block-myclub__left">
+																<img src="img/image/image1.webp" alt="">
+																<div class="cards-block-myclub__titles">
+																	<a href="#" class="cards-block-myclub__title">
+																		<img src="img/icon/video.svg" alt="">
+																		<span>
+																			«Яндекс Книги» впервые раскрыли месячную
+																			аудиторию
+																			сервиса
+																		</span>
+																	</a>
+																	<div class="cards-block-myclub__data">10 сен</div>
+																	<div class="cards-block-myclub__icons">
+																		<div class="cards-block-myclub__icon">
+																			<svg aria-hidden="true" width="14" height="13">
+																				<use xlink:href="img/sprite.svg#heart">
 																				</use>
 																			</svg>
+																			<span>11</span>
 																		</div>
-																		Скопировать ссылку
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<img src="img/icon/bookmark.svg" alt="">
-																		</div>
-																		Добавить в Закладки
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#eye-off">
-																				</use>
+																		<div class="cards-block-myclub__icon">
+																			<svg aria-hidden="true" width="13" height="13">
+																				<use xlink:href="img/sprite.svg#chat"></use>
 																			</svg>
+																			<span>0</span>
 																		</div>
-																		Скрыть публикацию
-																	</button>
+																		<div class="cards-block-myclub__icon red">
+																			<span>1</span>
+																		</div>
+																	</div>
 																</div>
-																<div class="dropdown__bottom">
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="12">
-																				<use xlink:href="img/sprite.svg#eye-closed">
-																				</use>
-																			</svg>
+															</div>
+															<div class="cards-block-myclub__center">
+																<ul>
+																	<li>
+																		<span class="grey">Просмотров</span>
+																		4
+																	</li>
+																	<li>
+																		<span class="grey">Новых подписчиков</span>
+																		0
+																	</li>
+																</ul>
+															</div>
+															<div class="cards-block-myclub__right">
+																<a href="#" class="cards-block-myclub__link">
+																	<img src="img/icon/arrow-down-right.svg" alt="">
+																</a>
+																<div class="dots">
+																	<svg aria-hidden="true" width="16" height="4">
+																		<use xlink:href="img/sprite.svg#dots"></use>
+																	</svg>
+																	<div class="dropdown">
+																		<div class="dropdown__menu-content">
+																			<div class="dropdown__top">
+																				<button type="button">
+																					<div class="dropdown__icon">
+																						<img src="img/icon/pen2.svg" alt="">
+																					</div>
+																					Редактировать
+																				</button>
+																				<button type="button">
+																					<div class="dropdown__icon">
+																						<img src="img/icon/copylink2.svg" alt="">
+																					</div>
+																					Копировать URL
+																				</button>
+																				<button type="button">
+																					<div class="dropdown__icon">
+																						<img src="img/icon/unpin.svg" alt="">
+																					</div>
+																					Открепить
+																				</button>
+																			</div>
+																			<div class="dropdown__bottom">
+																				<button type="button">
+																					<div class="dropdown__icon">
+																						<img src="img/icon/arrow2.svg" alt="">
+																					</div>
+																					Снять с публикации
+																				</button>
+																			</div>
 																		</div>
-																		Скрыть автора
-																	</button>
-																	<button type="button">
-																		<div class="dropdown__icon">
-																			<svg aria-hidden="true" width="22" height="22">
-																				<use xlink:href="img/sprite.svg#octagon-alert">
-																				</use>
-																			</svg>
-																		</div>
-																		Сообщить о нарушении
-																	</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="pin-block-publication__column">
+													<div class="pin-block-publication__number">3</div>
+													<div class="pin-block-publication__item">
+														<a href="#" data-popup="#pin-publication" class="pin-block-publication__text">
+															<svg aria-hidden="true" width="16" height="16">
+																<use xlink:href="img/sprite.svg#plus"></use>
+															</svg>
+															<span>Закрепить публикацию</span>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles">
+												<div class="block-myclub__title">
+													Последние публикации
+												</div>
+												<a href="#" class="block-myclub__link">
+													<span class="desc">Посмотреть все</span>
+													<span class="mob">Все</span>
+												</a>
+											</div>
+											<div class="cards-block-myclub">
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<img src="img/image/image1.webp" alt="">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<img src="img/icon/headphones.svg" alt="">
+																<span>Топ 10 авто из Китая</span>
+															</a>
+															<div class="cards-block-myclub__data">10 сен</div>
+															<div class="cards-block-myclub__icons">
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="14" height="13">
+																		<use xlink:href="img/sprite.svg#heart"></use>
+																	</svg>
+																	<span>11</span>
+																</div>
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="13" height="13">
+																		<use xlink:href="img/sprite.svg#chat"></use>
+																	</svg>
+																	<span>0</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__center">
+														<ul>
+															<li>
+																<span>Просмотров</span>
+																40
+															</li>
+															<li>
+																<span class="grey">Новых подписчиков</span>
+																2
+															</li>
+														</ul>
+													</div>
+													<div class="cards-block-myclub__right">
+														<a href="#" class="cards-block-myclub__link">
+															<img src="img/icon/arrow-down-right.svg" alt="">
+														</a>
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Копировать URL
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pin.svg" alt="">
+																			</div>
+																			Закрепить на 1 позицию
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pin.svg" alt="">
+																			</div>
+																			Закрепить на 2 позицию
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pin.svg" alt="">
+																			</div>
+																			Закрепить на 3 позицию
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/arrow2.svg" alt="">
+																			</div>
+																			Снять с публикации
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<img src="img/image/image1.webp" alt="">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<img src="img/icon/mic.svg" alt="">
+																<span>
+																	Близкие короля Карла III опасаются, что он доведет себя
+																	до
+																	полного истощения
+																</span>
+															</a>
+															<div class="cards-block-myclub__data">10 сен</div>
+															<div class="cards-block-myclub__icons">
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="14" height="13">
+																		<use xlink:href="img/sprite.svg#heart"></use>
+																	</svg>
+																	<span>11</span>
+																</div>
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="13" height="13">
+																		<use xlink:href="img/sprite.svg#chat"></use>
+																	</svg>
+																	<span>0</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__center">
+														<ul>
+															<li>
+																<span>Просмотров</span>
+																4
+															</li>
+															<li>
+																<span class="grey">Новых подписчиков</span>
+																0
+															</li>
+														</ul>
+													</div>
+													<div class="cards-block-myclub__right">
+														<a href="#" class="cards-block-myclub__link">
+															<img src="img/icon/arrow-down-right.svg" alt="">
+														</a>
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Копировать URL
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pin.svg" alt="">
+																			</div>
+																			Закрепить на 1 позицию
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pin.svg" alt="">
+																			</div>
+																			Закрепить на 2 позицию
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pin.svg" alt="">
+																			</div>
+																			Закрепить на 3 позицию
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/arrow2.svg" alt="">
+																			</div>
+																			Снять с публикации
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<span>
+																	Чат-бот BotFather для администрирования ботов в Telegram
+																	обзавёлся мини-приложением
+																</span>
+															</a>
+															<div class="cards-block-myclub__data">10 сен</div>
+															<div class="cards-block-myclub__icons">
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="14" height="13">
+																		<use xlink:href="img/sprite.svg#heart"></use>
+																	</svg>
+																	<span>11</span>
+																</div>
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="13" height="13">
+																		<use xlink:href="img/sprite.svg#chat"></use>
+																	</svg>
+																	<span>0</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__center">
+														<ul>
+															<li>
+																<span>Просмотров</span>
+																25
+															</li>
+															<li>
+																<span class="grey">Новых подписчиков</span>
+																20
+															</li>
+														</ul>
+													</div>
+													<div class="cards-block-myclub__right">
+														<a href="#" class="cards-block-myclub__link">
+															<img src="img/icon/arrow-down-right.svg" alt="">
+														</a>
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Копировать URL
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/unpin.svg" alt="">
+																			</div>
+																			Открепить
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/arrow2.svg" alt="">
+																			</div>
+																			Снять с публикации
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<img src="img/image/image1.webp" alt="">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<img src="img/icon/video.svg" alt="">
+																<span>
+																	«Яндекс Книги» впервые раскрыли месячную аудиторию
+																	сервиса
+																</span>
+															</a>
+															<div class="cards-block-myclub__data">10 сен</div>
+															<div class="cards-block-myclub__icons">
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="14" height="13">
+																		<use xlink:href="img/sprite.svg#heart"></use>
+																	</svg>
+																	<span>11</span>
+																</div>
+																<div class="cards-block-myclub__icon">
+																	<svg aria-hidden="true" width="13" height="13">
+																		<use xlink:href="img/sprite.svg#chat"></use>
+																	</svg>
+																	<span>0</span>
+																</div>
+																<div class="cards-block-myclub__icon red">
+																	<span>1</span>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__center">
+														<ul>
+															<li>
+																<span>Просмотров</span>
+																4
+															</li>
+															<li>
+																<span class="grey">Новых подписчиков</span>
+																0
+															</li>
+														</ul>
+													</div>
+													<div class="cards-block-myclub__right">
+														<a href="#" class="cards-block-myclub__link">
+															<img src="img/icon/arrow-down-right.svg" alt="">
+														</a>
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Копировать URL
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/unpin.svg" alt="">
+																			</div>
+																			Открепить
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/arrow2.svg" alt="">
+																			</div>
+																			Снять с публикации
+																		</button>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="left-tabs-history__descr">
-												<a href="#" class="left-tabs-history__titles">
-													<div class="left-tabs-history__title">
-														Grow: как Джо Хаттон переосмыслила йогу
-														для
-														реальной
-														жизни
-													</div>
-													<p>
-														Серия интервью Grow создана для того,
-														чтобы
-														рассказать о том, как писатели стали
-														независимыми и
-														расширили свою аудиторию.
-													</p>
-													<div class="left-tabs-history__text">
-														~ 3м чтения
-													</div>
+										</div>
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles">
+												<div class="block-myclub__title">
+													Черновики
+												</div>
+												<a href="#" class="block-myclub__link">
+													<span class="desc">Посмотреть все</span>
+													<span class="mob">Все</span>
 												</a>
-												<div class="left-tabs-history__pic">
-													<img src="img/image/image11.webp" alt="">
-												</div>
 											</div>
-											<div class="post__footer noclick">
-												<div class="post__like post-icon">
-													<div class="post__like-icon">
-														<svg aria-hidden="true" width="21" height="20">
-															<use xlink:href="img/sprite.svg#heart">
-															</use>
-														</svg>
+											<div class="cards-block-myclub">
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<img src="img/image/image1.webp" alt="">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<img src="img/icon/headphones.svg" alt="">
+																<span>Топ 10 авто из Китая</span>
+															</a>
+															<div class="cards-block-myclub__data">
+																Обновлено <span>15:30</span>
+															</div>
+														</div>
 													</div>
-													<div class="post__like-active">
-														<img src="img/icon/heart-active.svg" alt="">
+													<div class="cards-block-myclub__right">
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/send.svg" alt="">
+																			</div>
+																			Опубликовать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Дублировать
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/trash.svg" alt="">
+																			</div>
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
 													</div>
-													<div class="post__like-active2">
-														<img src="img/icon/heart-active2.svg" alt="">
-													</div>
-													<span>50</span>
 												</div>
-												<div class="post__comment post-icon">
-													<svg aria-hidden="true" width="20" height="19">
-														<use xlink:href="img/sprite.svg#chat">
-														</use>
-													</svg>
-													<span>2</span>
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<img src="img/image/image1.webp" alt="">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<img src="img/icon/video.svg" alt="">
+																<span>Где лучше встречать закат?</span>
+															</a>
+															<div class="cards-block-myclub__data">
+																Обновлено <span>19:30</span>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__right">
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/send.svg" alt="">
+																			</div>
+																			Опубликовать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Дублировать
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/trash.svg" alt="">
+																			</div>
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
-												<div class="post__data">
-													03.05.2025
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<img src="img/image/image1.webp" alt="">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<span>Черника – для здорового питания!</span>
+															</a>
+															<div class="cards-block-myclub__data">
+																Обновлено <span>7 июля</span>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__right">
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/send.svg" alt="">
+																			</div>
+																			Опубликовать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Дублировать
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/trash.svg" alt="">
+																			</div>
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<span>Тест</span>
+															</a>
+															<div class="cards-block-myclub__data">
+																Обновлено <span>5 июля</span>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__right">
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/send.svg" alt="">
+																			</div>
+																			Опубликовать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Дублировать
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/trash.svg" alt="">
+																			</div>
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="cards-block-myclub__card">
+													<div class="cards-block-myclub__left">
+														<div class="cards-block-myclub__titles">
+															<a href="#" class="cards-block-myclub__title">
+																<img src="img/icon/mic.svg" alt="">
+																<span>Почему музыка заставляет нас испытывать эмоции</span>
+															</a>
+															<div class="cards-block-myclub__data">
+																Обновлено <span>15 июня</span>
+															</div>
+														</div>
+													</div>
+													<div class="cards-block-myclub__right">
+														<div class="dots">
+															<svg aria-hidden="true" width="16" height="4">
+																<use xlink:href="img/sprite.svg#dots"></use>
+															</svg>
+															<div class="dropdown">
+																<div class="dropdown__menu-content">
+																	<div class="dropdown__top">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/send.svg" alt="">
+																			</div>
+																			Опубликовать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/pen2.svg" alt="">
+																			</div>
+																			Редактировать
+																		</button>
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/copylink2.svg" alt="">
+																			</div>
+																			Дублировать
+																		</button>
+																	</div>
+																	<div class="dropdown__bottom">
+																		<button type="button">
+																			<div class="dropdown__icon">
+																				<img src="img/icon/trash.svg" alt="">
+																			</div>
+																			Удалить
+																		</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -835,10 +1398,177 @@
 
 			</main>
 		</div>
-		<script src="js/swiper-10.2.0.min.js"></script>
-		<script src="js/fancybox.umd.js"></script>
-		<script src="js/simplebar.min.js"></script>
-		<script src="js/scripts.js"></script>
+		<div id="demonstration" aria-hidden="true" class="popup popup-demonstration">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#353535" />
+						</svg>
+					</button>
+					<div class="popup-demonstration__body">
+						<div class="popup-demonstration__left">
+							<div class="popup-demonstration__images1">
+								<div class="popup-demonstration__image">2</div>
+								<div class="popup-demonstration__image">3</div>
+							</div>
+							<div class="popup-demonstration__images2">
+								<div class="popup-demonstration__image">1</div>
+							</div>
+						</div>
+						<div class="popup-demonstration__right">
+							<div class="popup-demonstration__title">Популярное</div>
+							<p>
+								В этом списке будут отображаться 6 наиболее популярных публикаций, <a href="#">кроме
+									закреплённых</a>.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="pin-publication" aria-hidden="true" class="popup popup-pin-publication">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#353535" />
+						</svg>
+					</button>
+					<div class="popup-pin-publication__content">
+						<div class="popup-pin-publication__top">
+							<div class="popup-pin-publication__title">
+								Публикация №1
+							</div>
+							<div class="popup-pin-publication__search">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
+								<button type="button" class="popup-pin-publication__search-icon">
+									<svg aria-hidden="true" width="20" height="20">
+										<use xlink:href="img/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="popup-pin-publication__body">
+							<div class="popup-pin-publication__column active">
+								<div class="popup-pin-publication__left">
+									<div class="popup-pin-publication__name">Grow: как Джо Хаттон переосмыслила йогу для
+										реальной жизни</div>
+									<p>
+										Овощи являются неотъемлемой частью рациона каждого человека. Они богаты витаминами,
+										минералами и клетчаткой, необходимыми для поддержания здоровья организма. Регулярное
+										употребление овощей помогает укрепить иммунитет, нормализовать работу
+										пищеварительной системы и снизить риск развития хронических заболеваний.
+									</p>
+								</div>
+								<div class="popup-pin-publication__image">
+									<img src="img/image/image11.webp" alt="">
+								</div>
+								<div class="popup-pin-publication__icons">
+									<div class="popup-pin-publication__icon">
+										<img src="img/icon/pin.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="popup-pin-publication__column">
+								<div class="popup-pin-publication__left">
+									<div class="popup-pin-publication__name">ПРОБЛЕМА С ПАМЯТЬЮ</div>
+									<p>
+										Краткое руководство по поддержанию памяти
+									</p>
+								</div>
+								<div class="popup-pin-publication__icons">
+									<div class="popup-pin-publication__icon">
+										<img src="img/icon/pin.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="popup-pin-publication__column">
+								<div class="popup-pin-publication__left">
+									<div class="popup-pin-publication__name">Пост 3</div>
+									<p>
+										Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+										независимыми и расширили свою аудиторию.
+									</p>
+								</div>
+								<div class="popup-pin-publication__image">
+									<img src="img/image/image11.webp" alt="">
+								</div>
+								<div class="popup-pin-publication__icons">
+									<div class="popup-pin-publication__icon">
+										<img src="img/icon/pin.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="popup-pin-publication__column">
+								<div class="popup-pin-publication__left">
+									<div class="popup-pin-publication__name">1122</div>
+									<p>
+										+++++
+									</p>
+								</div>
+								<div class="popup-pin-publication__icons">
+									<div class="popup-pin-publication__icon">
+										<img src="img/icon/pin.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="popup-pin-publication__column">
+								<div class="popup-pin-publication__left">
+									<div class="popup-pin-publication__name">Пост 3</div>
+									<p>
+										Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+										независимыми и расширили свою аудиторию.
+									</p>
+								</div>
+								<div class="popup-pin-publication__image">
+									<img src="img/image/image11.webp" alt="">
+								</div>
+								<div class="popup-pin-publication__icons">
+									<div class="popup-pin-publication__icon">
+										<img src="img/icon/pin.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="popup-pin-publication__column">
+								<div class="popup-pin-publication__left">
+									<div class="popup-pin-publication__name">Пост 3</div>
+									<p>
+										Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+										независимыми и расширили свою аудиторию.
+									</p>
+								</div>
+								<div class="popup-pin-publication__image">
+									<img src="img/image/image11.webp" alt="">
+								</div>
+								<div class="popup-pin-publication__icons">
+									<div class="popup-pin-publication__icon">
+										<img src="img/icon/pin.svg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="popup-pin-publication__column">
+								<div class="popup-pin-publication__left">
+									<div class="popup-pin-publication__name">Пост 3</div>
+									<p>
+										Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+										независимыми и расширили свою аудиторию.
+									</p>
+								</div>
+								<div class="popup-pin-publication__image">
+									<img src="img/image/image11.webp" alt="">
+								</div>
+								<div class="popup-pin-publication__icons">
+									<div class="popup-pin-publication__icon">
+										<img src="img/icon/pin.svg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="search1" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
@@ -1112,6 +1842,10 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/simplebar.min.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 
 </html>

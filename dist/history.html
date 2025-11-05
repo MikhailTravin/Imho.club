@@ -19,11 +19,13 @@
 		<div class="main-wrapper-outer">
 			<header data-lp class="header">
 				<div class="header__contents">
-					<a href="#" class="header__logo">
-						<img src="img/icon/logo.svg" alt="">
-					</a>
-					<div class="header__title">
-						История
+					<div class="header__left">
+						<a href="#" class="header__logo">
+							<img src="img/icon/logo.svg" alt="">
+						</a>
+						<div class="header__title">
+							<span>История</span>
+						</div>
 					</div>
 					<form data-popup="#search1" class="header__search">
 						<button type="button" class="header__search-icon">
@@ -50,7 +52,7 @@
 									</a>
 									<a href="#" class="add-header__link">
 										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#public2"></use>
+											<use xlink:href="img/sprite.svg#public"></use>
 										</svg>
 										<span>Добавить публикацию</span>
 									</a>
@@ -487,14 +489,37 @@
 				<div class="block-history">
 					<div class="container"><!--на странице "Понравившиеся" добавляй класс history-liked-->
 						<div class="block-history__content">
+							<div class="tabs-history__right right-tabs-history">
+								<div class="right-tabs-history__sticky">
+									<div class="right-tabs-history__search">
+										<button type="button" class="right-tabs-history__search-icon">
+											<svg aria-hidden="true" width="20" height="20">
+												<use xlink:href="img/sprite.svg#search"></use>
+											</svg>
+										</button>
+										<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
+										<div class="right-tabs-history__close">
+											<svg aria-hidden="true" width="12" height="12">
+												<use xlink:href="img/sprite.svg#close"></use>
+											</svg>
+										</div>
+									</div>
+									<a href="#" data-popup="#remove-history" class="right-tabs-history__remove">
+										<svg aria-hidden="true" width="18" height="20">
+											<use xlink:href="img/sprite.svg#delete"></use>
+										</svg>
+										<span>Очистить историю просмотра</span>
+									</a>
+								</div>
+							</div>
 							<div class="tabs-history">
 								<nav class="tabs-history__navigation">
-									<div class="tabs-history__title">История
-										просмотров</div>
-									<a href="#" type="button" class="tabs-history__title _tab-active">Понравившиеся</a>
+									<a href="#" class="tabs-history__title _tab-active">История
+										просмотров</a>
+									<a href="#" type="button" class="tabs-history__title">Понравившиеся</a>
 								</nav>
 								<div class="tabs-history__content">
-									<div class="tabs-history__body">
+									<div class="tabs-history__body _tab-active">
 										<div class="tabs-history__items">
 											<div class="tabs-history__left left-tabs-history">
 												<div class="left-tabs-history__content">
@@ -508,15 +533,40 @@
 													</div>
 													<div class="left-tabs-history__body">
 														<div class="left-tabs-history__column">
-															<a href="#" class="left-tabs-history__item">
-																<div class="left-tabs-history__author">
-																	<div class="left-tabs-history__image">
-																		<img src="img/avatar2.webp" alt="">
+															<div class="left-tabs-history__item">
+																<div class="post__header">
+																	<div class="post__left">
+																		<div class="post__avatar">
+																			<img loading="lazy" src="img/avatar2.webp" alt="">
+																		</div>
+																		<a href="#" class="post__titles">
+																			<div class="post__name">
+																				<span>София Кэри</span>
+																				<svg aria-hidden="true" width="15" height="16">
+																					<use xlink:href="img/sprite.svg#star">
+																					</use>
+																				</svg>
+																			</div>
+																			<span>Александр Константинович</span>
+																		</a>
 																	</div>
-																	<span>Вместе с Софи Кэри</span>
+																	<div class="post__right">
+																		<button type="button" class="post__subscribe">Подписаться</button>
+																		<div class="left-tabs-history__delete">
+																			<div class="left-tabs-history__delete-item">
+																				<div class="left-tabs-history__delete-icon">
+																					<svg aria-hidden="true" width="12" height="12">
+																						<use xlink:href="img/sprite.svg#close">
+																						</use>
+																					</svg>
+																				</div>
+																				<span>Удалить из истории просмотра</span>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="left-tabs-history__descr">
-																	<div class="left-tabs-history__titles">
+																	<a href="#" class="left-tabs-history__titles">
 																		<div class="left-tabs-history__title">
 																			Grow: как Джо Хаттон переосмыслила йогу для
 																			реальной
@@ -531,18 +581,24 @@
 																		<div class="left-tabs-history__text">
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
-																	</div>
+																	</a>
 																	<div class="left-tabs-history__pic">
 																		<img src="img/image/image11.webp" alt="">
 																	</div>
 																</div>
 																<div class="post__footer">
-																	<div class="post__like post-icon">
+																	<div class="post__like post-icon _active">
 																		<div class="post__like-icon">
 																			<svg aria-hidden="true" width="21" height="20">
 																				<use xlink:href="img/sprite.svg#heart">
 																				</use>
 																			</svg>
+																		</div>
+																		<div class="post__like-active">
+																			<img src="img/icon/heart-active.svg" alt="">
+																		</div>
+																		<div class="post__like-active2">
+																			<img src="img/icon/heart-active2.svg" alt="">
 																		</div>
 																		<span>50</span>
 																	</div>
@@ -556,65 +612,48 @@
 																		<img src="img/icon/eye-show.svg" alt="">
 																		<span>1</span>
 																	</div>
-																</div>
-																<div class="links-tabs-history">
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button _active">
-																			<svg class="icon1" aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#heart">
-																				</use>
-																			</svg>
-																			<img class="icon2" src="img/icon/heart-active.svg" alt="">
-																		</div>
+																	<div class="post__data">
+																		03.05.2025
 																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button _active">
-																			<svg class="icon1" aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#copylink">
-																				</use>
-																			</svg>
-																			<svg class="icon2" aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#copylink">
-																				</use>
-																			</svg>
-																		</div>
-																		<span>Ссылка на публикацию скопирована в буфер
-																			обмена</span>
-																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button _active">
-																			<svg class="icon1" aria-hidden="true" width="16" height="20">
-																				<use xlink:href="img/sprite.svg#bookmark">
-																				</use>
-																			</svg>
-																			<img class="icon2" src="img/icon/remove-bookmark.svg" alt="">
-																		</div>
-																		<span>Добавить в Закладки</span>
-																	</div>
-																</div>
-															</a>
-															<div class="left-tabs-history__delete">
-																<div class="left-tabs-history__delete-item">
-																	<div class="left-tabs-history__delete-icon">
-																		<svg aria-hidden="true" width="12" height="12">
-																			<use xlink:href="img/sprite.svg#close"></use>
-																		</svg>
-																	</div>
-																	<span>Удалить из истории просмотра</span>
 																</div>
 															</div>
-
 														</div>
 														<div class="left-tabs-history__column">
-															<a href="#" class="left-tabs-history__item">
-																<div class="left-tabs-history__author">
-																	<div class="left-tabs-history__image">
-																		<img src="img/avatar2.webp" alt="">
+															<div class="left-tabs-history__item">
+																<div class="post__header">
+																	<div class="post__left">
+																		<div class="post__avatar">
+																			<img loading="lazy" src="img/avatar2.webp" alt="">
+																		</div>
+																		<a href="#" class="post__titles">
+																			<div class="post__name">
+																				<span>София Кэри</span>
+																				<svg aria-hidden="true" width="15" height="16">
+																					<use xlink:href="img/sprite.svg#star">
+																					</use>
+																				</svg>
+																			</div>
+																			<span>Александр Константинович</span>
+																		</a>
 																	</div>
-																	<span>Вместе с Софи Кэри</span>
+																	<div class="post__right">
+																		<button type="button" class="post__subscribe _active">Вы
+																			подписаны</button>
+																		<div class="left-tabs-history__delete">
+																			<div class="left-tabs-history__delete-item">
+																				<div class="left-tabs-history__delete-icon">
+																					<svg aria-hidden="true" width="12" height="12">
+																						<use xlink:href="img/sprite.svg#close">
+																						</use>
+																					</svg>
+																				</div>
+																				<span>Удалить из истории просмотра</span>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="left-tabs-history__descr">
-																	<div class="left-tabs-history__titles">
+																	<a href="#" class="left-tabs-history__titles">
 																		<div class="left-tabs-history__title">
 																			Grow: как Джо Хаттон переосмыслила йогу для
 																			реальной
@@ -629,7 +668,7 @@
 																		<div class="left-tabs-history__text">
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
-																	</div>
+																	</a>
 																	<div class="left-tabs-history__pic">
 																		<img src="img/image/image12.webp" alt="">
 																	</div>
@@ -642,6 +681,12 @@
 																				</use>
 																			</svg>
 																		</div>
+																		<div class="post__like-active">
+																			<img src="img/icon/heart-active.svg" alt="">
+																		</div>
+																		<div class="post__like-active2">
+																			<img src="img/icon/heart-active2.svg" alt="">
+																		</div>
 																		<span>50</span>
 																	</div>
 																	<div class="post__comment post-icon">
@@ -654,48 +699,11 @@
 																		<img src="img/icon/eye-show.svg" alt="">
 																		<span>1</span>
 																	</div>
-																</div>
-																<div class="links-tabs-history">
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#heart">
-																				</use>
-																			</svg>
-																		</div>
+																	<div class="post__data">
+																		03.05.2025
 																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#copylink">
-																				</use>
-																			</svg>
-																		</div>
-																		<span>Ссылка на публикацию скопирована в буфер
-																			обмена</span>
-																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="16" height="20">
-																				<use xlink:href="img/sprite.svg#bookmark">
-																				</use>
-																			</svg>
-																		</div>
-																		<span>Добавить в Закладки</span>
-																	</div>
-																</div>
-															</a>
-															<div class="left-tabs-history__delete">
-																<div class="left-tabs-history__delete-item">
-																	<div class="left-tabs-history__delete-icon">
-																		<svg aria-hidden="true" width="12" height="12">
-																			<use xlink:href="img/sprite.svg#close"></use>
-																		</svg>
-																	</div>
-																	<span>Удалить из истории просмотра</span>
 																</div>
 															</div>
-
 														</div>
 													</div>
 												</div>
@@ -710,15 +718,40 @@
 													</div>
 													<div class="left-tabs-history__body">
 														<div class="left-tabs-history__column">
-															<a href="#" class="left-tabs-history__item">
-																<div class="left-tabs-history__author">
-																	<div class="left-tabs-history__image">
-																		<img src="img/avatar2.webp" alt="">
+															<div class="left-tabs-history__item">
+																<div class="post__header">
+																	<div class="post__left">
+																		<div class="post__avatar">
+																			<img loading="lazy" src="img/avatar2.webp" alt="">
+																		</div>
+																		<a href="#" class="post__titles">
+																			<div class="post__name">
+																				<span>София Кэри</span>
+																				<svg aria-hidden="true" width="15" height="16">
+																					<use xlink:href="img/sprite.svg#star">
+																					</use>
+																				</svg>
+																			</div>
+																			<span>Александр Константинович</span>
+																		</a>
 																	</div>
-																	<span>Вместе с Софи Кэри</span>
+																	<div class="post__right">
+																		<button type="button" class="post__subscribe">Подписаться</button>
+																		<div class="left-tabs-history__delete">
+																			<div class="left-tabs-history__delete-item">
+																				<div class="left-tabs-history__delete-icon">
+																					<svg aria-hidden="true" width="12" height="12">
+																						<use xlink:href="img/sprite.svg#close">
+																						</use>
+																					</svg>
+																				</div>
+																				<span>Удалить из истории просмотра</span>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="left-tabs-history__descr">
-																	<div class="left-tabs-history__titles">
+																	<a href="#" class="left-tabs-history__titles">
 																		<div class="left-tabs-history__title">
 																			Grow: как Джо Хаттон переосмыслила йогу для
 																			реальной
@@ -733,7 +766,7 @@
 																		<div class="left-tabs-history__text">
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
-																	</div>
+																	</a>
 																	<div class="left-tabs-history__pic">
 																		<img src="img/image/image11.webp" alt="">
 																	</div>
@@ -746,6 +779,12 @@
 																				</use>
 																			</svg>
 																		</div>
+																		<div class="post__like-active">
+																			<img src="img/icon/heart-active.svg" alt="">
+																		</div>
+																		<div class="post__like-active2">
+																			<img src="img/icon/heart-active2.svg" alt="">
+																		</div>
 																		<span>50</span>
 																	</div>
 																	<div class="post__comment post-icon">
@@ -758,59 +797,48 @@
 																		<img src="img/icon/eye-show.svg" alt="">
 																		<span>1</span>
 																	</div>
-																</div>
-																<div class="links-tabs-history">
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#heart">
-																				</use>
-																			</svg>
-																		</div>
+																	<div class="post__data">
+																		03.05.2025
 																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#copylink">
-																				</use>
-																			</svg>
-																		</div>
-																		<span>Ссылка на публикацию скопирована в буфер
-																			обмена</span>
-																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="16" height="20">
-																				<use xlink:href="img/sprite.svg#bookmark">
-																				</use>
-																			</svg>
-																		</div>
-																		<span>Добавить в Закладки</span>
-																	</div>
-																</div>
-															</a>
-															<div class="left-tabs-history__delete">
-																<div class="left-tabs-history__delete-item">
-																	<div class="left-tabs-history__delete-icon">
-																		<svg aria-hidden="true" width="12" height="12">
-																			<use xlink:href="img/sprite.svg#close"></use>
-																		</svg>
-																	</div>
-																	<span>Удалить из истории просмотра</span>
 																</div>
 															</div>
-
 														</div>
 														<div class="left-tabs-history__column">
-															<a href="#" class="left-tabs-history__item">
-																<div class="left-tabs-history__author">
-																	<div class="left-tabs-history__image">
-																		<img src="img/avatar2.webp" alt="">
+															<div class="left-tabs-history__item">
+																<div class="post__header">
+																	<div class="post__left">
+																		<div class="post__avatar">
+																			<img loading="lazy" src="img/avatar2.webp" alt="">
+																		</div>
+																		<a href="#" class="post__titles">
+																			<div class="post__name">
+																				<span>София Кэри</span>
+																				<svg aria-hidden="true" width="15" height="16">
+																					<use xlink:href="img/sprite.svg#star">
+																					</use>
+																				</svg>
+																			</div>
+																			<span>Александр Константинович</span>
+																		</a>
 																	</div>
-																	<span>Вместе с Софи Кэри</span>
+																	<div class="post__right">
+																		<button type="button" class="post__subscribe _active">Вы
+																			подписаны</button>
+																		<div class="left-tabs-history__delete">
+																			<div class="left-tabs-history__delete-item">
+																				<div class="left-tabs-history__delete-icon">
+																					<svg aria-hidden="true" width="12" height="12">
+																						<use xlink:href="img/sprite.svg#close">
+																						</use>
+																					</svg>
+																				</div>
+																				<span>Удалить из истории просмотра</span>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 																<div class="left-tabs-history__descr">
-																	<div class="left-tabs-history__titles">
+																	<a href="#" class="left-tabs-history__titles">
 																		<div class="left-tabs-history__title">
 																			Grow: как Джо Хаттон переосмыслила йогу для
 																			реальной
@@ -825,9 +853,9 @@
 																		<div class="left-tabs-history__text">
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
-																	</div>
+																	</a>
 																	<div class="left-tabs-history__pic">
-																		<img src="img/image/image13.webp" alt="">
+																		<img src="img/image/image12.webp" alt="">
 																	</div>
 																</div>
 																<div class="post__footer">
@@ -837,6 +865,12 @@
 																				<use xlink:href="img/sprite.svg#heart">
 																				</use>
 																			</svg>
+																		</div>
+																		<div class="post__like-active">
+																			<img src="img/icon/heart-active.svg" alt="">
+																		</div>
+																		<div class="post__like-active2">
+																			<img src="img/icon/heart-active2.svg" alt="">
 																		</div>
 																		<span>50</span>
 																	</div>
@@ -850,77 +884,18 @@
 																		<img src="img/icon/eye-show.svg" alt="">
 																		<span>1</span>
 																	</div>
-																</div>
-																<div class="links-tabs-history">
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#heart">
-																				</use>
-																			</svg>
-																		</div>
+																	<div class="post__data">
+																		03.05.2025
 																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="20" height="20">
-																				<use xlink:href="img/sprite.svg#copylink">
-																				</use>
-																			</svg>
-																		</div>
-																		<span>Ссылка на публикацию скопирована в буфер
-																			обмена</span>
-																	</div>
-																	<div class="links-tabs-history__link">
-																		<div class="links-tabs-history__button">
-																			<svg aria-hidden="true" width="16" height="20">
-																				<use xlink:href="img/sprite.svg#bookmark">
-																				</use>
-																			</svg>
-																		</div>
-																		<span>Добавить в Закладки</span>
-																	</div>
-																</div>
-															</a>
-															<div class="left-tabs-history__delete">
-																<div class="left-tabs-history__delete-item">
-																	<div class="left-tabs-history__delete-icon">
-																		<svg aria-hidden="true" width="12" height="12">
-																			<use xlink:href="img/sprite.svg#close"></use>
-																		</svg>
-																	</div>
-																	<span>Удалить из истории просмотра</span>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div data-da=".block-history__content, 992, first" class="tabs-history__right right-tabs-history">
-												<div class="right-tabs-history__sticky">
-													<div class="right-tabs-history__search">
-														<button type="button" class="right-tabs-history__search-icon">
-															<svg aria-hidden="true" width="20" height="20">
-																<use xlink:href="img/sprite.svg#search"></use>
-															</svg>
-														</button>
-														<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
-														<div class="right-tabs-history__close">
-															<svg aria-hidden="true" width="12" height="12">
-																<use xlink:href="img/sprite.svg#close"></use>
-															</svg>
-														</div>
-													</div>
-													<a href="#" data-popup="#remove-history" class="right-tabs-history__remove">
-														<svg aria-hidden="true" width="18" height="20">
-															<use xlink:href="img/sprite.svg#delete"></use>
-														</svg>
-														<span>Очистить историю просмотра</span>
-													</a>
-												</div>
-											</div>
 										</div>
 									</div>
-									<div class="tabs-history__body _tab-active">
+									<div class="tabs-history__body">
 										<div class="tabs-history__subnavigation">
 											<button data-subhistory="publications" type="button" class="tabs-history__subtitle _tab-active">Публикации</button>
 											<button data-subhistory="notes" type="button" class="tabs-history__subtitle">Заметки</button>
@@ -932,15 +907,41 @@
 														<div class="left-tabs-history__content">
 															<div class="left-tabs-history__body">
 																<div class="left-tabs-history__column">
-																	<a href="#" class="left-tabs-history__item">
-																		<div class="left-tabs-history__author">
-																			<div class="left-tabs-history__image">
-																				<img src="img/avatar2.webp" alt="">
+																	<div class="left-tabs-history__item">
+																		<div class="post__header">
+																			<div class="post__left">
+																				<div class="post__avatar">
+																					<img loading="lazy" src="img/avatar2.webp" alt="">
+																				</div>
+																				<a href="#" class="post__titles">
+																					<div class="post__name">
+																						<span>София Кэри</span>
+																						<svg aria-hidden="true" width="15" height="16">
+																							<use xlink:href="img/sprite.svg#star">
+																							</use>
+																						</svg>
+																					</div>
+																					<span>Александр Константинович</span>
+																				</a>
 																			</div>
-																			<span>Вместе с Софи Кэри</span>
+																			<div class="post__right">
+																				<button type="button" class="post__subscribe">Подписаться</button>
+																				<div class="left-tabs-history__delete">
+																					<div class="left-tabs-history__delete-item">
+																						<div class="left-tabs-history__delete-icon">
+																							<svg aria-hidden="true" width="12" height="12">
+																								<use xlink:href="img/sprite.svg#close">
+																								</use>
+																							</svg>
+																						</div>
+																						<span>Удалить из истории
+																							просмотра</span>
+																					</div>
+																				</div>
+																			</div>
 																		</div>
 																		<div class="left-tabs-history__descr">
-																			<div class="left-tabs-history__titles">
+																			<a href="#" class="left-tabs-history__titles">
 																				<div class="left-tabs-history__title">
 																					Grow: как Джо Хаттон переосмыслила йогу
 																					для
@@ -957,15 +958,24 @@
 																				<div class="left-tabs-history__text">
 																					Софи Кери <span>- 6м чтения</span>
 																				</div>
-																			</div>
+																			</a>
 																			<div class="left-tabs-history__pic">
 																				<img src="img/image/image11.webp" alt="">
 																			</div>
 																		</div>
 																		<div class="post__footer noclick">
 																			<div class="post__like post-icon _active">
+																				<div class="post__like-icon">
+																					<svg aria-hidden="true" width="21" height="20">
+																						<use xlink:href="img/sprite.svg#heart">
+																						</use>
+																					</svg>
+																				</div>
 																				<div class="post__like-active">
 																					<img src="img/icon/heart-active.svg" alt="">
+																				</div>
+																				<div class="post__like-active2">
+																					<img src="img/icon/heart-active2.svg" alt="">
 																				</div>
 																				<span>50</span>
 																			</div>
@@ -976,53 +986,53 @@
 																				</svg>
 																				<span>2</span>
 																			</div>
-																		</div>
-																		<div class="links-tabs-history">
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#heart">
-																						</use>
-																					</svg>
-																				</div>
+																			<div class="post__show post-icon">
+																				<img src="img/icon/eye-show.svg" alt="">
+																				<span>1</span>
 																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#copylink">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Ссылка на публикацию скопирована в
-																					буфер
-																					обмена</span>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="16" height="20">
-																						<use xlink:href="img/sprite.svg#bookmark">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Добавить в Закладки</span>
+																			<div class="post__data">
+																				03.05.2025
 																			</div>
 																		</div>
-																	</a>
+																	</div>
 																</div>
-															</div>
-														</div>
-														<div class="left-tabs-history__content">
-															<div class="left-tabs-history__body">
 																<div class="left-tabs-history__column">
-																	<a href="#" class="left-tabs-history__item">
-																		<div class="left-tabs-history__author">
-																			<div class="left-tabs-history__image">
-																				<img src="img/avatar2.webp" alt="">
+																	<div class="left-tabs-history__item">
+																		<div class="post__header">
+																			<div class="post__left">
+																				<div class="post__avatar">
+																					<img loading="lazy" src="img/avatar2.webp" alt="">
+																				</div>
+																				<a href="#" class="post__titles">
+																					<div class="post__name">
+																						<span>София Кэри</span>
+																						<svg aria-hidden="true" width="15" height="16">
+																							<use xlink:href="img/sprite.svg#star">
+																							</use>
+																						</svg>
+																					</div>
+																					<span>Александр Константинович</span>
+																				</a>
 																			</div>
-																			<span>Вместе с Софи Кэри</span>
+																			<div class="post__right">
+																				<button type="button" class="post__subscribe _active">Вы
+																					подписаны</button>
+																				<div class="left-tabs-history__delete">
+																					<div class="left-tabs-history__delete-item">
+																						<div class="left-tabs-history__delete-icon">
+																							<svg aria-hidden="true" width="12" height="12">
+																								<use xlink:href="img/sprite.svg#close">
+																								</use>
+																							</svg>
+																						</div>
+																						<span>Удалить из истории
+																							просмотра</span>
+																					</div>
+																				</div>
+																			</div>
 																		</div>
 																		<div class="left-tabs-history__descr">
-																			<div class="left-tabs-history__titles">
+																			<a href="#" class="left-tabs-history__titles">
 																				<div class="left-tabs-history__title">
 																					Grow: как Джо Хаттон переосмыслила йогу
 																					для
@@ -1039,15 +1049,24 @@
 																				<div class="left-tabs-history__text">
 																					Софи Кери <span>- 6м чтения</span>
 																				</div>
-																			</div>
+																			</a>
 																			<div class="left-tabs-history__pic">
 																				<img src="img/image/image12.webp" alt="">
 																			</div>
 																		</div>
-																		<div class="post__footer noclick">
-																			<div class="post__like post-icon _active">
+																		<div class="post__footer">
+																			<div class="post__like post-icon">
+																				<div class="post__like-icon">
+																					<svg aria-hidden="true" width="21" height="20">
+																						<use xlink:href="img/sprite.svg#heart">
+																						</use>
+																					</svg>
+																				</div>
 																				<div class="post__like-active">
 																					<img src="img/icon/heart-active.svg" alt="">
+																				</div>
+																				<div class="post__like-active2">
+																					<img src="img/icon/heart-active2.svg" alt="">
 																				</div>
 																				<span>50</span>
 																			</div>
@@ -1058,202 +1077,15 @@
 																				</svg>
 																				<span>2</span>
 																			</div>
-																		</div>
-																		<div class="links-tabs-history">
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#heart">
-																						</use>
-																					</svg>
-																				</div>
+																			<div class="post__show post-icon">
+																				<img src="img/icon/eye-show.svg" alt="">
+																				<span>1</span>
 																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#copylink">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Ссылка на публикацию скопирована в
-																					буфер
-																					обмена</span>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="16" height="20">
-																						<use xlink:href="img/sprite.svg#bookmark">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Добавить в Закладки</span>
+																			<div class="post__data">
+																				03.05.2025
 																			</div>
 																		</div>
-																	</a>
-																</div>
-															</div>
-														</div>
-														<div class="left-tabs-history__content">
-															<div class="left-tabs-history__body">
-																<div class="left-tabs-history__column">
-																	<a href="#" class="left-tabs-history__item">
-																		<div class="left-tabs-history__author">
-																			<div class="left-tabs-history__image">
-																				<img src="img/avatar2.webp" alt="">
-																			</div>
-																			<span>Вместе с Софи Кэри</span>
-																		</div>
-																		<div class="left-tabs-history__descr">
-																			<div class="left-tabs-history__titles">
-																				<div class="left-tabs-history__title">
-																					Grow: как Джо Хаттон переосмыслила йогу
-																					для
-																					реальной
-																					жизни
-																				</div>
-																				<p>
-																					Серия интервью Grow создана для того,
-																					чтобы
-																					рассказать о том, как писатели стали
-																					независимыми и
-																					расширили свою аудиторию.
-																				</p>
-																				<div class="left-tabs-history__text">
-																					Софи Кери <span>- 6м чтения</span>
-																				</div>
-																			</div>
-																			<div class="left-tabs-history__pic">
-																				<img src="img/image/image12.webp" alt="">
-																			</div>
-																		</div>
-																		<div class="post__footer noclick">
-																			<div class="post__like post-icon _active">
-																				<div class="post__like-active">
-																					<img src="img/icon/heart-active.svg" alt="">
-																				</div>
-																				<span>50</span>
-																			</div>
-																			<div class="post__comment post-icon">
-																				<svg aria-hidden="true" width="20" height="19">
-																					<use xlink:href="img/sprite.svg#chat">
-																					</use>
-																				</svg>
-																				<span>2</span>
-																			</div>
-																		</div>
-																		<div class="links-tabs-history">
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#heart">
-																						</use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#copylink">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Ссылка на публикацию скопирована в
-																					буфер
-																					обмена</span>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="16" height="20">
-																						<use xlink:href="img/sprite.svg#bookmark">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Добавить в Закладки</span>
-																			</div>
-																		</div>
-																	</a>
-																</div>
-															</div>
-														</div>
-														<div class="left-tabs-history__content">
-															<div class="left-tabs-history__body">
-																<div class="left-tabs-history__column">
-																	<a href="#" class="left-tabs-history__item">
-																		<div class="left-tabs-history__author">
-																			<div class="left-tabs-history__image">
-																				<img src="img/avatar2.webp" alt="">
-																			</div>
-																			<span>Вместе с Софи Кэри</span>
-																		</div>
-																		<div class="left-tabs-history__descr">
-																			<div class="left-tabs-history__titles">
-																				<div class="left-tabs-history__title">
-																					Grow: как Джо Хаттон переосмыслила йогу
-																					для
-																					реальной
-																					жизни
-																				</div>
-																				<p>
-																					Серия интервью Grow создана для того,
-																					чтобы
-																					рассказать о том, как писатели стали
-																					независимыми и
-																					расширили свою аудиторию.
-																				</p>
-																				<div class="left-tabs-history__text">
-																					Софи Кери <span>- 6м чтения</span>
-																				</div>
-																			</div>
-																			<div class="left-tabs-history__pic">
-																				<img src="img/image/image12.webp" alt="">
-																			</div>
-																		</div>
-																		<div class="post__footer noclick">
-																			<div class="post__like post-icon _active">
-																				<div class="post__like-active">
-																					<img src="img/icon/heart-active.svg" alt="">
-																				</div>
-																				<span>50</span>
-																			</div>
-																			<div class="post__comment post-icon">
-																				<svg aria-hidden="true" width="20" height="19">
-																					<use xlink:href="img/sprite.svg#chat">
-																					</use>
-																				</svg>
-																				<span>2</span>
-																			</div>
-																		</div>
-																		<div class="links-tabs-history">
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#heart">
-																						</use>
-																					</svg>
-																				</div>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#copylink">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Ссылка на публикацию скопирована в
-																					буфер
-																					обмена</span>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="16" height="20">
-																						<use xlink:href="img/sprite.svg#bookmark">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Добавить в Закладки</span>
-																			</div>
-																		</div>
-																	</a>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1264,42 +1096,166 @@
 												<div class="tabs-history__items">
 													<div class="tabs-history__left left-tabs-history">
 														<div class="left-tabs-history__content">
-															<div class="left-tabs-history__body">
-																<div class="left-tabs-history__column">
-																	<a href="#" class="left-tabs-history__item">
-																		<div class="left-tabs-history__author">
-																			<div class="left-tabs-history__image">
-																				<img src="img/avatar2.webp" alt="">
+															<div class="posts__content">
+																<div class="posts__post post">
+																	<div class="post__header">
+																		<div class="post__left">
+																			<div class="post__avatar">
+																				<img loading="lazy" src="img/avatar2.webp" alt="">
 																			</div>
-																			<span>Вместе с Софи Кэри</span>
+																			<a href="#" class="post__titles">
+																				<div class="post__name">
+																					<span>София Кэри</span>
+																					<svg aria-hidden="true" width="15" height="16">
+																						<use xlink:href="img/sprite.svg#star">
+																						</use>
+																					</svg>
+																				</div>
+																				<span>Александр Константинович</span>
+																			</a>
 																		</div>
-																		<div class="left-tabs-history__descr">
-																			<div class="left-tabs-history__titles">
-																				<div class="left-tabs-history__title">
-																					Grow: как Джо Хаттон переосмыслила йогу
-																					для
-																					реальной
-																					жизни
-																				</div>
-																				<p>
-																					Серия интервью Grow создана для того,
-																					чтобы
-																					рассказать о том, как писатели стали
-																					независимыми и
-																					расширили свою аудиторию.
-																				</p>
-																				<div class="left-tabs-history__text">
-																					Софи Кери <span>- 6м чтения</span>
+																		<div class="post__right">
+																			<button type="button" class="post__subscribe">Подписаться</button>
+																			<div class="dots">
+																				<svg aria-hidden="true" width="16" height="4">
+																					<use xlink:href="img/sprite.svg#dots">
+																					</use>
+																				</svg>
+																				<div class="dropdown">
+																					<div class="dropdown__menu-content">
+																						<div class="dropdown__top">
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="20">
+																										<use xlink:href="img/sprite.svg#user-plus">
+																										</use>
+																									</svg>
+																								</div>
+																								Подписаться
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#copylink2">
+																										</use>
+																									</svg>
+																								</div>
+																								Скопировать ссылку
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<img src="img/icon/bookmark.svg" alt="">
+																								</div>
+																								Добавить в Закладки
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#eye-off">
+																										</use>
+																									</svg>
+																								</div>
+																								Скрыть публикацию
+																							</button>
+																						</div>
+																						<div class="dropdown__bottom">
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="12">
+																										<use xlink:href="img/sprite.svg#eye-closed">
+																										</use>
+																									</svg>
+																								</div>
+																								Скрыть автора
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#blacklisted">
+																										</use>
+																									</svg>
+																								</div>
+																								В черный список
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#octagon-alert">
+																										</use>
+																									</svg>
+																								</div>
+																								Сообщить о нарушении
+																							</button>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
-																			<div class="left-tabs-history__pic">
-																				<img src="img/image/image11.webp" alt="">
+																		</div>
+																	</div>
+																	<div class="post__content">
+																		<p>
+																			Подборка портретов, которые я сняла за эти годы
+																			❤️ Я действительно люблю
+																			фотографировать людей
+																		</p>
+																		<div class="post__sliders">
+																			<div class="post__slider swiper">
+																				<div class="post__wrapper swiper-wrapper">
+																					<a href="img/image/image6.webp" data-fancybox="gallery1" class="post__slide swiper-slide">
+																						<img loading="lazy" src="img/image/image6.webp" alt="">
+																						<div class="post__slide-bg">
+																							<svg aria-hidden="true" width="40" height="39">
+																								<use xlink:href="img/sprite.svg#search">
+																								</use>
+																							</svg>
+																						</div>
+																					</a>
+																					<a href="img/image/image7.webp" data-fancybox="gallery1" class="post__slide swiper-slide">
+																						<img loading="lazy" src="img/image/image7.webp" alt="">
+																						<div class="post__slide-bg">
+																							<svg aria-hidden="true" width="40" height="39">
+																								<use xlink:href="img/sprite.svg#search">
+																								</use>
+																							</svg>
+																						</div>
+																					</a>
+																					<a href="img/image/image7.webp" data-fancybox="gallery1" class="post__slide swiper-slide">
+																						<img loading="lazy" src="img/image/image7.webp" alt="">
+																						<div class="post__slide-bg">
+																							<svg aria-hidden="true" width="40" height="39">
+																								<use xlink:href="img/sprite.svg#search">
+																								</use>
+																							</svg>
+																						</div>
+																					</a>
+																				</div>
+																			</div>
+																			<div class="post__arrow-prev arrow-prev">
+																				<svg aria-hidden="true" width="15" height="8">
+																					<use xlink:href="img/sprite.svg#arrow1">
+																					</use>
+																				</svg>
+																			</div>
+																			<div class="post__arrow-next arrow-next">
+																				<svg aria-hidden="true" width="15" height="8">
+																					<use xlink:href="img/sprite.svg#arrow1">
+																					</use>
+																				</svg>
 																			</div>
 																		</div>
 																		<div class="post__footer">
-																			<div class="post__like post-icon _active">
+																			<div class="post__like post-icon">
+																				<div class="post__like-icon">
+																					<svg aria-hidden="true" width="21" height="20">
+																						<use xlink:href="img/sprite.svg#heart">
+																						</use>
+																					</svg>
+																				</div>
 																				<div class="post__like-active">
 																					<img src="img/icon/heart-active.svg" alt="">
+																				</div>
+																				<div class="post__like-active2">
+																					<img src="img/icon/heart-active2.svg" alt="">
 																				</div>
 																				<span>50</span>
 																			</div>
@@ -1310,78 +1266,163 @@
 																				</svg>
 																				<span>2</span>
 																			</div>
-																		</div>
-																		<div class="links-tabs-history">
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#heart">
-																						</use>
-																					</svg>
-																				</div>
+																			<div class="post__reset post-icon">
+																				<svg aria-hidden="true" width="20" height="20">
+																					<use xlink:href="img/sprite.svg#copylink">
+																					</use>
+																				</svg>
 																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#copylink">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Ссылка на публикацию скопирована в
-																					буфер
-																					обмена</span>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="16" height="20">
-																						<use xlink:href="img/sprite.svg#bookmark">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Добавить в Закладки</span>
+																			<div class="post__data">
+																				1 сентября
 																			</div>
 																		</div>
-																	</a>
+																	</div>
 																</div>
-															</div>
-														</div>
-														<div class="left-tabs-history__content">
-															<div class="left-tabs-history__body">
-																<div class="left-tabs-history__column">
-																	<a href="#" class="left-tabs-history__item">
-																		<div class="left-tabs-history__author">
-																			<div class="left-tabs-history__image">
-																				<img src="img/avatar2.webp" alt="">
+																<div class="posts__post post">
+																	<div class="post__header">
+																		<div class="post__left">
+																			<div class="post__avatar">
+																				<img loading="lazy" src="img/avatar3.webp" alt="">
 																			</div>
-																			<span>Вместе с Софи Кэри</span>
+																			<a href="#" class="post__titles">
+																				<div class="post__name">
+																					<span>Чулан историй</span>
+																					<svg aria-hidden="true" width="15" height="16">
+																						<use xlink:href="img/sprite.svg#star">
+																						</use>
+																					</svg>
+																				</div>
+																				<span>РА Фридман</span>
+																			</a>
 																		</div>
-																		<div class="left-tabs-history__descr">
-																			<div class="left-tabs-history__titles">
-																				<div class="left-tabs-history__title">
-																					Grow: как Джо Хаттон переосмыслила йогу
-																					для
-																					реальной
-																					жизни
-																				</div>
-																				<p>
-																					Серия интервью Grow создана для того,
-																					чтобы
-																					рассказать о том, как писатели стали
-																					независимыми и
-																					расширили свою аудиторию.
-																				</p>
-																				<div class="left-tabs-history__text">
-																					Софи Кери <span>- 6м чтения</span>
+																		<div class="post__right">
+																			<button type="button" class="post__subscribe _active">Вы
+																				подписаны</button>
+																			<div class="dots">
+																				<svg aria-hidden="true" width="16" height="4">
+																					<use xlink:href="img/sprite.svg#dots">
+																					</use>
+																				</svg>
+																				<div class="dropdown">
+																					<div class="dropdown__menu-content">
+																						<div class="dropdown__top">
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#copylink2">
+																										</use>
+																									</svg>
+																								</div>
+																								Скопировать ссылку
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<img src="img/icon/remove-bookmark.svg" alt="">
+																								</div>
+																								Убрать из Закладок
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#eye-off">
+																										</use>
+																									</svg>
+																								</div>
+																								Скрыть публикацию
+																							</button>
+																						</div>
+																						<div class="dropdown__bottom">
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="24" height="24">
+																										<use xlink:href="img/sprite.svg#eye-show">
+																										</use>
+																									</svg>
+																								</div>
+																								Показать автора
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="24" height="24">
+																										<use xlink:href="img/sprite.svg#blacklisted-remove">
+																										</use>
+																									</svg>
+																								</div>
+																								Из чёрного списка
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#octagon-alert">
+																										</use>
+																									</svg>
+																								</div>
+																								Сообщить о нарушении
+																							</button>
+																						</div>
+																					</div>
 																				</div>
 																			</div>
-																			<div class="left-tabs-history__pic">
-																				<img src="img/image/image13.webp" alt="">
+																		</div>
+																	</div>
+																	<div class="post__content">
+																		<p>
+																			Когда я рисую прямо с моделей каждую неделю,
+																			самая длинная поза —<br> 20 минут. Я не
+																			работаю быстро, поэтому я не беспокоюсь о
+																			том,<br> насколько хорош рисунок, а о том,
+																			как
+																			много я наблюдаю.
+																		</p>
+																		<div class="post__sliders">
+																			<div class="post__slider swiper">
+																				<div class="post__wrapper swiper-wrapper">
+																					<a href="img/image/image8.webp" data-fancybox="gallery2" class="post__slide swiper-slide">
+																						<img loading="lazy" src="img/image/image8.webp" alt="">
+																						<div class="post__slide-bg">
+																							<svg aria-hidden="true" width="40" height="39">
+																								<use xlink:href="img/sprite.svg#search">
+																								</use>
+																							</svg>
+																						</div>
+																					</a>
+																					<a href="img/image/image9.webp" data-fancybox="gallery2" class="post__slide swiper-slide">
+																						<img loading="lazy" src="img/image/image9.webp" alt="">
+																						<div class="post__slide-bg">
+																							<svg aria-hidden="true" width="40" height="39">
+																								<use xlink:href="img/sprite.svg#search">
+																								</use>
+																							</svg>
+																						</div>
+																					</a>
+																				</div>
+																			</div>
+																			<div class="post__arrow-prev arrow-prev">
+																				<svg aria-hidden="true" width="15" height="8">
+																					<use xlink:href="img/sprite.svg#arrow1">
+																					</use>
+																				</svg>
+																			</div>
+																			<div class="post__arrow-next arrow-next">
+																				<svg aria-hidden="true" width="15" height="8">
+																					<use xlink:href="img/sprite.svg#arrow1">
+																					</use>
+																				</svg>
 																			</div>
 																		</div>
 																		<div class="post__footer">
-																			<div class="post__like post-icon _active">
+																			<div class="post__like post-icon">
+																				<div class="post__like-icon">
+																					<svg aria-hidden="true" width="21" height="20">
+																						<use xlink:href="img/sprite.svg#heart">
+																						</use>
+																					</svg>
+																				</div>
 																				<div class="post__like-active">
 																					<img src="img/icon/heart-active.svg" alt="">
+																				</div>
+																				<div class="post__like-active2">
+																					<img src="img/icon/heart-active2.svg" alt="">
 																				</div>
 																				<span>50</span>
 																			</div>
@@ -1392,78 +1433,176 @@
 																				</svg>
 																				<span>2</span>
 																			</div>
-																		</div>
-																		<div class="links-tabs-history">
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#heart">
-																						</use>
-																					</svg>
-																				</div>
+																			<div class="post__reset post-icon">
+																				<svg aria-hidden="true" width="20" height="20">
+																					<use xlink:href="img/sprite.svg#copylink">
+																					</use>
+																				</svg>
 																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#copylink">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Ссылка на публикацию скопирована в
-																					буфер
-																					обмена</span>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="16" height="20">
-																						<use xlink:href="img/sprite.svg#bookmark">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Добавить в Закладки</span>
+																			<div class="post__data">
+																				1 сентября
 																			</div>
 																		</div>
-																	</a>
+																	</div>
 																</div>
-															</div>
-														</div>
-														<div class="left-tabs-history__content">
-															<div class="left-tabs-history__body">
-																<div class="left-tabs-history__column">
-																	<a href="#" class="left-tabs-history__item">
-																		<div class="left-tabs-history__author">
-																			<div class="left-tabs-history__image">
-																				<img src="img/avatar2.webp" alt="">
+																<div class="posts__post post">
+																	<div class="post__header">
+																		<div class="post__left">
+																			<div class="post__avatar">
+																				<img loading="lazy" src="img/avatar3.webp" alt="">
 																			</div>
-																			<span>Вместе с Софи Кэри</span>
+																			<a href="#" class="post__titles">
+																				<div class="post__name">
+																					<span>Чулан историй</span>
+																					<svg aria-hidden="true" width="15" height="16">
+																						<use xlink:href="img/sprite.svg#star">
+																						</use>
+																					</svg>
+																				</div>
+																				<span>РА Фридман</span>
+																			</a>
 																		</div>
-																		<div class="left-tabs-history__descr">
-																			<div class="left-tabs-history__titles">
-																				<div class="left-tabs-history__title">
-																					Grow: как Джо Хаттон переосмыслила йогу
-																					для
-																					реальной
-																					жизни
+																		<div class="post__right">
+																			<button type="button" class="post__subscribe _active">Вы
+																				подписаны</button>
+																			<div class="dots">
+																				<svg aria-hidden="true" width="16" height="4">
+																					<use xlink:href="img/sprite.svg#dots">
+																					</use>
+																				</svg>
+																				<div class="dropdown">
+																					<div class="dropdown__menu-content">
+																						<div class="dropdown__top">
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#copylink2">
+																										</use>
+																									</svg>
+																								</div>
+																								Скопировать ссылку
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<img src="img/icon/remove-bookmark.svg" alt="">
+																								</div>
+																								Убрать из Закладок
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#eye-off">
+																										</use>
+																									</svg>
+																								</div>
+																								Скрыть публикацию
+																							</button>
+																						</div>
+																						<div class="dropdown__bottom">
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="24" height="24">
+																										<use xlink:href="img/sprite.svg#eye-show">
+																										</use>
+																									</svg>
+																								</div>
+																								Показать автора
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="24" height="24">
+																										<use xlink:href="img/sprite.svg#blacklisted-remove">
+																										</use>
+																									</svg>
+																								</div>
+																								Из чёрного списка
+																							</button>
+																							<button type="button">
+																								<div class="dropdown__icon">
+																									<svg aria-hidden="true" width="22" height="22">
+																										<use xlink:href="img/sprite.svg#octagon-alert">
+																										</use>
+																									</svg>
+																								</div>
+																								Сообщить о нарушении
+																							</button>
+																						</div>
+																					</div>
 																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="post__content">
+																		<div data-showmore class="showmore">
+																			<div data-showmore-content class="showmore__content">
 																				<p>
-																					Серия интервью Grow создана для того,
-																					чтобы
-																					рассказать о том, как писатели стали
-																					независимыми и
-																					расширили свою аудиторию.
+																					Овощи — основа здорового питания.
 																				</p>
-																				<div class="left-tabs-history__text">
-																					Софи Кери <span>- 6м чтения</span>
-																				</div>
+																				<p>
+																					Овощи являются неотъемлемой частью
+																					рациона каждого человека. Они богаты
+																					витаминами,
+																					минералами и клетчаткой, необходимыми
+																					для поддержания здоровья организма.
+																					Регулярное
+																					употребление овощей помогает укрепить
+																					иммунитет, нормализовать работу
+																					пищеварительной
+																					системы и снизить риск развития
+																					хронических заболеваний.
+																				</p>
+
+																				<p>
+																					Существует огромное разнообразие овощей,
+																					каждый из которых обладает
+																					уникальными
+																					свойствами и вкусовыми качествами.
+																					Например, морковь известна своим высоким
+																					содержанием
+																					витамина А, брокколи является источником
+																					антиоксидантов, а помидоры содержат
+																					ликопин,
+																					полезный для сердца. Выбор овощей
+																					зависит от предпочтений и потребностей
+																					конкретного
+																					человека.
+																				</p>
+																				<p>
+																					Существует огромное разнообразие овощей,
+																					каждый из которых обладает
+																					уникальными
+																					свойствами и вкусовыми качествами.
+																					Например, морковь известна своим высоким
+																					содержанием
+																					витамина А, брокколи является источником
+																					антиоксидантов, а помидоры содержат
+																					ликопин,
+																					полезный для сердца. Выбор овощей
+																					зависит от предпочтений и потребностей
+																					конкретного
+																					человека.
+																				</p>
+
 																			</div>
-																			<div class="left-tabs-history__pic">
-																				<img src="img/image/image12.webp" alt="">
-																			</div>
+																			<button data-showmore-button type="button" class="showmore__more">
+																				<span>Читать
+																					дальше</span>
+																				<span>Свернуть</span>
+																			</button>
 																		</div>
 																		<div class="post__footer">
-																			<div class="post__like post-icon _active">
+																			<div class="post__like post-icon">
+																				<div class="post__like-icon">
+																					<svg aria-hidden="true" width="21" height="20">
+																						<use xlink:href="img/sprite.svg#heart">
+																						</use>
+																					</svg>
+																				</div>
 																				<div class="post__like-active">
 																					<img src="img/icon/heart-active.svg" alt="">
+																				</div>
+																				<div class="post__like-active2">
+																					<img src="img/icon/heart-active2.svg" alt="">
 																				</div>
 																				<span>50</span>
 																			</div>
@@ -1474,38 +1613,17 @@
 																				</svg>
 																				<span>2</span>
 																			</div>
-																		</div>
-																		<div class="links-tabs-history">
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#heart">
-																						</use>
-																					</svg>
-																				</div>
+																			<div class="post__reset post-icon">
+																				<svg aria-hidden="true" width="20" height="20">
+																					<use xlink:href="img/sprite.svg#copylink">
+																					</use>
+																				</svg>
 																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="20" height="20">
-																						<use xlink:href="img/sprite.svg#copylink">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Ссылка на публикацию скопирована в
-																					буфер
-																					обмена</span>
-																			</div>
-																			<div class="links-tabs-history__link">
-																				<div class="links-tabs-history__button">
-																					<svg aria-hidden="true" width="16" height="20">
-																						<use xlink:href="img/sprite.svg#bookmark">
-																						</use>
-																					</svg>
-																				</div>
-																				<span>Добавить в Закладки</span>
+																			<div class="post__data">
+																				1 сентября
 																			</div>
 																		</div>
-																	</a>
+																	</div>
 																</div>
 															</div>
 														</div>
@@ -1520,11 +1638,12 @@
 					</div>
 				</div>
 
+
+
 			</main>
 		</div>
 		<script src="js/swiper-10.2.0.min.js"></script>
 		<script src="js/fancybox.umd.js"></script>
-		<script src="js/dynamic_adapt.js"></script>
 		<script src="js/simplebar.min.js"></script>
 		<script src="js/scripts.js"></script>
 		<div id="search1" aria-hidden="true" class="popup">
@@ -1726,7 +1845,7 @@
 		</div>
 
 		<div id="share-thoughts" aria-hidden="true" class="popup">
-			<div data-da=".popup__share-thoughts, 992, 4" class="popup-share-thoughts__error">
+			<div class="popup-share-thoughts__error desct">
 				<img loading="lazy" src="img/icon/alert.svg" alt="">
 				В заметку нельзя добавить больше 6 изображений
 			</div>
@@ -1763,6 +1882,10 @@
 						</div>
 						<div class="previews"></div>
 						<div class="previews-video"></div>
+						<div class="popup-share-thoughts__error mob">
+							<img loading="lazy" src="img/icon/alert.svg" alt="">
+							В заметку нельзя добавить больше 6 изображений
+						</div>
 						<div class="popup-share-thoughts__bottom">
 							<div class="popup-share-thoughts__files">
 								<!-- Фото -->
@@ -1799,6 +1922,25 @@
 		<div id="remove-history" aria-hidden="true" class="popup remove-history-popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g filter="url(#filter0_d_2001_1770)">
+								<path d="M7.06131 5.99992L11.7802 1.28107C11.8499 1.21142 11.9052 1.12871 11.9429 1.03767C11.9807 0.946635 12.0001 0.849051 12.0001 0.750501C12.0001 0.65195 11.9807 0.554366 11.9429 0.463327C11.9052 0.372288 11.8499 0.28958 11.7802 0.21993C11.7105 0.150208 11.6278 0.094898 11.5368 0.0571609C11.4457 0.0194238 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194238 10.9624 0.0571609C10.8714 0.094898 10.7887 0.150208 10.719 0.21993L6.00017 4.93878L1.28107 0.21993C1.21142 0.150208 1.12871 0.094898 1.03767 0.0571609C0.946635 0.0194238 0.849051 0 0.7505 0C0.65195 0 0.554366 0.0194238 0.463327 0.0571609C0.372288 0.094898 0.28958 0.150208 0.21993 0.21993C0.150208 0.28958 0.0948979 0.372288 0.0571609 0.463327C0.0194238 0.554366 0 0.65195 0 0.750501C0 0.849051 0.0194238 0.946635 0.0571609 1.03767C0.0948979 1.12871 0.150208 1.21142 0.21993 1.28107L4.93903 5.99992L0.21993 10.7188C0.150271 10.7884 0.0950175 10.8712 0.0573245 10.9622C0.0196316 11.0532 0.000237243 11.1508 0.000248856 11.2493C0.000260468 11.3478 0.0196778 11.4454 0.0573922 11.5364C0.0951066 11.6274 0.150379 11.7101 0.220055 11.7798C0.28973 11.8494 0.372444 11.9047 0.463473 11.9424C0.554502 11.9801 0.652064 11.9995 0.750589 11.9995C0.849113 11.9995 0.946671 11.98 1.03769 11.9423C1.12871 11.9046 1.21141 11.8493 1.28107 11.7797L6.00017 7.06081L10.719 11.7797C10.8656 11.9263 11.0577 11.9995 11.2496 11.9995C11.4415 11.9995 11.6336 11.9263 11.7802 11.7797C11.8499 11.71 11.9052 11.6273 11.9429 11.5363C11.9807 11.4452 12.0001 11.3476 12.0001 11.2491C12.0001 11.1505 11.9807 11.053 11.9429 10.9619C11.9052 10.8709 11.8499 10.7882 11.7802 10.7185L7.06131 5.99992Z" fill="white" fill-opacity="0.5" shape-rendering="crispEdges" />
+							</g>
+							<defs>
+								<filter id="filter0_d_2001_1770" x="-2" y="-2" width="16" height="16" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+									<feFlood flood-opacity="0" result="BackgroundImageFix" />
+									<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+									<feOffset />
+									<feGaussianBlur stdDeviation="1" />
+									<feComposite in2="hardAlpha" operator="out" />
+									<feColorMatrix type="matrix" values="0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 0 0.620192 0 0 0 1 0" />
+									<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2001_1770" />
+									<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2001_1770" result="shape" />
+								</filter>
+							</defs>
+						</svg>
+					</button>
 					<div class="remove-history-popup__body">
 						<div class="remove-history-popup__title">
 							Вы действительно хотите очистить историю просмотра?
