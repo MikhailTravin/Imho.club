@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Мой клуб, дизайн, добавление пользовательских страниц</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        <header data-lp class="header header-myclub2">
+            <div class="header__contents">
+                <div class="header__left">
+                    <div class="header__back">
+                        <a data-popup="#back" href="#" class="arrow-next2">
+                            <svg aria-hidden="true" width="14" height="8">
+                                <use xlink:href="img/sprite.svg#arrow1"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__right">
+                    <a href="#" class="button-red btn btn-settings-publication">Сохранить</a>
+                </div>
+            </div>
+            <div class="shadow"></div>
+        </header>
+        <main class="main main-add-custom">
+
+            <div class="block-add-publication">
+                <div class="container">
+                    <div class="block-add-publication__content">
+                        <div class="form-add-publication">
+                            <div class="form-add-publication__input">
+                                <div class="popup-add-nav-menu__inputs">
+                                    <div class="popup-add-nav-menu__input">
+                                        <label for="inp1">Название страницы <span>*</span></label>
+                                        <input data-required="" id="inp1" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательное поле" placeholder="" value="Мои мысли">
+                                        <!--
+                                        <div class="checkbox2 disabled">
+                                            <input id="c_1" checked class="checkbox2__input" type="checkbox" value="1"
+                                                name="form[]">
+                                            <label for="c_1" class="checkbox2__label">
+                                                <span class="checkbox2__icon">
+                                                    <img src="img/icon/chek1.svg" alt="">
+                                                </span>
+                                                <span class="checkbox2__text">Автоматически генерировать url по
+                                                    названию</span>
+                                            </label>
+                                        </div>-->
+                                        <div class="checkbox2">
+                                            <input id="c_1" class="checkbox2__input" type="checkbox" value="1"
+                                                name="form[]">
+                                            <label for="c_1" class="checkbox2__label">
+                                                <span class="checkbox2__icon">
+                                                    <img src="img/icon/chek1.svg" alt="">
+                                                </span>
+                                                <span class="checkbox2__text">Автоматически генерировать url по
+                                                    названию</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="popup-add-nav-menu__input">
+                                        <label for="inp2">Ссылка <span>*</span></label>
+                                        <input data-required="" id="inp2" autocomplete="off" type="text" name="form[]"
+                                            data-error="Обязательное поле" placeholder="https://пример.ru">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-add-publication__inputs">
+                                <div class="buttons-club-about">
+                                    <div class="buttons-club-about__button">
+                                        <div class="buttons-club-about__title">
+                                            <span>Кнопки</span>
+                                            <svg aria-hidden="true" width="10" height="6">
+                                                <use xlink:href="img/sprite.svg#arrow1"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dropdown">
+                                            <div class="dropdown__menu-content">
+                                                <div class="dropdown__top">
+                                                    <button type="button">
+                                                        Подписаться
+                                                    </button>
+                                                    <button type="button">
+                                                        Подписаться на рассылку
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buttons-club-about__button">
+                                        <div class="buttons-club-about__title">
+                                            <span>Ещё</span>
+                                            <svg aria-hidden="true" width="10" height="6">
+                                                <use xlink:href="img/sprite.svg#arrow1"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="dropdown">
+                                            <div class="dropdown__menu-content">
+                                                <div class="dropdown__top">
+                                                    <button type="button">
+                                                        <img src="img/icon/square-code.svg" alt="">
+                                                        Блок с кодом
+                                                    </button>
+                                                    <button type="button">
+                                                        <img src="img/icon/line.svg" alt="">
+                                                        Разделитель
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-add-publication__input">
+                                    <textarea placeholder="Текст публикации" class="textarea">Текст страницы</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

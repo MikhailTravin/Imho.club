@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Мой клуб, публикации, запланированные</title>
+    <title>Мой клуб, дизайн</title>
     {% include 'blocks/head.njk' %}
 </head>
 
@@ -16,7 +16,7 @@
                     </a>
                 </div>
                 <div class="header__title">
-                    <span>Мой клуб</span>
+                    <span>Клуб by Оксана</span>
                 </div>
                 <div class="header__right">
                     <div class="header__notification notification-header">
@@ -544,9 +544,9 @@
                 </nav>
             </div>
         </div>
-        <main class="main main-myclub">
+        <main class="main main-myclub-design">
 
-            <div class="block-myclub">
+            <div class="block-myclub block-myclub-design">
                 <div class="container">
                     <div class="block-myclub__content">
                         <div class="navigation-category">
@@ -555,8 +555,7 @@
                                     <a href="#" data-filter="review" class="navigation-category__slide swiper-slide">
                                         Обзор
                                     </a>
-                                    <a href="#" data-filter="popular"
-                                        class="navigation-category__slide swiper-slide _active">
+                                    <a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
                                         Популярные
                                     </a>
                                     <a href="#" data-filter="subscribers"
@@ -570,7 +569,8 @@
                                     <a href="#" data-filter="UTM" class="navigation-category__slide swiper-slide">
                                         UTM
                                     </a>
-                                    <a href="#" data-filter="design" class="navigation-category__slide swiper-slide">
+                                    <a href="#" data-filter="design"
+                                        class="navigation-category__slide swiper-slide _active">
                                         Дизайн
                                     </a>
                                     <a href="#" data-filter="settings" class="navigation-category__slide swiper-slide">
@@ -580,161 +580,583 @@
                             </div>
                         </div>
                         <div class="block-myclub__body">
-                            <div class="block-myclub__heading">
-                                <h1 class="title3">Публикации</h1>
-                                <a href="#" class="button-red">Новая публикация</a>
-                            </div>
-                            <div class="block-myclub__items">
-                                <div class="top-block-myclub__nav">
-                                    <a href="#" class="top-block-myclub__title">
-                                        Опубликованные
-                                        <span>9999</span>
-                                    </a>
-                                    <a href="#" class="top-block-myclub__title">
-                                        Черновики
-                                    </a>
-                                    <a href="#" class="top-block-myclub__title active">
-                                        Запланированные
-                                        <span>2</span>
-                                    </a>
-                                </div>
-                                <div class="center-block-myclub">
-                                    <form class="center-block-myclub__search">
-                                        <button type="button" class="center-block-myclub__search-icon">
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#search"></use>
-                                            </svg>
-                                        </button>
-                                        <input autocomplete="off" type="text" name="form[]" placeholder="Найти">
-                                    </form>
-                                    <div class="center-block-myclub__filter">
-                                        <button type="button" class="center-block-myclub__filter-button">
-                                            <img src="img/icon/filter1.svg" alt="">
-                                            <span>Фильтр</span>
-                                        </button>
-                                        <div class="center-block-myclub__dropdown">
-                                            <div class="center-block-myclub__inputs">
-                                                <div class="center-block-myclub__input">
-                                                    <input autocomplete="off" type="date" name="form[]">
-                                                </div>
-                                                <div class="center-block-myclub__input">
-                                                    <input autocomplete="off" type="date" name="form[]">
-                                                </div>
-                                            </div>
-                                            <div class="center-block-myclub__buttons">
-                                                <a href="#" class="button-red">Применить</a>
-                                                <a href="#" class="button">Сбросить</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="center-block-myclub__select">
-                                        <div class="select1">
-                                            <div class="select1__title">
-                                                <img src="img/icon/filter2.svg" alt="">
-                                                <span>Новые сверху</span>
-                                            </div>
-                                            <div class="select1__options">
-                                                <div class="options__item">
-                                                    <input hidden id="o_1" class="options__input" checked type="radio"
-                                                        value="1" name="option">
-                                                    <label for="o_1" class="options__label">
-                                                        <span class="options__text">Новые сверху</span>
-                                                        <span class="options__icon">
-                                                            <img src="img/icon/chek1.svg" alt="">
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="options__item">
-                                                    <input hidden id="o_2" class="options__input" type="radio" value="2"
-                                                        name="option">
-                                                    <label for="o_2" class="options__label">
-                                                        <span class="options__text">Популярные сверху</span>
-                                                        <span class="options__icon">
-                                                            <img src="img/icon/chek1.svg" alt="">
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="options__item">
-                                                    <input hidden id="o_3" class="options__input" type="radio" value="3"
-                                                        name="option">
-                                                    <label for="o_3" class="options__label">
-                                                        <span class="options__text">Старые сверху</span>
-                                                        <span class="options__icon"><img src="img/icon/chek1.svg"
-                                                                alt=""></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                            <div class="design-myclub">
+                                <div class="design-myclub__left">
+                                    <div class="design-myclub__nav">
+                                        <a href="#" data-goto=".website" data-goto-header
+                                            class="design-myclub__nav-title">Web-сайт</a>
+                                        <a href="#" data-goto=".page-nav" data-goto-header
+                                            class="design-myclub__nav-title">Страницы и навигация</a>
+                                        <a href="#" data-goto=".page-welcome" data-goto-header
+                                            class="design-myclub__nav-title">Страница приветствия</a>
                                     </div>
                                 </div>
-                                <div class="cards-block-myclub">
-                                    <div class="cards-block-myclub__card">
-                                        <div class="cards-block-myclub__left">
-                                            <img src="img/image/image1.webp" alt="">
-                                            <div class="cards-block-myclub__titles">
-                                                <a href="#" class="cards-block-myclub__title">
-                                                    <img src="img/icon/headphones.svg" alt="">
-                                                    <span>Топ 10 авто из Китая</span>
-                                                </a>
-                                                <div class="cards-block-myclub__data">
-                                                    Обновлено <span>15:30</span>
-                                                </div>
-                                                <div class="cards-block-myclub__center2">
-                                                    <ul>
-                                                        <li>
-                                                            <span>Будет опубликовано</span>
-                                                            22.08.2025 15:30
-                                                        </li>
-                                                    </ul>
+                                <div class="design-myclub__right">
+                                    <div data-watch="navigator" class="design-myclub__body website">
+                                        <div class="block-myclub__heading">
+                                            <h1 class="title3">Web-сайт</h1>
+                                            <button type="button" class="block-myclub__site button-site">
+                                                <img src="img/icon/copylink3.svg" alt="">
+                                                <span> user1554973.imho.club</span>
+                                            </button>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">Тема клуба</div>
+                                                    <p>
+                                                        Задайте цвет, макет и стили шрифтов для
+                                                        вашего сайта.
+                                                    </p>
                                                 </div>
                                             </div>
+                                            <div class="design-myclub__text">
+                                                Для настройки дизайна вашего сайта, пожалуйста, используйте компьютер
+                                            </div>
+                                            <a href="#" class="design-myclub__btn button-site">
+                                                <span>Открыть визуальный редактор сайта</span>
+                                                <img src="img/icon/arrow-down-right.svg" alt="">
+                                            </a>
                                         </div>
-                                        <div class="cards-block-myclub__center2">
-                                            <ul>
-                                                <li>
-                                                    <span>Будет опубликовано</span>
-                                                    22.08.2025 15:30
-                                                </li>
-                                            </ul>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">Название клуба</div>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <input autocomplete="off" type="text" name="form[]"
+                                                    placeholder="Название клуба" value="Клуб by Оксана" class="input">
+                                                <div class="design-myclub__buttons">
+                                                    <button type="button" class="button-red btn">Сохранить</button>
+                                                    <button type="button" class="button btn">Отменить</button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <div class="cards-block-myclub__right">
-                                            <div class="dots">
-                                                <svg aria-hidden="true" width="16" height="4">
-                                                    <use xlink:href="img/sprite.svg#dots"></use>
-                                                </svg>
-                                                <div class="dropdown">
-                                                    <div class="dropdown__menu-content">
-                                                        <div class="dropdown__top">
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/send.svg" alt="">
-                                                                </div>
-                                                                Опубликовать
-                                                            </button>
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/pen2.svg" alt="">
-                                                                </div>
-                                                                Редактировать
-                                                            </button>
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/copylink2.svg" alt="">
-                                                                </div>
-                                                                Дублировать
-                                                            </button>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">Главная страница</div>
+                                                    <p>
+                                                        Выберите до трёх публикаций для закрепления на вашей главной
+                                                        странице.
+                                                        <br>
+                                                        Если нет закреплённых, то отображаются наиболее свежие
+                                                        публикации.
+                                                    </p>
+                                                </div>
+                                                <a href="#" data-popup="#demonstration"
+                                                    class="button-site demonstration-btn"><span>Демонстрация</span></a>
+                                            </div>
+                                            <div class="pin-block-publication">
+                                                <div class="pin-block-publication__column">
+                                                    <div class="pin-block-publication__number">1</div>
+                                                    <div class="pin-block-publication__item">
+                                                        <a href="#" data-popup="#pin-publication"
+                                                            class="pin-block-publication__text">
+                                                            <svg aria-hidden="true" width="16" height="16">
+                                                                <use xlink:href="img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                            <span>Закрепить публикацию</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="pin-block-publication__column active">
+                                                    <div class="pin-block-publication__number">2</div>
+                                                    <div class="pin-block-publication__item">
+                                                        <div class="popup-pin-publication__column">
+                                                            <div class="popup-pin-publication__close">
+                                                                <svg aria-hidden="true" width="9" height="9">
+                                                                    <use xlink:href="img/sprite.svg#close"></use>
+                                                                </svg>
+                                                            </div>
+                                                            <div class="popup-pin-publication__left">
+                                                                <div class="popup-pin-publication__name">Grow: как Джо
+                                                                    Хаттон переосмыслила йогу для
+                                                                    реальной жизни</div>
+                                                                <p>
+                                                                    Овощи являются неотъемлемой частью рациона каждого
+                                                                    человека. Они&nbsp;богаты витаминами,
+                                                                    минералами и&nbsp;клетчаткой, необходимыми
+                                                                    для&nbsp;поддержания здоровья организма. Регулярное
+                                                                    употребление овощей помогает укрепить иммунитет,
+                                                                    нормализовать работу
+                                                                    пищеварительной системы и&nbsp;снизить риск развития
+                                                                    хронических заболеваний.
+                                                                </p>
+                                                            </div>
+                                                            <div class="popup-pin-publication__image">
+                                                                <img src="img/image/image11.webp" alt="">
+                                                            </div>
                                                         </div>
-                                                        <div class="dropdown__bottom">
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/trash.svg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="pin-block-publication__column">
+                                                    <div class="pin-block-publication__number">3</div>
+                                                    <div class="pin-block-publication__item">
+                                                        <a href="#" data-popup="#pin-publication"
+                                                            class="pin-block-publication__text">
+                                                            <svg aria-hidden="true" width="16" height="16">
+                                                                <use xlink:href="img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                            <span>Закрепить публикацию</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title title3">Призыв подписаться</div>
+                                                    <p>
+                                                        Покажите пользу для новых подписчиков вашего клуба.
+                                                    </p>
+                                                </div>
+                                                <label class="toggle-switch">
+                                                    <input checked type="checkbox">
+                                                    <div class="toggle-switch-background">
+                                                        <div class="toggle-switch-handle"></div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <form action="#">
+                                                <textarea
+                                                    class="input textarea">Станьте платным подписчиком сегодня и получите полный доступ ко всему архиву публикаций</textarea>
+                                                <div class="design-myclub__buttons">
+                                                    <button type="button" class="button-red btn">Сохранить</button>
+                                                    <button type="button" class="button btn">Отменить</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div data-watch="navigator" class="design-myclub__body page-nav">
+                                        <div class="block-myclub__heading">
+                                            <h2 class="title3">Страницы и навигация</h2>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top top1">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">
+                                                        Навигационное меню
+                                                    </div>
+                                                    <p>
+                                                        Управляйте элементами навигационного меню по страницам вашего
+                                                        клуба.
+                                                    </p>
+                                                </div>
+                                                <a href="#" data-popup="#add-nav-menu"
+                                                    class="button-site"><span>Добавить</span></a>
+                                            </div>
+                                            <div class="design-myclub__tables">
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item main-title">
+                                                        Вкладка
+                                                    </div>
+                                                    <div class="design-myclub__item main-title">
+                                                        URL адрес
+                                                    </div>
+                                                    <div class="design-myclub__item main-title">
+                                                        Видимость
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon"></div>
+                                                        <span>Главная</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>/</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon"></div>
+                                                        <span>Заметки</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>/notes</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <label class="toggle-switch">
+                                                            <input checked type="checkbox">
+                                                            <div class="toggle-switch-background">
+                                                                <div class="toggle-switch-handle"></div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon"></div>
+                                                        <span>Архив</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>/archive</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <label class="toggle-switch">
+                                                            <input checked type="checkbox">
+                                                            <div class="toggle-switch-background">
+                                                                <div class="toggle-switch-handle"></div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon"></div>
+                                                        <span>О проекте</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>/about</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <label class="toggle-switch">
+                                                            <input checked type="checkbox">
+                                                            <div class="toggle-switch-background">
+                                                                <div class="toggle-switch-handle"></div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon">
+                                                            <img src="img/icon/dots1.svg" alt="">
+                                                        </div>
+                                                        <span>О проекте</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>https://пример.ru/moi_mysli</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="dots">
+                                                            <svg aria-hidden="true" width="16" height="4">
+                                                                <use xlink:href="img/sprite.svg#dots"></use>
+                                                            </svg>
+                                                            <div class="dropdown">
+                                                                <div class="dropdown__menu-content">
+                                                                    <div class="dropdown__top">
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/pen2.svg" alt="">
+                                                                            </div>
+                                                                            Редактировать
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="dropdown__bottom">
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/trash.svg" alt="">
+                                                                            </div>
+                                                                            Удалить
+                                                                        </button>
+                                                                    </div>
                                                                 </div>
-                                                                Удалить
-                                                            </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon">
+                                                            <img src="img/icon/dots1.svg" alt="">
+                                                        </div>
+                                                        <span>Другое</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>https://пример.ru/Drugoe</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="dots">
+                                                            <svg aria-hidden="true" width="16" height="4">
+                                                                <use xlink:href="img/sprite.svg#dots"></use>
+                                                            </svg>
+                                                            <div class="dropdown">
+                                                                <div class="dropdown__menu-content">
+                                                                    <div class="dropdown__top">
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/pen2.svg" alt="">
+                                                                            </div>
+                                                                            Редактировать
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="dropdown__bottom">
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/trash.svg" alt="">
+                                                                            </div>
+                                                                            Удалить
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top top1">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">
+                                                        О проекте
+                                                    </div>
+                                                    <p>
+                                                        На этой странице вы можете написать преимущества подписки на
+                                                        ваши
+                                                        публикации.
+                                                    </p>
+                                                </div>
+                                                <a href="#" class="button-site"><span>Изменить</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top top1">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">
+                                                        Пользовательские страницы
+                                                    </div>
+                                                    <p>
+                                                        Создавайте пользовательские страницы и добавляйте их в
+                                                        навигационное меню.
+                                                    </p>
+                                                </div>
+                                                <a href="#" class="button-site"><span>Добавить</span></a>
+                                            </div>
+                                            <div class="design-myclub__tables tables2">
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item main-title">
+                                                        Вкладка
+                                                    </div>
+                                                    <div class="design-myclub__item main-title">
+                                                        URL адрес
+                                                    </div>
+                                                    <div class="design-myclub__item main-title">
+                                                        Статус
+                                                    </div>
+                                                    <div class="design-myclub__item main-title">
+
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon"></div>
+                                                        <span>Новости</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>/p/news</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__badge">Черновик</div>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="dots">
+                                                            <svg aria-hidden="true" width="16" height="4">
+                                                                <use xlink:href="img/sprite.svg#dots"></use>
+                                                            </svg>
+                                                            <div class="dropdown">
+                                                                <div class="dropdown__menu-content">
+                                                                    <div class="dropdown__top">
+                                                                        <button type="button" class="long-text">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/plus.svg" alt="">
+                                                                            </div>
+                                                                            Добавить в навигационное меню
+                                                                        </button>
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/pen2.svg" alt="">
+                                                                            </div>
+                                                                            Редактировать
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="dropdown__bottom">
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/trash.svg" alt="">
+                                                                            </div>
+                                                                            Удалить
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon"></div>
+                                                        <span>Интересное</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>/p/interesting</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__badge design-myclub__item_green">
+                                                            Используется в
+                                                            меню</div>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="dots">
+                                                            <svg aria-hidden="true" width="16" height="4">
+                                                                <use xlink:href="img/sprite.svg#dots"></use>
+                                                            </svg>
+                                                            <div class="dropdown">
+                                                                <div class="dropdown__menu-content">
+                                                                    <div class="dropdown__top">
+                                                                        <button type="button" class="long-text">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/line.svg" alt="">
+                                                                            </div>
+                                                                            Убрать из навигационного меню
+                                                                        </button>
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/pen2.svg" alt="">
+                                                                            </div>
+                                                                            Редактировать
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="dropdown__bottom">
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/trash.svg" alt="">
+                                                                            </div>
+                                                                            Удалить
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="design-myclub__table">
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__table-icon"></div>
+                                                        <span>Развлечения</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <span>/p/entertainments</span>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="design-myclub__badge">Черновик</div>
+                                                    </div>
+                                                    <div class="design-myclub__item">
+                                                        <div class="dots">
+                                                            <svg aria-hidden="true" width="16" height="4">
+                                                                <use xlink:href="img/sprite.svg#dots"></use>
+                                                            </svg>
+                                                            <div class="dropdown">
+                                                                <div class="dropdown__menu-content">
+                                                                    <div class="dropdown__top">
+                                                                        <button type="button" class="long-text">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/plus.svg" alt="">
+                                                                            </div>
+                                                                            Добавить в навигационное меню
+                                                                        </button>
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/pen2.svg" alt="">
+                                                                            </div>
+                                                                            Редактировать
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="dropdown__bottom">
+                                                                        <button type="button">
+                                                                            <div class="dropdown__icon">
+                                                                                <img src="img/icon/trash.svg" alt="">
+                                                                            </div>
+                                                                            Удалить
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="design-myclub__showmore-btn button">
+                                                <svg aria-hidden="true" width="10" height="6">
+                                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                                </svg>
+                                                <span>Показать ещё</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div data-watch="navigator" class="design-myclub__body page-welcome">
+                                        <div class="block-myclub__heading">
+                                            <h2 class="title3">Страница приветствия</h2>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top top2">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">
+                                                        Изображение на странице приветствия
+                                                    </div>
+                                                    <p>
+                                                        Изображение, размером не менее 600 х 600 пикселей, которое
+                                                        отображается на вашей <a href="#">странице приветствия</a>.
+                                                    </p>
+                                                </div>
+                                                <div class="form-add-publication__files">
+                                                    <div class="form-add-publication__file">
+                                                        <input type="file" accept="image/*" class="">
+                                                        <a href="#" class="button">
+                                                            <svg aria-hidden="true" width="16" height="16">
+                                                                <use xlink:href="img/sprite.svg#plus"></use>
+                                                            </svg>
+                                                            <span>Добавить фото</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="previews"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">Краткое описание клуба
+                                                    </div>
+                                                    <p>
+                                                        Кратко опишите о чём будут ваши публикации.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <textarea class="input textarea">Мой личный клуб</textarea>
+                                                <div class="design-myclub__buttons">
+                                                    <button type="button" class="button-red btn">Сохранить</button>
+                                                    <button type="button" class="button btn">Отменить</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="design-myclub__column">
+                                            <div class="design-myclub__top">
+                                                <div class="design-myclub__titles">
+                                                    <div class="design-myclub__title">Текст кнопки “Пропустить” на
+                                                        странице приветствия</div>
+                                                    <p>
+                                                        Кнопка, которая позволяет посетителям продолжить просмотр без
+                                                        подписки.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <form action="#">
+                                                <input autocomplete="off" type="text" name="form[]" value="Нет, спасибо"
+                                                    class="input">
+                                                <div class="design-myclub__buttons">
+                                                    <button type="button" class="button-red btn">Сохранить</button>
+                                                    <button type="button" class="button btn">Отменить</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -746,8 +1168,222 @@
 
         </main>
     </div>
-    {% include 'blocks/scripts.njk' %}
+    <div id="demonstration" aria-hidden="true" class="popup popup-demonstration">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z"
+                            fill="#353535" />
+                    </svg>
+                </button>
+                <div class="popup-demonstration__body">
+                    <div class="popup-demonstration__left">
+                        <div class="popup-demonstration__images1">
+                            <div class="popup-demonstration__image">2</div>
+                            <div class="popup-demonstration__image">3</div>
+                        </div>
+                        <div class="popup-demonstration__images2">
+                            <div class="popup-demonstration__image">1</div>
+                        </div>
+                    </div>
+                    <div class="popup-demonstration__right">
+                        <div class="popup-demonstration__title">Популярное</div>
+                        <p>
+                            В этом списке будут отображаться 6 наиболее популярных публикаций, <a href="#">кроме
+                                закреплённых</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pin-publication" aria-hidden="true" class="popup popup-pin-publication">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z"
+                            fill="#353535" />
+                    </svg>
+                </button>
+                <div class="popup-pin-publication__content">
+                    <div class="popup-pin-publication__top">
+                        <div class="popup-pin-publication__title">
+                            Публикация №1
+                        </div>
+                        <div class="popup-pin-publication__search">
+                            <input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
+                            <button type="button" class="popup-pin-publication__search-icon">
+                                <svg aria-hidden="true" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="popup-pin-publication__body">
+                        <div class="popup-pin-publication__column active">
+                            <div class="popup-pin-publication__left">
+                                <div class="popup-pin-publication__name">Grow: как Джо Хаттон переосмыслила йогу для
+                                    реальной жизни</div>
+                                <p>
+                                    Овощи являются неотъемлемой частью рациона каждого человека. Они богаты витаминами,
+                                    минералами и клетчаткой, необходимыми для поддержания здоровья организма. Регулярное
+                                    употребление овощей помогает укрепить иммунитет, нормализовать работу
+                                    пищеварительной системы и снизить риск развития хронических заболеваний.
+                                </p>
+                            </div>
+                            <div class="popup-pin-publication__image">
+                                <img src="img/image/image11.webp" alt="">
+                            </div>
+                            <div class="popup-pin-publication__icons">
+                                <div class="popup-pin-publication__icon">
+                                    <img src="img/icon/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-pin-publication__column">
+                            <div class="popup-pin-publication__left">
+                                <div class="popup-pin-publication__name">ПРОБЛЕМА С ПАМЯТЬЮ</div>
+                                <p>
+                                    Краткое руководство по поддержанию памяти
+                                </p>
+                            </div>
+                            <div class="popup-pin-publication__icons">
+                                <div class="popup-pin-publication__icon">
+                                    <img src="img/icon/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-pin-publication__column">
+                            <div class="popup-pin-publication__left">
+                                <div class="popup-pin-publication__name">Пост 3</div>
+                                <p>
+                                    Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+                                    независимыми и расширили свою аудиторию.
+                                </p>
+                            </div>
+                            <div class="popup-pin-publication__image">
+                                <img src="img/image/image11.webp" alt="">
+                            </div>
+                            <div class="popup-pin-publication__icons">
+                                <div class="popup-pin-publication__icon">
+                                    <img src="img/icon/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-pin-publication__column">
+                            <div class="popup-pin-publication__left">
+                                <div class="popup-pin-publication__name">1122</div>
+                                <p>
+                                    +++++
+                                </p>
+                            </div>
+                            <div class="popup-pin-publication__icons">
+                                <div class="popup-pin-publication__icon">
+                                    <img src="img/icon/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-pin-publication__column">
+                            <div class="popup-pin-publication__left">
+                                <div class="popup-pin-publication__name">Пост 3</div>
+                                <p>
+                                    Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+                                    независимыми и расширили свою аудиторию.
+                                </p>
+                            </div>
+                            <div class="popup-pin-publication__image">
+                                <img src="img/image/image11.webp" alt="">
+                            </div>
+                            <div class="popup-pin-publication__icons">
+                                <div class="popup-pin-publication__icon">
+                                    <img src="img/icon/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-pin-publication__column">
+                            <div class="popup-pin-publication__left">
+                                <div class="popup-pin-publication__name">Пост 3</div>
+                                <p>
+                                    Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+                                    независимыми и расширили свою аудиторию.
+                                </p>
+                            </div>
+                            <div class="popup-pin-publication__image">
+                                <img src="img/image/image11.webp" alt="">
+                            </div>
+                            <div class="popup-pin-publication__icons">
+                                <div class="popup-pin-publication__icon">
+                                    <img src="img/icon/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-pin-publication__column">
+                            <div class="popup-pin-publication__left">
+                                <div class="popup-pin-publication__name">Пост 3</div>
+                                <p>
+                                    Серия интервью Grow создана для того, чтобы рассказать о том, как писатели стали
+                                    независимыми и расширили свою аудиторию.
+                                </p>
+                            </div>
+                            <div class="popup-pin-publication__image">
+                                <img src="img/image/image11.webp" alt="">
+                            </div>
+                            <div class="popup-pin-publication__icons">
+                                <div class="popup-pin-publication__icon">
+                                    <img src="img/icon/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="add-nav-menu" aria-hidden="true" class="popup popup-add-nav-menu">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div class="popup-add-nav-menu__content">
+                    <div class="popup-add-nav-menu__top">
+                        <div class="popup-add-nav-menu__title">
+                            Добавить ссылку в навигационное меню
+                        </div>
+                        <button data-close type="button" class="popup__close">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z"
+                                    fill="#353535" />
+                            </svg>
+                        </button>
+                    </div>
+                    <form action="#" class="popup-add-nav-menu__form">
+                        <div class="popup-add-nav-menu__inputs">
+                            <div class="popup-add-nav-menu__input">
+                                <label for="inp1">Название страницы <span>*</span></label>
+                                <input data-required id="inp1" autocomplete="off" type="text" name="form[]"
+                                    data-error="Обязательное поле" placeholder="" value="Мои мысли">
+                            </div>
+                            <div class="popup-add-nav-menu__input">
+                                <label for="inp2">Ссылка <span>*</span></label>
+                                <input data-required id="inp2" autocomplete="off" type="text" name="form[]"
+                                    data-error="Обязательное поле" placeholder="https://пример.ru">
+                            </div>
+                        </div>
+                        <div class="popup-add-nav-menu__buttons">
+                            <button type="submit" class="button-red btn">Добавить</button>
+                            <button type="button" class="button btn">Отменить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
 </body>
 
 </html>

@@ -41,8 +41,16 @@
       padding-left: 0px;
     }
   }
+  &.main-myclub-design {
+    overflow: visible;
+    @media (max-width: 1900px) {
+      padding-left: 0px;
+    }
+    @media (max-width: 992px) {
+      overflow: hidden;
+    }
+  }
 }
-
 
 .container {
   margin: 0 auto;

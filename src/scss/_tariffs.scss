@@ -1,6 +1,6 @@
 .block-tariffs {
     .container {
-        max-width: 1160px;
+        max-width: 1540px;
         padding: 0px 20px;
     }
     // .block-tariffs__content
@@ -94,8 +94,11 @@
     }
 }
 .card-tariffs-tabs {
-    flex: 0 1 calc(33.3333% - 20px);
+    flex: 0 1 calc(25% - 20px);
     position: relative;
+    @media (max-width: 1400px) {
+        flex: 0 1 calc(33.3333% - 20px);
+    }
     @media (max-width: 1200px) {
         flex: 0 1 calc(50% - 20px);
     }
@@ -353,4 +356,8 @@
             font-size: 16px;
         }
     }
+}
+
+.main-tariffs {
+    padding-left: 0px;
 }

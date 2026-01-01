@@ -1,0 +1,359 @@
+.statistics-filter {
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+    // .statistics-filter__options
+
+    &__options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+        .options2-item2 {
+            .options2__input {
+                &:checked + .options2__label {
+                    border: 1px solid var(--color-grey);
+                    background-color: var(--color-base);
+                }
+                &:checked + .options2__label .options2__icon {
+                    background-color: var(--color-red);
+                }
+                &:checked + .options2__label .options2__icon::before {
+                    background-color: var(--color-base);
+                }
+            }
+            .options2__icon {
+                background-color: var(--color-blue-grey);
+                transition: background-color 0.3s;
+                &::before {
+                    content: "";
+                    background-color: var(--color-blue-grey);
+                }
+            }
+            .options2__label {
+                align-items: center;
+                height: 100%;
+                border: 1px solid transparent;
+                border-radius: 10px;
+                padding: 9px;
+                background-color: var(--color-blue-grey);
+                transition:
+                    background-color 0.3s,
+                    border 0.3s;
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+        }
+        .options2__input {
+            &:checked + .options2__label .options2__text span.checked {
+                display: none;
+            }
+        }
+        .options2__label {
+            align-items: center;
+            height: 100%;
+            border: 1px solid var(--color-grey);
+            border-radius: 10px;
+            padding: 9px;
+            transition:
+                background-color 0.3s,
+                border 0.3s;
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+        }
+    }
+
+    // .statistics-filter__select
+
+    &__select {
+        width: 114px;
+        .select1 {
+            width: 114px;
+            &.active {
+                .select1__title {
+                    svg {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+        .select1__title {
+            border: 1px solid var(--color-grey);
+            font-weight: 400;
+            font-size: 14px;
+            justify-content: space-between;
+            gap: 10px;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            padding: 9px 13px 9px 9px;
+            span {
+                display: block;
+            }
+            svg {
+                fill: var(--color-black);
+                transition: transform 0.3s;
+            }
+        }
+        .select1__options {
+            width: 100%;
+        }
+        .options__text {
+            font-size: 14px;
+        }
+    }
+}
+.statistics-diagram {
+    height: auto;
+    width: 100%;
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.finance-myclub {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @media (max-width: 650px) {
+        grid-template-columns: 1fr;
+    }
+    // .finance-myclub__column
+
+    &__column {
+        border: 1px solid var(--color-grey);
+        border-radius: 10px;
+        padding: 20px 10px;
+        background: var(--color-base);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    // .finance-myclub__title
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        text-align: center;
+        flex: 1 1 auto;
+    }
+
+    // .finance-myclub__subtitle
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+    }
+}
+
+.table-statistics1 {
+    @media (max-width: 1300px) {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        border-radius: 0px;
+    }
+    @media (max-width: 992px) {
+        margin: 0px -10px 0px 0px;
+        padding: 0px 10px 0px 0px;
+        width: calc(100% + 20px);
+        border-radius: 10px 0px 0px 10px;
+    }
+    .tables-block-myclub__table {
+        min-width: 100%;
+        &:nth-child(n + 2) {
+            &:hover {
+                .tables-block-myclub__item {
+                    background-color: var(--color-base);
+                }
+            }
+            &.active {
+                .tables-block-myclub__item {
+                    background-color: var(--color-base);
+                }
+            }
+        }
+        .tables-block-myclub__item {
+            &:nth-child(1) {
+                position: relative;
+                width: auto;
+                left: 0px;
+                box-shadow: none;
+            }
+        }
+        @media (max-width: 992px) {
+            min-width: 1035px;
+            .tables-block-myclub__item {
+                &:nth-child(1) {
+                    position: sticky;
+                    width: 150px;
+                    left: 0px;
+                    box-shadow: 4px 0 10px 0 rgba(0, 0, 0, 0.12);
+                }
+            }
+        }
+        @media (max-width: 600px) {
+            min-width: 692px;
+        }
+    }
+    .tables-block-myclub__item {
+        font-weight: 600;
+        @media (min-width: 993px) {
+            &:nth-child(1) {
+                flex: 0 0 282px;
+            }
+            &:nth-child(2) {
+                flex: 0 0 201px;
+            }
+            &:nth-child(3) {
+                flex: 0 0 201px;
+            }
+            &:nth-child(4) {
+                flex: 0 0 201px;
+            }
+        }
+        @media (max-width: 992px) and (min-width: 600px) {
+            &:nth-child(1) {
+                flex: 0 0 282px;
+            }
+            &:nth-child(2) {
+                flex: 0 0 251px;
+            }
+            &:nth-child(3) {
+                flex: 0 0 251px;
+            }
+            &:nth-child(4) {
+                flex: 0 0 251px;
+            }
+        }
+        @media (max-width: 600px) {
+            &:nth-child(1) {
+                flex: 0 0 145px;
+            }
+            &:nth-child(2) {
+                flex: 0 0 190px;
+            }
+            &:nth-child(3) {
+                flex: 0 0 167px;
+            }
+            &:nth-child(4) {
+                flex: 0 0 190px;
+            }
+        }
+        &.main-title {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+.table-statistics2 {
+    @media (max-width: 1300px) {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        border-radius: 0px;
+    }
+    @media (max-width: 768px) {
+        margin: 0px -10px 0px 0px;
+        padding: 0px 10px 0px 0px;
+        width: calc(100% + 20px);
+        border-radius: 10px 0px 0px 10px;
+    }
+    .tables-block-myclub__table {
+        min-width: 100%;
+        &:nth-child(n + 2) {
+            &:hover {
+                .tables-block-myclub__item {
+                    background-color: var(--color-base);
+                }
+            }
+            &.active {
+                .tables-block-myclub__item {
+                    background-color: var(--color-base);
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            min-width: 770px;
+            .tables-block-myclub__item {
+                &:nth-child(1) {
+                    position: sticky;
+                    width: 150px;
+                    left: 0px;
+                    box-shadow: 4px 0 10px 0 rgba(0, 0, 0, 0.12);
+                }
+            }
+        }
+        @media (max-width: 550px) {
+            min-width: 642px;
+        }
+    }
+    .tables-block-myclub__item {
+        min-width: 0;
+        font-weight: 600;
+        text-align: right;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        word-break: normal;
+        gap: 4px;
+        &:nth-child(1) {
+            position: relative;
+            width: auto;
+            left: 0px;
+            box-shadow: none;
+            font-weight: 500;
+            align-items: start;
+            text-align: left;
+            color: #939393;
+            &.main-title {
+                color: var(--color-black);
+            }
+        }
+        &:nth-child(1) {
+            flex: 1 1 415px;
+        }
+        &:nth-child(2) {
+            flex: 0 0 110px;
+        }
+        &:nth-child(3) {
+            flex: 0 0 110px;
+        }
+        &:nth-child(4) {
+            flex: 0 0 140px;
+        }
+        &:nth-child(5) {
+            flex: 0 0 110px;
+        }
+        @media (max-width: 768px) {
+            &:nth-child(1) {
+                flex: 0 0 300px;
+            }
+        }
+        @media (max-width: 550px) {
+            &:nth-child(1) {
+                flex: 0 0 172px;
+            }
+        }
+        &.main-title {
+            text-align: left;
+            align-items: start;
+            font-weight: 500;
+        }
+    }
+}

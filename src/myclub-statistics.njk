@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Мой клуб, публикации, запланированные</title>
+    <title>Мой клуб, статистика</title>
     {% include 'blocks/head.njk' %}
 </head>
 
@@ -555,8 +555,7 @@
                                     <a href="#" data-filter="review" class="navigation-category__slide swiper-slide">
                                         Обзор
                                     </a>
-                                    <a href="#" data-filter="popular"
-                                        class="navigation-category__slide swiper-slide _active">
+                                    <a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
                                         Популярные
                                     </a>
                                     <a href="#" data-filter="subscribers"
@@ -564,7 +563,7 @@
                                         Подписчики
                                     </a>
                                     <a href="#" data-filter="statistics"
-                                        class="navigation-category__slide swiper-slide">
+                                        class="navigation-category__slide swiper-slide _active">
                                         Статистика
                                     </a>
                                     <a href="#" data-filter="UTM" class="navigation-category__slide swiper-slide">
@@ -581,160 +580,366 @@
                         </div>
                         <div class="block-myclub__body">
                             <div class="block-myclub__heading">
-                                <h1 class="title3">Публикации</h1>
-                                <a href="#" class="button-red">Новая публикация</a>
+                                <h1 class="title3">Статистика</h1>
                             </div>
                             <div class="block-myclub__items">
-                                <div class="top-block-myclub__nav">
-                                    <a href="#" class="top-block-myclub__title">
-                                        Опубликованные
-                                        <span>9999</span>
-                                    </a>
-                                    <a href="#" class="top-block-myclub__title">
-                                        Черновики
-                                    </a>
-                                    <a href="#" class="top-block-myclub__title active">
-                                        Запланированные
-                                        <span>2</span>
-                                    </a>
-                                </div>
-                                <div class="center-block-myclub">
-                                    <form class="center-block-myclub__search">
-                                        <button type="button" class="center-block-myclub__search-icon">
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#search"></use>
-                                            </svg>
-                                        </button>
-                                        <input autocomplete="off" type="text" name="form[]" placeholder="Найти">
-                                    </form>
-                                    <div class="center-block-myclub__filter">
-                                        <button type="button" class="center-block-myclub__filter-button">
-                                            <img src="img/icon/filter1.svg" alt="">
-                                            <span>Фильтр</span>
-                                        </button>
-                                        <div class="center-block-myclub__dropdown">
-                                            <div class="center-block-myclub__inputs">
-                                                <div class="center-block-myclub__input">
-                                                    <input autocomplete="off" type="date" name="form[]">
-                                                </div>
-                                                <div class="center-block-myclub__input">
-                                                    <input autocomplete="off" type="date" name="form[]">
-                                                </div>
-                                            </div>
-                                            <div class="center-block-myclub__buttons">
-                                                <a href="#" class="button-red">Применить</a>
-                                                <a href="#" class="button">Сбросить</a>
+                                <div class="block-myclub__columns">
+                                    <div class="block-myclub__column">
+                                        <div class="block-myclub__titles">
+                                            <div class="block-myclub__title">
+                                                Подписчики
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="center-block-myclub__select">
-                                        <div class="select1">
-                                            <div class="select1__title">
-                                                <img src="img/icon/filter2.svg" alt="">
-                                                <span>Новые сверху</span>
-                                            </div>
-                                            <div class="select1__options">
-                                                <div class="options__item">
-                                                    <input hidden id="o_1" class="options__input" checked type="radio"
-                                                        value="1" name="option">
-                                                    <label for="o_1" class="options__label">
-                                                        <span class="options__text">Новые сверху</span>
-                                                        <span class="options__icon">
-                                                            <img src="img/icon/chek1.svg" alt="">
+                                        <div class="statistics-filter">
+                                            <div class="statistics-filter__options">
+                                                <div class="options2__item">
+                                                    <input hidden id="o_11" class="options2__input" checked type="radio"
+                                                        value="11" name="option">
+                                                    <label for="o_11" class="options2__label">
+                                                        <span class="options2__icon"></span>
+                                                        <span class="options2__text">Все подписчики</span>
+                                                    </label>
+                                                </div>
+                                                <div class="options2__item options2-item2">
+                                                    <input hidden id="o_12" class="options2__input" type="radio"
+                                                        value="12" name="option">
+                                                    <label for="o_12" class="options2__label">
+                                                        <span class="options2__icon"></span>
+                                                        <span class="options2__text">
+                                                            Платные подписчики
+                                                            <span class="checked">
+                                                                (<a href="#" class="cl">добавить платный тариф</a>)
+                                                            </span>
                                                         </span>
                                                     </label>
                                                 </div>
-                                                <div class="options__item">
-                                                    <input hidden id="o_2" class="options__input" type="radio" value="2"
-                                                        name="option">
-                                                    <label for="o_2" class="options__label">
-                                                        <span class="options__text">Популярные сверху</span>
-                                                        <span class="options__icon">
-                                                            <img src="img/icon/chek1.svg" alt="">
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="options__item">
-                                                    <input hidden id="o_3" class="options__input" type="radio" value="3"
-                                                        name="option">
-                                                    <label for="o_3" class="options__label">
-                                                        <span class="options__text">Старые сверху</span>
-                                                        <span class="options__icon"><img src="img/icon/chek1.svg"
-                                                                alt=""></span>
-                                                    </label>
-                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cards-block-myclub">
-                                    <div class="cards-block-myclub__card">
-                                        <div class="cards-block-myclub__left">
-                                            <img src="img/image/image1.webp" alt="">
-                                            <div class="cards-block-myclub__titles">
-                                                <a href="#" class="cards-block-myclub__title">
-                                                    <img src="img/icon/headphones.svg" alt="">
-                                                    <span>Топ 10 авто из Китая</span>
-                                                </a>
-                                                <div class="cards-block-myclub__data">
-                                                    Обновлено <span>15:30</span>
-                                                </div>
-                                                <div class="cards-block-myclub__center2">
-                                                    <ul>
-                                                        <li>
-                                                            <span>Будет опубликовано</span>
-                                                            22.08.2025 15:30
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cards-block-myclub__center2">
-                                            <ul>
-                                                <li>
-                                                    <span>Будет опубликовано</span>
-                                                    22.08.2025 15:30
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cards-block-myclub__right">
-                                            <div class="dots">
-                                                <svg aria-hidden="true" width="16" height="4">
-                                                    <use xlink:href="img/sprite.svg#dots"></use>
-                                                </svg>
-                                                <div class="dropdown">
-                                                    <div class="dropdown__menu-content">
-                                                        <div class="dropdown__top">
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/send.svg" alt="">
-                                                                </div>
-                                                                Опубликовать
-                                                            </button>
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/pen2.svg" alt="">
-                                                                </div>
-                                                                Редактировать
-                                                            </button>
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/copylink2.svg" alt="">
-                                                                </div>
-                                                                Дублировать
-                                                            </button>
+                                            <div class="statistics-filter__select">
+                                                <div class="select1">
+                                                    <div class="select1__title">
+                                                        <span>Всё время</span>
+                                                        <svg aria-hidden="true" width="10" height="6">
+                                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="select1__options">
+                                                        <div class="options__item">
+                                                            <input hidden id="o_1" class="options__input" checked
+                                                                type="radio" value="1" name="option1">
+                                                            <label for="o_1" class="options__label">
+                                                                <span class="options__text">Всё время</span>
+                                                                <span class="options__icon">
+                                                                    <img src="img/icon/chek1.svg" alt="">
+                                                                </span>
+                                                            </label>
                                                         </div>
-                                                        <div class="dropdown__bottom">
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/trash.svg" alt="">
-                                                                </div>
-                                                                Удалить
-                                                            </button>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_2" class="options__input" type="radio"
+                                                                value="2" name="option1">
+                                                            <label for="o_2" class="options__label">
+                                                                <span class="options__text">30 дней</span>
+                                                                <span class="options__icon">
+                                                                    <img src="img/icon/chek1.svg" alt="">
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_3" class="options__input" type="radio"
+                                                                value="3" name="option1">
+                                                            <label for="o_3" class="options__label">
+                                                                <span class="options__text">90 дней</span>
+                                                                <span class="options__icon"><img
+                                                                        src="img/icon/chek1.svg" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_4" class="options__input" type="radio"
+                                                                value="4" name="option1">
+                                                            <label for="o_4" class="options__label">
+                                                                <span class="options__text">365 дней</span>
+                                                                <span class="options__icon"><img
+                                                                        src="img/icon/chek1.svg" alt=""></span>
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="statistics-diagram">
+                                            <img src="img/image1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="block-myclub__column">
+                                        <div class="block-myclub__titles">
+                                            <div class="block-myclub__title">
+                                                Статистика по тарифам
+                                            </div>
+                                        </div>
+                                        <div class="tables-block-myclub table-statistics1">
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Тариф</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Количество оплаченных</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Количество пробных</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Количество отписанных</span>
+                                                </div>
+                                            </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">Базовый</div>
+                                                <div class="tables-block-myclub__item">10</div>
+                                                <div class="tables-block-myclub__item">100</div>
+                                                <div class="tables-block-myclub__item">8</div>
+                                            </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">Профи</div>
+                                                <div class="tables-block-myclub__item">600</div>
+                                                <div class="tables-block-myclub__item">80</div>
+                                                <div class="tables-block-myclub__item">50</div>
+                                            </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">Креатор+</div>
+                                                <div class="tables-block-myclub__item">1 518 448</div>
+                                                <div class="tables-block-myclub__item">33</div>
+                                                <div class="tables-block-myclub__item">10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-myclub__column">
+                                        <div class="block-myclub__titles">
+                                            <div class="block-myclub__title">
+                                                Финансы
+                                            </div>
+                                        </div>
+                                        <div class="finance-myclub">
+                                            <div class="finance-myclub__column">
+                                                <div class="finance-myclub__title">Доход за последние 30 дней</div>
+                                                <div class="finance-myclub__subtitle">9 700 ₽</div>
+                                            </div>
+                                            <div class="finance-myclub__column">
+                                                <div class="finance-myclub__title">Всего заработано</div>
+                                                <div class="finance-myclub__subtitle">5 892 700 ₽</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block-myclub__column">
+                                        <div class="block-myclub__titles">
+                                            <div class="block-myclub__title">
+                                                Оплаты по месяцам
+                                            </div>
+                                            <div class="info-myclub__icon info-myclub-icon2">
+                                                <img src="img/icon/info.svg" alt="">
+                                                <div class="info-myclub__icon-text">
+                                                    На графике показана сумма оплат по каждому месяцу за всё время
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="statistics-diagram">
+                                            <img src="img/image1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="block-myclub__column">
+                                        <div class="block-myclub__titles titles-filter">
+                                            <div class="block-myclub__title">
+                                                Количество посетителей и просмотров
+                                            </div>
+                                            <div class="statistics-filter__select">
+                                                <div class="select1">
+                                                    <div class="select1__title">
+                                                        <span>Всё время</span>
+                                                        <svg aria-hidden="true" width="10" height="6">
+                                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="select1__options">
+                                                        <div class="options__item">
+                                                            <input hidden id="o_21" class="options__input" checked
+                                                                type="radio" value="21" name="option3">
+                                                            <label for="o_21" class="options__label">
+                                                                <span class="options__text">Всё время</span>
+                                                                <span class="options__icon">
+                                                                    <img src="img/icon/chek1.svg" alt="">
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_22" class="options__input" type="radio"
+                                                                value="22" name="option3">
+                                                            <label for="o_22" class="options__label">
+                                                                <span class="options__text">30 дней</span>
+                                                                <span class="options__icon">
+                                                                    <img src="img/icon/chek1.svg" alt="">
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_23" class="options__input" type="radio"
+                                                                value="23" name="option3">
+                                                            <label for="o_23" class="options__label">
+                                                                <span class="options__text">90 дней</span>
+                                                                <span class="options__icon"><img
+                                                                        src="img/icon/chek1.svg" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_24" class="options__input" type="radio"
+                                                                value="24" name="option3">
+                                                            <label for="o_24" class="options__label">
+                                                                <span class="options__text">365 дней</span>
+                                                                <span class="options__icon"><img
+                                                                        src="img/icon/chek1.svg" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="statistics-diagram">
+                                            <img src="img/image1.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="block-myclub__column">
+                                        <div class="block-myclub__titles titles-filter">
+                                            <div class="block-myclub__title">
+                                                Email рассылки
+                                            </div>
+                                            <div class="statistics-filter__select">
+                                                <div class="select1">
+                                                    <div class="select1__title">
+                                                        <span>Всё время</span>
+                                                        <svg aria-hidden="true" width="10" height="6">
+                                                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="select1__options">
+                                                        <div class="options__item">
+                                                            <input hidden id="o_31" class="options__input" checked
+                                                                type="radio" value="31" name="option4">
+                                                            <label for="o_31" class="options__label">
+                                                                <span class="options__text">Всё время</span>
+                                                                <span class="options__icon">
+                                                                    <img src="img/icon/chek1.svg" alt="">
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_32" class="options__input" type="radio"
+                                                                value="32" name="option4">
+                                                            <label for="o_32" class="options__label">
+                                                                <span class="options__text">30 дней</span>
+                                                                <span class="options__icon">
+                                                                    <img src="img/icon/chek1.svg" alt="">
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_33" class="options__input" type="radio"
+                                                                value="33" name="option4">
+                                                            <label for="o_33" class="options__label">
+                                                                <span class="options__text">90 дней</span>
+                                                                <span class="options__icon"><img
+                                                                        src="img/icon/chek1.svg" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="options__item">
+                                                            <input hidden id="o_34" class="options__input" type="radio"
+                                                                value="34" name="option4">
+                                                            <label for="o_34" class="options__label">
+                                                                <span class="options__text">365 дней</span>
+                                                                <span class="options__icon"><img
+                                                                        src="img/icon/chek1.svg" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tables-block-myclub table-statistics2">
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Название публикации</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Отправлено</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Прочитано</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Перешли на сайт</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Отписались</span>
+                                                </div>
+                                            </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">
+                                                    <div class="tables-block-myclub__title">Чат-бот BotFather для
+                                                        администрирования ботов в Telegram
+                                                        обзавёлся
+                                                        мини-приложением</div>
+                                                    Создано 10 августа в 14:40
+                                                </div>
+                                                <div class="tables-block-myclub__item">10</div>
+                                                <div style="color:#353535;" class="tables-block-myclub__item">
+                                                    100 %
+                                                    <div class="tables-block-myclub__line">
+                                                        <span style="background:#c5c5c5; width:100%"></span>
+                                                    </div>
+                                                </div>
+                                                <div style="color:#26a138;" class="tables-block-myclub__item">
+                                                    8 %
+                                                    <div class="tables-block-myclub__line">
+                                                        <span style="background:#26a138; width:8%"></span>
+                                                    </div>
+                                                </div>
+                                                <div style="color:#cd5045;" class="tables-block-myclub__item">
+                                                    2 %
+                                                    <div class="tables-block-myclub__line">
+                                                        <span style="background:#cd5045; width:2%"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">
+                                                    <div class="tables-block-myclub__title">
+                                                        Как придумать название бренда, которое запомнят
+                                                    </div>
+                                                    Создано 1 августа в 10:00
+                                                </div>
+                                                <div class="tables-block-myclub__item">600</div>
+                                                <div style="color:#353535;" class="tables-block-myclub__item">
+                                                    80 %
+                                                    <div class="tables-block-myclub__line">
+                                                        <span style="background:#c5c5c5; width:80%"></span>
+                                                    </div>
+                                                </div>
+                                                <div style="color:#26a138;" class="tables-block-myclub__item">
+                                                    50 %
+                                                    <div class="tables-block-myclub__line">
+                                                        <span style="background:#26a138; width:50%"></span>
+                                                    </div>
+                                                </div>
+                                                <div style="color:#cd5045;" class="tables-block-myclub__item">
+                                                    10 %
+                                                    <div class="tables-block-myclub__line">
+                                                        <span style="background:#cd5045; width:10%"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tables-block-myclub__button">
+                                            <button type="button" class="button">
+                                                <svg aria-hidden="true" width="10" height="6">
+                                                    <use xlink:href="img/sprite.svg#arrow1"></use>
+                                                </svg>
+                                                <span>Показать ещё</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -746,8 +951,8 @@
 
         </main>
     </div>
-    {% include 'blocks/scripts.njk' %}
     {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
 </body>
 
 </html>

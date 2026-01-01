@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Мой клуб, публикации, запланированные</title>
+    <title>Мой клуб, рефереры</title>
     {% include 'blocks/head.njk' %}
 </head>
 
@@ -555,8 +555,7 @@
                                     <a href="#" data-filter="review" class="navigation-category__slide swiper-slide">
                                         Обзор
                                     </a>
-                                    <a href="#" data-filter="popular"
-                                        class="navigation-category__slide swiper-slide _active">
+                                    <a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
                                         Популярные
                                     </a>
                                     <a href="#" data-filter="subscribers"
@@ -570,6 +569,10 @@
                                     <a href="#" data-filter="UTM" class="navigation-category__slide swiper-slide">
                                         UTM
                                     </a>
+                                    <a href="#" data-filter="statistics"
+                                        class="navigation-category__slide swiper-slide _active">
+                                        Рефереры
+                                    </a>
                                     <a href="#" data-filter="design" class="navigation-category__slide swiper-slide">
                                         Дизайн
                                     </a>
@@ -579,161 +582,81 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block-myclub__body">
+                        <div class="block-myclub__body  block-myclub-referrers">
                             <div class="block-myclub__heading">
-                                <h1 class="title3">Публикации</h1>
-                                <a href="#" class="button-red">Новая публикация</a>
+                                <h1 class="title3">Рефереры</h1>
+                                <p>
+                                    Список ваших подписчиков, которые привлекли для вас новых подписчиков по
+                                    своей реферальной ссылке
+                                </p>
+                                <div class="citation">
+                                    <p>
+                                        Вы можете настроить вознаграждение по реферальной программе для своих
+                                        подписчиков в разделе <a href="#">
+                                            «Настройки»
+                                        </a>
+                                    </p>
+                                    <button type="button" class="citation__close">
+                                        <svg aria-hidden="true" width="12" height="12">
+                                            <use xlink:href="img/sprite.svg#close"></use>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div class="block-myclub__items">
-                                <div class="top-block-myclub__nav">
-                                    <a href="#" class="top-block-myclub__title">
-                                        Опубликованные
-                                        <span>9999</span>
-                                    </a>
-                                    <a href="#" class="top-block-myclub__title">
-                                        Черновики
-                                    </a>
-                                    <a href="#" class="top-block-myclub__title active">
-                                        Запланированные
-                                        <span>2</span>
-                                    </a>
-                                </div>
-                                <div class="center-block-myclub">
-                                    <form class="center-block-myclub__search">
-                                        <button type="button" class="center-block-myclub__search-icon">
-                                            <svg aria-hidden="true" width="20" height="20">
-                                                <use xlink:href="img/sprite.svg#search"></use>
-                                            </svg>
-                                        </button>
-                                        <input autocomplete="off" type="text" name="form[]" placeholder="Найти">
-                                    </form>
-                                    <div class="center-block-myclub__filter">
-                                        <button type="button" class="center-block-myclub__filter-button">
-                                            <img src="img/icon/filter1.svg" alt="">
-                                            <span>Фильтр</span>
-                                        </button>
-                                        <div class="center-block-myclub__dropdown">
-                                            <div class="center-block-myclub__inputs">
-                                                <div class="center-block-myclub__input">
-                                                    <input autocomplete="off" type="date" name="form[]">
+                                <div class="block-myclub__columns">
+                                    <div class="block-myclub__column">
+                                        <div class="tables-block-myclub">
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Email</span>
                                                 </div>
-                                                <div class="center-block-myclub__input">
-                                                    <input autocomplete="off" type="date" name="form[]">
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Фамилия и имя</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Привлечено бесплатных подписчиков</span>
+                                                </div>
+                                                <div class="tables-block-myclub__item main-title">
+                                                    <span>Привлечено платных подписчиков</span>
                                                 </div>
                                             </div>
-                                            <div class="center-block-myclub__buttons">
-                                                <a href="#" class="button-red">Применить</a>
-                                                <a href="#" class="button">Сбросить</a>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">petlover123@example.com</div>
+                                                <div class="tables-block-myclub__item">Смирнов Алексей</div>
+                                                <div class="tables-block-myclub__item">125</div>
+                                                <div class="tables-block-myclub__item">31</div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="center-block-myclub__select">
-                                        <div class="select1">
-                                            <div class="select1__title">
-                                                <img src="img/icon/filter2.svg" alt="">
-                                                <span>Новые сверху</span>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">petlover123@example.com</div>
+                                                <div class="tables-block-myclub__item">Смирнов Алексей</div>
+                                                <div class="tables-block-myclub__item">75</div>
+                                                <div class="tables-block-myclub__item">7</div>
                                             </div>
-                                            <div class="select1__options">
-                                                <div class="options__item">
-                                                    <input hidden id="o_1" class="options__input" checked type="radio"
-                                                        value="1" name="option">
-                                                    <label for="o_1" class="options__label">
-                                                        <span class="options__text">Новые сверху</span>
-                                                        <span class="options__icon">
-                                                            <img src="img/icon/chek1.svg" alt="">
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="options__item">
-                                                    <input hidden id="o_2" class="options__input" type="radio" value="2"
-                                                        name="option">
-                                                    <label for="o_2" class="options__label">
-                                                        <span class="options__text">Популярные сверху</span>
-                                                        <span class="options__icon">
-                                                            <img src="img/icon/chek1.svg" alt="">
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="options__item">
-                                                    <input hidden id="o_3" class="options__input" type="radio" value="3"
-                                                        name="option">
-                                                    <label for="o_3" class="options__label">
-                                                        <span class="options__text">Старые сверху</span>
-                                                        <span class="options__icon"><img src="img/icon/chek1.svg"
-                                                                alt=""></span>
-                                                    </label>
-                                                </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">
+                                                    creativemind77586785463gfdbd@domain.com</div>
+                                                <div class="tables-block-myclub__item">Иванова Мария</div>
+                                                <div class="tables-block-myclub__item">35</div>
+                                                <div class="tables-block-myclub__item">18</div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cards-block-myclub">
-                                    <div class="cards-block-myclub__card">
-                                        <div class="cards-block-myclub__left">
-                                            <img src="img/image/image1.webp" alt="">
-                                            <div class="cards-block-myclub__titles">
-                                                <a href="#" class="cards-block-myclub__title">
-                                                    <img src="img/icon/headphones.svg" alt="">
-                                                    <span>Топ 10 авто из Китая</span>
-                                                </a>
-                                                <div class="cards-block-myclub__data">
-                                                    Обновлено <span>15:30</span>
-                                                </div>
-                                                <div class="cards-block-myclub__center2">
-                                                    <ul>
-                                                        <li>
-                                                            <span>Будет опубликовано</span>
-                                                            22.08.2025 15:30
-                                                        </li>
-                                                    </ul>
-                                                </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">creativemind77@domain.com</div>
+                                                <div class="tables-block-myclub__item">Иванова Мария</div>
+                                                <div class="tables-block-myclub__item">21</div>
+                                                <div class="tables-block-myclub__item">4</div>
                                             </div>
-                                        </div>
-                                        <div class="cards-block-myclub__center2">
-                                            <ul>
-                                                <li>
-                                                    <span>Будет опубликовано</span>
-                                                    22.08.2025 15:30
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cards-block-myclub__right">
-                                            <div class="dots">
-                                                <svg aria-hidden="true" width="16" height="4">
-                                                    <use xlink:href="img/sprite.svg#dots"></use>
-                                                </svg>
-                                                <div class="dropdown">
-                                                    <div class="dropdown__menu-content">
-                                                        <div class="dropdown__top">
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/send.svg" alt="">
-                                                                </div>
-                                                                Опубликовать
-                                                            </button>
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/pen2.svg" alt="">
-                                                                </div>
-                                                                Редактировать
-                                                            </button>
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/copylink2.svg" alt="">
-                                                                </div>
-                                                                Дублировать
-                                                            </button>
-                                                        </div>
-                                                        <div class="dropdown__bottom">
-                                                            <button type="button">
-                                                                <div class="dropdown__icon">
-                                                                    <img src="img/icon/trash.svg" alt="">
-                                                                </div>
-                                                                Удалить
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">sunnyday89@mail.com</div>
+                                                <div class="tables-block-myclub__item">Кузнецов Дмитрий</div>
+                                                <div class="tables-block-myclub__item">17</div>
+                                                <div class="tables-block-myclub__item">28</div>
+                                            </div>
+                                            <div class="tables-block-myclub__table">
+                                                <div class="tables-block-myclub__item">sunnyday89@mail.com</div>
+                                                <div class="tables-block-myclub__item">Кузнецов Дмитрий</div>
+                                                <div class="tables-block-myclub__item">1</div>
+                                                <div class="tables-block-myclub__item">35</div>
                                             </div>
                                         </div>
                                     </div>
@@ -746,8 +669,8 @@
 
         </main>
     </div>
-    {% include 'blocks/scripts.njk' %}
     {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
 </body>
 
 </html>
