@@ -2,7 +2,7 @@
 <html lang="ru">
 
 	<head>
-		<title>Все авторы</title>
+		<title>Мой клуб, статистика</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,54 +17,17 @@
 
 	<body class="preload mp">
 		<div class="main-wrapper-outer">
-			<header data-lp class="header">
+			<header data-lp class="header header-myclub">
 				<div class="header__contents">
 					<div class="header__left">
 						<a href="#" class="header__logo">
 							<img src="img/icon/logo.svg" alt="">
 						</a>
-						<div class="header__title">
-							<a href="#" class="arrow-prev2">
-								<svg aria-hidden="true" width="14" height="8">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</a>
-							<span>Все авторы</span>
-						</div>
 					</div>
-					<form data-popup="#search1" class="header__search">
-						<button type="button" class="header__search-icon">
-							<svg aria-hidden="true" width="20" height="21">
-								<use xlink:href="img/sprite.svg#search"></use>
-							</svg>
-						</button>
-						<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
-					</form>
+					<div class="header__title">
+						<span>Мой клуб</span>
+					</div>
 					<div class="header__right">
-						<div class="header__add add-header">
-							<button type="button" class="add-header__plus button-red">
-								<svg aria-hidden="true" width="22" height="21">
-									<use xlink:href="img/sprite.svg#plus"></use>
-								</svg>
-							</button>
-							<div class="add-header__body">
-								<div class="add-header__content">
-									<a href="#" data-popup="#share-thoughts" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#pencel"></use>
-										</svg>
-										<span>Добавить заметку</span>
-									</a>
-									<a href="#" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#public"></use>
-										</svg>
-										<span>Добавить публикацию</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="header__club button">Мой клуб</a>
 						<div class="header__notification notification-header">
 							<div class="notification-header__icon">
 								<svg aria-hidden="true" width="28" height="29">
@@ -433,7 +396,7 @@
 				</div>
 				<div class="shadow"></div>
 			</header>
-			<div class="sidebar">
+			<div class="sidebar sidebar-myclub">
 				<a href="#" class="sidebar__logo">
 					<img src="img/icon/logo.svg" alt="">
 				</a>
@@ -474,7 +437,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#" class="_active">
+								<a href="#">
 									<svg class="link" aria-hidden="true" width="32" height="32">
 										<use xlink:href="img/sprite.svg#author"></use>
 									</svg>
@@ -513,176 +476,380 @@
 					</nav>
 				</div>
 			</div>
-			<main class="main main-all-authors">
+			<main class="main main-myclub">
 
-				<div class="block-all-authors">
+				<div class="block-myclub">
 					<div class="container">
-						<div class="navigation-category">
-							<div class="navigation-category__slider swiper">
-								<div class="navigation-category__wrapper swiper-wrapper">
-									<a href="#" data-filter="new" class="navigation-category__slide swiper-slide _active">
-										Свежие
-									</a>
-									<a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
-										Популярные
-									</a>
-									<a href="#" data-filter="animation" class="navigation-category__slide swiper-slide">
-										Анимация
-									</a>
-									<a href="#" data-filter="business" class="navigation-category__slide swiper-slide">
-										Бизнес
-									</a>
-									<a href="#" data-filter="charity" class="navigation-category__slide swiper-slide">
-										Благотворительность
-									</a>
-									<a href="#" data-filter="blog" class="navigation-category__slide swiper-slide">
-										Блог
-									</a>
-									<a href="#" data-filter="military-affairs" class="navigation-category__slide swiper-slide">
-										Военное дело
-									</a>
-									<a href="#" data-filter="food" class="navigation-category__slide swiper-slide">
-										Еда
-									</a>
-									<a href="#" data-filter="animals" class="navigation-category__slide swiper-slide">
-										Животные
-									</a>
-									<a href="#" data-filter="health" class="navigation-category__slide swiper-slide">
-										Здоровье
-									</a>
-									<a href="#" data-filter="games" class="navigation-category__slide swiper-slide">
-										Игры
-									</a>
-									<a href="#" data-filter="games" class="navigation-category__slide swiper-slide">
-										Игры
-									</a>
-								</div>
-							</div>
-							<div class="navigation-category__arrow-prev arrow-prev">
-								<svg aria-hidden="true" width="15" height="10">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</div>
-							<div class="navigation-category__arrow-next arrow-next">
-								<svg aria-hidden="true" width="15" height="10">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</div>
-						</div>
-						<div class="block-all-authors__content">
-							<div data-filter="new" class="right-all-publication__content filter-block">
-								<div class="right-all-publication__filter">
-									<a href="#" class="right-all-publication__filter-title active">По публикациям</a>
-									<a href="#" class="right-all-publication__filter-title">По подписчикам</a>
-								</div>
-								<div class="right-all-publication__body">
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button-red">
-												Подписаться
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
-									</div>
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button">
-												Управление подпиской
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
+						<div class="block-myclub__content">
+							<div class="navigation-category">
+								<div class="navigation-category__slider swiper">
+									<div class="navigation-category__wrapper swiper-wrapper">
+										<a href="#" data-filter="review" class="navigation-category__slide swiper-slide">
+											Обзор
+										</a>
+										<a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
+											Популярные
+										</a>
+										<a href="#" data-filter="subscribers" class="navigation-category__slide swiper-slide">
+											Подписчики
+										</a>
+										<a href="#" data-filter="statistics" class="navigation-category__slide swiper-slide _active">
+											Статистика
+										</a>
+										<a href="#" data-filter="UTM" class="navigation-category__slide swiper-slide">
+											UTM
+										</a>
+										<a href="#" data-filter="design" class="navigation-category__slide swiper-slide">
+											Дизайн
+										</a>
+										<a href="#" data-filter="settings" class="navigation-category__slide swiper-slide">
+											Настройки
+										</a>
 									</div>
 								</div>
 							</div>
-							<div data-filter="popular" class="right-all-publication__content filter-block">
-								<div class="right-all-publication__filter">
-									<a href="#" class="right-all-publication__filter-title active">По публикациям</a>
-									<a href="#" class="right-all-publication__filter-title">По подписчикам</a>
-									<a href="#" class="right-all-publication__filter-title">Новые авторы</a>
-									<a href="#" class="right-all-publication__filter-title">Случайные авторы</a>
+							<div class="block-myclub__body">
+								<div class="block-myclub__heading">
+									<h1 class="title3">Статистика</h1>
 								</div>
-								<div class="right-all-publication__body">
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
+								<div class="block-myclub__items">
+									<div class="block-myclub__columns">
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles">
+												<div class="block-myclub__title">
+													Подписчики
 												</div>
-											</a>
-											<button type="button" class="button-red">
-												Подписаться
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
 											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
-									</div>
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
+											<div class="statistics-filter">
+												<div class="statistics-filter__options">
+													<div class="options2__item">
+														<input hidden id="o_11" class="options2__input" checked type="radio" value="11" name="option">
+														<label for="o_11" class="options2__label">
+															<span class="options2__icon"></span>
+															<span class="options2__text">Все подписчики</span>
+														</label>
+													</div>
+													<div class="options2__item options2-item2">
+														<input hidden id="o_12" class="options2__input" type="radio" value="12" name="option">
+														<label for="o_12" class="options2__label">
+															<span class="options2__icon"></span>
+															<span class="options2__text">
+																Платные подписчики
+																<span class="checked">
+																	(<a href="#" class="cl">добавить платный тариф</a>)
+																</span>
+															</span>
+														</label>
+													</div>
 												</div>
-											</a>
-											<button type="button" class="button">
-												Управление подпиской
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
+												<div class="statistics-filter__select">
+													<div class="select1">
+														<div class="select1__title">
+															<span>Всё время</span>
+															<svg aria-hidden="true" width="10" height="6">
+																<use xlink:href="img/sprite.svg#arrow1"></use>
+															</svg>
+														</div>
+														<div class="select1__options">
+															<div class="options__item">
+																<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option1">
+																<label for="o_1" class="options__label">
+																	<span class="options__text">Всё время</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_2" class="options__input" type="radio" value="2" name="option1">
+																<label for="o_2" class="options__label">
+																	<span class="options__text">30 дней</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_3" class="options__input" type="radio" value="3" name="option1">
+																<label for="o_3" class="options__label">
+																	<span class="options__text">90 дней</span>
+																	<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_4" class="options__input" type="radio" value="4" name="option1">
+																<label for="o_4" class="options__label">
+																	<span class="options__text">365 дней</span>
+																	<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
+											<div class="statistics-diagram">
+												<img src="img/image1.webp" alt="">
+											</div>
+										</div>
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles">
+												<div class="block-myclub__title">
+													Статистика по тарифам
+												</div>
+											</div>
+											<div class="tables-block-myclub table-statistics1">
+												<div class="tables-block-myclub__table">
+													<div class="tables-block-myclub__item main-title">
+														<span>Тариф</span>
+													</div>
+													<div class="tables-block-myclub__item main-title">
+														<span>Количество оплаченных</span>
+													</div>
+													<div class="tables-block-myclub__item main-title">
+														<span>Количество пробных</span>
+													</div>
+													<div class="tables-block-myclub__item main-title">
+														<span>Количество отписанных</span>
+													</div>
+												</div>
+												<div class="tables-block-myclub__table">
+													<div class="tables-block-myclub__item">Базовый</div>
+													<div class="tables-block-myclub__item">10</div>
+													<div class="tables-block-myclub__item">100</div>
+													<div class="tables-block-myclub__item">8</div>
+												</div>
+												<div class="tables-block-myclub__table">
+													<div class="tables-block-myclub__item">Профи</div>
+													<div class="tables-block-myclub__item">600</div>
+													<div class="tables-block-myclub__item">80</div>
+													<div class="tables-block-myclub__item">50</div>
+												</div>
+												<div class="tables-block-myclub__table">
+													<div class="tables-block-myclub__item">Креатор+</div>
+													<div class="tables-block-myclub__item">1 518 448</div>
+													<div class="tables-block-myclub__item">33</div>
+													<div class="tables-block-myclub__item">10</div>
+												</div>
+											</div>
+										</div>
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles">
+												<div class="block-myclub__title">
+													Финансы
+												</div>
+											</div>
+											<div class="finance-myclub">
+												<div class="finance-myclub__column">
+													<div class="finance-myclub__title">Доход за последние 30 дней</div>
+													<div class="finance-myclub__subtitle">9 700 ₽</div>
+												</div>
+												<div class="finance-myclub__column">
+													<div class="finance-myclub__title">Всего заработано</div>
+													<div class="finance-myclub__subtitle">5 892 700 ₽</div>
+												</div>
+											</div>
+										</div>
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles">
+												<div class="block-myclub__title">
+													Оплаты по месяцам
+												</div>
+												<div class="info-myclub__icon info-myclub-icon2">
+													<img src="img/icon/info.svg" alt="">
+													<div class="info-myclub__icon-text">
+														На графике показана сумма оплат по каждому месяцу за всё время
+													</div>
+												</div>
+											</div>
+											<div class="statistics-diagram">
+												<img src="img/image1.webp" alt="">
+											</div>
+										</div>
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles titles-filter">
+												<div class="block-myclub__title">
+													Количество посетителей и просмотров
+												</div>
+												<div class="statistics-filter__select">
+													<div class="select1">
+														<div class="select1__title">
+															<span>Всё время</span>
+															<svg aria-hidden="true" width="10" height="6">
+																<use xlink:href="img/sprite.svg#arrow1"></use>
+															</svg>
+														</div>
+														<div class="select1__options">
+															<div class="options__item">
+																<input hidden id="o_21" class="options__input" checked type="radio" value="21" name="option3">
+																<label for="o_21" class="options__label">
+																	<span class="options__text">Всё время</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_22" class="options__input" type="radio" value="22" name="option3">
+																<label for="o_22" class="options__label">
+																	<span class="options__text">30 дней</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_23" class="options__input" type="radio" value="23" name="option3">
+																<label for="o_23" class="options__label">
+																	<span class="options__text">90 дней</span>
+																	<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_24" class="options__input" type="radio" value="24" name="option3">
+																<label for="o_24" class="options__label">
+																	<span class="options__text">365 дней</span>
+																	<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="statistics-diagram">
+												<img src="img/image1.webp" alt="">
+											</div>
+										</div>
+										<div class="block-myclub__column">
+											<div class="block-myclub__titles titles-filter">
+												<div class="block-myclub__title">
+													Email рассылки
+												</div>
+												<div class="statistics-filter__select">
+													<div class="select1">
+														<div class="select1__title">
+															<span>Всё время</span>
+															<svg aria-hidden="true" width="10" height="6">
+																<use xlink:href="img/sprite.svg#arrow1"></use>
+															</svg>
+														</div>
+														<div class="select1__options">
+															<div class="options__item">
+																<input hidden id="o_31" class="options__input" checked type="radio" value="31" name="option4">
+																<label for="o_31" class="options__label">
+																	<span class="options__text">Всё время</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_32" class="options__input" type="radio" value="32" name="option4">
+																<label for="o_32" class="options__label">
+																	<span class="options__text">30 дней</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_33" class="options__input" type="radio" value="33" name="option4">
+																<label for="o_33" class="options__label">
+																	<span class="options__text">90 дней</span>
+																	<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden id="o_34" class="options__input" type="radio" value="34" name="option4">
+																<label for="o_34" class="options__label">
+																	<span class="options__text">365 дней</span>
+																	<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tables-block-myclub table-statistics2">
+												<div class="tables-block-myclub__table">
+													<div class="tables-block-myclub__item main-title">
+														<span>Название публикации</span>
+													</div>
+													<div class="tables-block-myclub__item main-title">
+														<span>Отправлено</span>
+													</div>
+													<div class="tables-block-myclub__item main-title">
+														<span>Прочитано</span>
+													</div>
+													<div class="tables-block-myclub__item main-title">
+														<span>Перешли на сайт</span>
+													</div>
+													<div class="tables-block-myclub__item main-title">
+														<span>Отписались</span>
+													</div>
+												</div>
+												<div class="tables-block-myclub__table">
+													<div class="tables-block-myclub__item">
+														<div class="tables-block-myclub__title">Чат-бот BotFather для
+															администрирования ботов в Telegram
+															обзавёлся
+															мини-приложением</div>
+														Создано 10 августа в 14:40
+													</div>
+													<div class="tables-block-myclub__item">10</div>
+													<div style="color:#353535;" class="tables-block-myclub__item">
+														100 %
+														<div class="tables-block-myclub__line">
+															<span style="background:#c5c5c5; width:100%"></span>
+														</div>
+													</div>
+													<div style="color:#26a138;" class="tables-block-myclub__item">
+														8 %
+														<div class="tables-block-myclub__line">
+															<span style="background:#26a138; width:8%"></span>
+														</div>
+													</div>
+													<div style="color:#cd5045;" class="tables-block-myclub__item">
+														2 %
+														<div class="tables-block-myclub__line">
+															<span style="background:#cd5045; width:2%"></span>
+														</div>
+													</div>
+												</div>
+												<div class="tables-block-myclub__table">
+													<div class="tables-block-myclub__item">
+														<div class="tables-block-myclub__title">
+															Как придумать название бренда, которое запомнят
+														</div>
+														Создано 1 августа в 10:00
+													</div>
+													<div class="tables-block-myclub__item">600</div>
+													<div style="color:#353535;" class="tables-block-myclub__item">
+														80 %
+														<div class="tables-block-myclub__line">
+															<span style="background:#c5c5c5; width:80%"></span>
+														</div>
+													</div>
+													<div style="color:#26a138;" class="tables-block-myclub__item">
+														50 %
+														<div class="tables-block-myclub__line">
+															<span style="background:#26a138; width:50%"></span>
+														</div>
+													</div>
+													<div style="color:#cd5045;" class="tables-block-myclub__item">
+														10 %
+														<div class="tables-block-myclub__line">
+															<span style="background:#cd5045; width:10%"></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="tables-block-myclub__button">
+												<button type="button" class="button">
+													<svg aria-hidden="true" width="10" height="6">
+														<use xlink:href="img/sprite.svg#arrow1"></use>
+													</svg>
+													<span>Показать ещё</span>
+												</button>
 											</div>
 										</div>
 									</div>
@@ -692,14 +859,8 @@
 					</div>
 				</div>
 
-
-
 			</main>
 		</div>
-		<script src="js/swiper-10.2.0.min.js"></script>
-		<script src="js/fancybox.umd.js"></script>
-		<script src="js/simplebar.min.js"></script>
-		<script src="js/scripts.js"></script>
 		<div id="search1" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
@@ -973,6 +1134,10 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/simplebar.min.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 
 </html>

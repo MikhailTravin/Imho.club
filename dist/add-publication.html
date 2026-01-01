@@ -134,31 +134,25 @@
 										</div>
 									</div>
 									<div class="form-settings-publication__checkboxes">
-										<div class="checkbox">
-											<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
-											<label for="c_1" class="checkbox__label">
-												<span class="checkbox__icon">
-													<img src="img/icon/chek1.svg" alt="">
-												</span>
-												<span class="checkbox__text">Базовый</span>
+										<div class="options2__item">
+											<input hidden id="o_18" class="options2__input" type="radio" value="18" name="option4">
+											<label for="o_18" class="options2__label">
+												<span class="options2__icon"></span>
+												<span class="options2__text">Базовый</span>
 											</label>
 										</div>
-										<div class="checkbox">
-											<input id="c_2" class="checkbox__input" type="checkbox" value="2" name="form[]">
-											<label for="c_2" class="checkbox__label">
-												<span class="checkbox__icon">
-													<img src="img/icon/chek1.svg" alt="">
-												</span>
-												<span class="checkbox__text">Профи</span>
+										<div class="options2__item">
+											<input hidden id="o_19" class="options2__input" type="radio" value="19" name="option4">
+											<label for="o_19" class="options2__label">
+												<span class="options2__icon"></span>
+												<span class="options2__text">Профи</span>
 											</label>
 										</div>
-										<div class="checkbox">
-											<input id="c_3" class="checkbox__input" type="checkbox" value="3" name="form[]">
-											<label for="c_3" class="checkbox__label">
-												<span class="checkbox__icon">
-													<img src="img/icon/chek1.svg" alt="">
-												</span>
-												<span class="checkbox__text">Креатор+</span>
+										<div class="options2__item">
+											<input hidden id="o_20" class="options2__input" type="radio" value="20" name="option4">
+											<label for="o_20" class="options2__label">
+												<span class="options2__icon"></span>
+												<span class="options2__text">Креатор+</span>
 											</label>
 										</div>
 									</div>
@@ -186,35 +180,37 @@
 											</svg>
 										</div>
 										<div class="select2__options">
-											<div class="options__item">
-												<input hidden id="o_10" class="options__input" type="checkbox" value="10" name="option">
-												<label for="o_10" class="options__label">
-													<span class="options__text">Природа</span>
-													<span class="options__icon">
-														<img src="img/icon/chek1.svg" alt="">
-													</span>
-												</label>
-											</div>
-											<div class="options__item">
-												<input hidden id="o_11" class="options__input" type="checkbox" value="11" name="option">
-												<label for="o_11" class="options__label">
-													<span class="options__text">Лес</span>
-													<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-												</label>
-											</div>
-											<div class="options__item">
-												<input hidden id="o_12" class="options__input" type="checkbox" value="12" name="option">
-												<label for="o_12" class="options__label">
-													<span class="options__text">Поляна</span>
-													<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-												</label>
-											</div>
-											<div class="options__item">
-												<input hidden id="o_13" class="options__input" type="checkbox" value="13" name="option">
-												<label for="o_13" class="options__label">
-													<span class="options__text">Спорт</span>
-													<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-												</label>
+											<div data-simplebar class="select2__simplebar">
+												<div class="options__item">
+													<input hidden id="o_10" class="options__input" type="checkbox" value="10" name="option">
+													<label for="o_10" class="options__label">
+														<span class="options__text">Природа</span>
+														<span class="options__icon">
+															<img src="img/icon/chek1.svg" alt="">
+														</span>
+													</label>
+												</div>
+												<div class="options__item">
+													<input hidden id="o_11" class="options__input" type="checkbox" value="11" name="option">
+													<label for="o_11" class="options__label">
+														<span class="options__text">Лес</span>
+														<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+													</label>
+												</div>
+												<div class="options__item">
+													<input hidden id="o_12" class="options__input" type="checkbox" value="12" name="option">
+													<label for="o_12" class="options__label">
+														<span class="options__text">Поляна</span>
+														<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+													</label>
+												</div>
+												<div class="options__item">
+													<input hidden id="o_13" class="options__input" type="checkbox" value="13" name="option">
+													<label for="o_13" class="options__label">
+														<span class="options__text">Спорт</span>
+														<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -385,54 +381,62 @@
 					<div class="popup-settings-publication__body">
 						<div class="form-settings-publication">
 							<div class="form-settings-publication__column">
+								<div class="form-settings-publication__title">
+									<span>Опубликовать по расписанию</span>
+									<label class="toggle-switch">
+										<input type="checkbox">
+										<div class="toggle-switch-background">
+											<div class="toggle-switch-handle"></div>
+										</div>
+									</label>
+								</div>
+								<div class="form-settings-publication__input">
+									<input autocomplete="off" type="date" name="form[]">
+								</div>
+							</div>
+							<div class="form-settings-publication__column">
 								<div class="form-settings-publication__title"><span>Выбор тарифа</span></div>
 								<div class="options2">
 									<div class="options2__item">
-										<input hidden id="o_5" class="options2__input options2-check1" checked type="radio" value="5" name="option">
-										<label for="o_5" class="options2__label">
+										<input hidden id="o_10" class="options2__input options2-check1" checked type="radio" value="10" name="option2">
+										<label for="o_10" class="options2__label">
 											<span class="options2__icon"></span>
-											<span class="options2__text">Публикация в открытом доступе (доступна
-												всем подписчикам)</span>
+											<span class="options2__text">Публикация в открытом доступе <span class="cl-grey">(для всех
+													подписчиков)</span>
 										</label>
 									</div>
 									<div class="options2__item">
-										<input hidden id="o_6" class="options2__input options2-check2" type="radio" value="6" name="option">
-										<label for="o_6" class="options2__label">
+										<input hidden id="o_11" class="options2__input options2-check2" type="radio" value="11" name="option2">
+										<label for="o_11" class="options2__label">
 											<span class="options2__icon"></span>
 											<span class="options2__text">Только для платных подписчиков
-												<span class="checked">
-													(<span class="cl">добавить платный тариф</span>)
+												<span class="cl-grey">
+													(для всех подписчиков выбранного и более дорогих тарифов)
 												</span>
 											</span>
 										</label>
 									</div>
 								</div>
 								<div class="form-settings-publication__checkboxes">
-									<div class="checkbox">
-										<input id="c_1" class="checkbox__input" type="checkbox" value="1" name="form[]">
-										<label for="c_1" class="checkbox__label">
-											<span class="checkbox__icon">
-												<img src="img/icon/chek1.svg" alt="">
-											</span>
-											<span class="checkbox__text">Базовый</span>
+									<div class="options2__item">
+										<input hidden id="o_15" class="options2__input" type="radio" value="15" name="option3">
+										<label for="o_15" class="options2__label">
+											<span class="options2__icon"></span>
+											<span class="options2__text">Базовый</span>
 										</label>
 									</div>
-									<div class="checkbox">
-										<input id="c_2" class="checkbox__input" type="checkbox" value="2" name="form[]">
-										<label for="c_2" class="checkbox__label">
-											<span class="checkbox__icon">
-												<img src="img/icon/chek1.svg" alt="">
-											</span>
-											<span class="checkbox__text">Профи</span>
+									<div class="options2__item">
+										<input hidden id="o_16" class="options2__input" type="radio" value="16" name="option3">
+										<label for="o_16" class="options2__label">
+											<span class="options2__icon"></span>
+											<span class="options2__text">Профи</span>
 										</label>
 									</div>
-									<div class="checkbox">
-										<input id="c_3" class="checkbox__input" type="checkbox" value="3" name="form[]">
-										<label for="c_3" class="checkbox__label">
-											<span class="checkbox__icon">
-												<img src="img/icon/chek1.svg" alt="">
-											</span>
-											<span class="checkbox__text">Креатор+</span>
+									<div class="options2__item">
+										<input hidden id="o_17" class="options2__input" type="radio" value="17" name="option3">
+										<label for="o_17" class="options2__label">
+											<span class="options2__icon"></span>
+											<span class="options2__text">Креатор+</span>
 										</label>
 									</div>
 								</div>
@@ -460,35 +464,37 @@
 										</svg>
 									</div>
 									<div class="select2__options">
-										<div class="options__item">
-											<input hidden id="o_10" class="options__input" type="checkbox" value="10" name="option">
-											<label for="o_10" class="options__label">
-												<span class="options__text">Природа</span>
-												<span class="options__icon">
-													<img src="img/icon/chek1.svg" alt="">
-												</span>
-											</label>
-										</div>
-										<div class="options__item">
-											<input hidden id="o_11" class="options__input" type="checkbox" value="11" name="option">
-											<label for="o_11" class="options__label">
-												<span class="options__text">Лес</span>
-												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-											</label>
-										</div>
-										<div class="options__item">
-											<input hidden id="o_12" class="options__input" type="checkbox" value="12" name="option">
-											<label for="o_12" class="options__label">
-												<span class="options__text">Поляна</span>
-												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-											</label>
-										</div>
-										<div class="options__item">
-											<input hidden id="o_13" class="options__input" type="checkbox" value="13" name="option">
-											<label for="o_13" class="options__label">
-												<span class="options__text">Спорт</span>
-												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
-											</label>
+										<div data-simplebar class="select2__simplebar">
+											<div class="options__item">
+												<input hidden id="o_10" class="options__input" type="checkbox" value="10" name="option">
+												<label for="o_10" class="options__label">
+													<span class="options__text">Природа</span>
+													<span class="options__icon">
+														<img src="img/icon/chek1.svg" alt="">
+													</span>
+												</label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_11" class="options__input" type="checkbox" value="11" name="option">
+												<label for="o_11" class="options__label">
+													<span class="options__text">Лес</span>
+													<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+												</label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_12" class="options__input" type="checkbox" value="12" name="option">
+												<label for="o_12" class="options__label">
+													<span class="options__text">Поляна</span>
+													<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+												</label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_13" class="options__input" type="checkbox" value="13" name="option">
+												<label for="o_13" class="options__label">
+													<span class="options__text">Спорт</span>
+													<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -732,10 +738,14 @@
 																					<img loading="lazy" src="img/avatar2.webp" alt="">
 																				</div>
 																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span>
-																						подписался(ась)
-																						на ваши публикации
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							подписался(ась) на ваши
+																							публикации
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
 																					</div>
 																					<div class="notifications__icon">
 																						<span></span>
@@ -747,10 +757,15 @@
 																					<img loading="lazy" src="img/avatar2.webp" alt="">
 																				</div>
 																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span> оставил(а)
-																						комментарий:
-																						«Это лучшее, что можно придумать»
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							оставил(а) комментарий:
+																							«Это лучшее, что можно
+																							придумать»
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
 																					</div>
 																					<div class="notifications__icon">
 																					</div>
@@ -761,9 +776,13 @@
 																					<img loading="lazy" src="img/avatar2.webp" alt="">
 																				</div>
 																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span> отправил(а)
-																						запрос на дружбу
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							отправил(а) запрос на дружбу
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
 																					</div>
 																					<div class="notifications__icon">
 																						<span></span>
@@ -775,10 +794,15 @@
 																					<img loading="lazy" src="img/avatar2.webp" alt="">
 																				</div>
 																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span> оставил(а)
-																						комментарий:
-																						«Это лучшее, что можно придумать»
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							оставил(а) комментарий:
+																							«Это лучшее, что можно
+																							придумать»
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
 																					</div>
 																					<div class="notifications__icon">
 																					</div>
@@ -789,25 +813,15 @@
 																					<img loading="lazy" src="img/avatar2.webp" alt="">
 																				</div>
 																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span> оставил(а)
-																						комментарий:
-																						«Это лучшее, что можно придумать»
-																					</div>
-																					<div class="notifications__icon">
-																						<span></span>
-																					</div>
-																				</div>
-																			</a>
-																			<a data-filter="unread" href="#" class="notifications__column">
-																				<div class="notifications__image">
-																					<img loading="lazy" src="img/avatar2.webp" alt="">
-																				</div>
-																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span> оставил(а)
-																						комментарий:
-																						«Это лучшее, что можно придумать»
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							оставил(а) комментарий:
+																							«Это лучшее, что можно
+																							придумать»
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
 																					</div>
 																					<div class="notifications__icon">
 																						<span></span>
@@ -819,10 +833,15 @@
 																					<img loading="lazy" src="img/avatar2.webp" alt="">
 																				</div>
 																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span> оставил(а)
-																						комментарий:
-																						«Это лучшее, что можно придумать»
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							оставил(а) комментарий:
+																							«Это лучшее, что можно
+																							придумать»
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
 																					</div>
 																					<div class="notifications__icon">
 																						<span></span>
@@ -834,10 +853,35 @@
 																					<img loading="lazy" src="img/avatar2.webp" alt="">
 																				</div>
 																				<div class="notifications__right">
-																					<div class="notifications__title">
-																						<span>София Кэри</span> оставил(а)
-																						комментарий:
-																						«Это лучшее, что можно придумать»
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							оставил(а) комментарий:
+																							«Это лучшее, что можно
+																							придумать»
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
+																					</div>
+																					<div class="notifications__icon">
+																						<span></span>
+																					</div>
+																				</div>
+																			</a>
+																			<a data-filter="unread" href="#" class="notifications__column">
+																				<div class="notifications__image">
+																					<img loading="lazy" src="img/avatar2.webp" alt="">
+																				</div>
+																				<div class="notifications__right">
+																					<div class="notifications__titles">
+																						<div class="notifications__title">
+																							<span>София Кэри</span>
+																							оставил(а) комментарий:
+																							«Это лучшее, что можно
+																							придумать»
+																						</div>
+																						<div class="notifications__data">
+																							Сегодня, 10:16</div>
 																					</div>
 																					<div class="notifications__icon">
 																						<span></span>

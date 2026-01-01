@@ -2,7 +2,7 @@
 <html lang="ru">
 
 	<head>
-		<title>Все авторы</title>
+		<title>Мой клуб, настройки</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,54 +17,17 @@
 
 	<body class="preload mp">
 		<div class="main-wrapper-outer">
-			<header data-lp class="header">
+			<header data-lp class="header header-myclub">
 				<div class="header__contents">
 					<div class="header__left">
 						<a href="#" class="header__logo">
 							<img src="img/icon/logo.svg" alt="">
 						</a>
-						<div class="header__title">
-							<a href="#" class="arrow-prev2">
-								<svg aria-hidden="true" width="14" height="8">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</a>
-							<span>Все авторы</span>
-						</div>
 					</div>
-					<form data-popup="#search1" class="header__search">
-						<button type="button" class="header__search-icon">
-							<svg aria-hidden="true" width="20" height="21">
-								<use xlink:href="img/sprite.svg#search"></use>
-							</svg>
-						</button>
-						<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
-					</form>
+					<div class="header__title">
+						<span>Клуб by Оксана</span>
+					</div>
 					<div class="header__right">
-						<div class="header__add add-header">
-							<button type="button" class="add-header__plus button-red">
-								<svg aria-hidden="true" width="22" height="21">
-									<use xlink:href="img/sprite.svg#plus"></use>
-								</svg>
-							</button>
-							<div class="add-header__body">
-								<div class="add-header__content">
-									<a href="#" data-popup="#share-thoughts" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#pencel"></use>
-										</svg>
-										<span>Добавить заметку</span>
-									</a>
-									<a href="#" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#public"></use>
-										</svg>
-										<span>Добавить публикацию</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="header__club button">Мой клуб</a>
 						<div class="header__notification notification-header">
 							<div class="notification-header__icon">
 								<svg aria-hidden="true" width="28" height="29">
@@ -433,7 +396,7 @@
 				</div>
 				<div class="shadow"></div>
 			</header>
-			<div class="sidebar">
+			<div class="sidebar sidebar-myclub">
 				<a href="#" class="sidebar__logo">
 					<img src="img/icon/logo.svg" alt="">
 				</a>
@@ -474,7 +437,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#" class="_active">
+								<a href="#">
 									<svg class="link" aria-hidden="true" width="32" height="32">
 										<use xlink:href="img/sprite.svg#author"></use>
 									</svg>
@@ -513,176 +476,926 @@
 					</nav>
 				</div>
 			</div>
-			<main class="main main-all-authors">
+			<main class="main main-myclub-design">
 
-				<div class="block-all-authors">
+				<div class="block-myclub block-myclub-design">
 					<div class="container">
-						<div class="navigation-category">
-							<div class="navigation-category__slider swiper">
-								<div class="navigation-category__wrapper swiper-wrapper">
-									<a href="#" data-filter="new" class="navigation-category__slide swiper-slide _active">
-										Свежие
-									</a>
-									<a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
-										Популярные
-									</a>
-									<a href="#" data-filter="animation" class="navigation-category__slide swiper-slide">
-										Анимация
-									</a>
-									<a href="#" data-filter="business" class="navigation-category__slide swiper-slide">
-										Бизнес
-									</a>
-									<a href="#" data-filter="charity" class="navigation-category__slide swiper-slide">
-										Благотворительность
-									</a>
-									<a href="#" data-filter="blog" class="navigation-category__slide swiper-slide">
-										Блог
-									</a>
-									<a href="#" data-filter="military-affairs" class="navigation-category__slide swiper-slide">
-										Военное дело
-									</a>
-									<a href="#" data-filter="food" class="navigation-category__slide swiper-slide">
-										Еда
-									</a>
-									<a href="#" data-filter="animals" class="navigation-category__slide swiper-slide">
-										Животные
-									</a>
-									<a href="#" data-filter="health" class="navigation-category__slide swiper-slide">
-										Здоровье
-									</a>
-									<a href="#" data-filter="games" class="navigation-category__slide swiper-slide">
-										Игры
-									</a>
-									<a href="#" data-filter="games" class="navigation-category__slide swiper-slide">
-										Игры
-									</a>
-								</div>
-							</div>
-							<div class="navigation-category__arrow-prev arrow-prev">
-								<svg aria-hidden="true" width="15" height="10">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</div>
-							<div class="navigation-category__arrow-next arrow-next">
-								<svg aria-hidden="true" width="15" height="10">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</div>
-						</div>
-						<div class="block-all-authors__content">
-							<div data-filter="new" class="right-all-publication__content filter-block">
-								<div class="right-all-publication__filter">
-									<a href="#" class="right-all-publication__filter-title active">По публикациям</a>
-									<a href="#" class="right-all-publication__filter-title">По подписчикам</a>
-								</div>
-								<div class="right-all-publication__body">
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button-red">
-												Подписаться
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
-									</div>
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button">
-												Управление подпиской
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
+						<div class="block-myclub__content">
+							<div class="navigation-category">
+								<div class="navigation-category__slider swiper">
+									<div class="navigation-category__wrapper swiper-wrapper">
+										<a href="#" data-filter="review" class="navigation-category__slide swiper-slide">
+											Обзор
+										</a>
+										<a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
+											Популярные
+										</a>
+										<a href="#" data-filter="subscribers" class="navigation-category__slide swiper-slide">
+											Подписчики
+										</a>
+										<a href="#" data-filter="statistics" class="navigation-category__slide swiper-slide">
+											Статистика
+										</a>
+										<a href="#" data-filter="UTM" class="navigation-category__slide swiper-slide">
+											UTM
+										</a>
+										<a href="#" data-filter="design" class="navigation-category__slide swiper-slide">
+											Дизайн
+										</a>
+										<a href="#" data-filter="settings" class="navigation-category__slide swiper-slide _active">
+											Настройки
+										</a>
 									</div>
 								</div>
 							</div>
-							<div data-filter="popular" class="right-all-publication__content filter-block">
-								<div class="right-all-publication__filter">
-									<a href="#" class="right-all-publication__filter-title active">По публикациям</a>
-									<a href="#" class="right-all-publication__filter-title">По подписчикам</a>
-									<a href="#" class="right-all-publication__filter-title">Новые авторы</a>
-									<a href="#" class="right-all-publication__filter-title">Случайные авторы</a>
-								</div>
-								<div class="right-all-publication__body">
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button-red">
-												Подписаться
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
+							<div class="block-myclub__body">
+
+								<div class="design-myclub">
+									<div class="design-myclub__left">
+										<div class="design-myclub__nav">
+											<a href="#" data-goto=".club-category" data-goto-header class="design-myclub__nav-title">Категория клуба</a>
+											<a href="#" data-goto=".club-payments" data-goto-header class="design-myclub__nav-title">Платежи</a>
+											<a href="#" data-goto=".club-tariffs" data-goto-header class="design-myclub__nav-title">Тарифы</a>
+											<a href="#" data-goto=".club-referral-program" data-goto-header class="design-myclub__nav-title">Реферальная программа</a>
+											<a href="#" data-goto=".club-emails" data-goto-header class="design-myclub__nav-title">Электронные письма</a>
+											<a href="#" data-goto=".club-communication" data-goto-header class="design-myclub__nav-title">Коммуникация</a>
+											<a href="#" data-goto=".club-reports" data-goto-header class="design-myclub__nav-title">Отчёты</a>
+											<a href="#" data-goto=".club-socials" data-goto-header class="design-myclub__nav-title">Мои соцсети</a>
+											<a href="#" data-goto=".club-domain-subdomain" data-goto-header class="design-myclub__nav-title">Домен и поддомен</a>
 										</div>
 									</div>
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button">
-												Управление подпиской
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
+									<div class="design-myclub__right">
+										<div data-watch="navigator" class="design-myclub__body club-category">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Категория клуба</h2>
 											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">Категория</div>
+														<p>
+															Выберите одну преимущественную категорию публикаций вашего
+															клуба.<br> В дальнейшем для каждой публикации можно будет
+															выбрать
+															другие категории
+														</p>
+													</div>
+												</div>
+												<div class="select1">
+													<div class="select1__title">
+														<span>Выберите категорию</span>
+														<svg aria-hidden="true" width="14" height="8">
+															<use xlink:href="img/sprite.svg#arrow1"></use>
+														</svg>
+													</div>
+													<div class="select1__options">
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="1" name="option">
+															<span class="options__label">
+																<span class="options__text">Анимация</span>
+																<span class="options__icon">
+																	<img src="img/icon/chek1.svg" alt="">
+																</span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="2" name="option">
+															<span class="options__label">
+																<span class="options__text">Бизнес</span>
+																<span class="options__icon">
+																	<img src="img/icon/chek1.svg" alt="">
+																</span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="3" name="option">
+															<span class="options__label">
+																<span class="options__text">Благотворительность</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="4" name="option">
+															<span class="options__label">
+																<span class="options__text">Блог</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="5" name="option">
+															<span class="options__label">
+																<span class="options__text">Военное дело</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="6" name="option">
+															<span class="options__label">
+																<span class="options__text">Еда</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="7" name="option">
+															<span class="options__label">
+																<span class="options__text">Животные</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="8" name="option">
+															<span class="options__label">
+																<span class="options__text">Здоровье</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="9" name="option">
+															<span class="options__label">
+																<span class="options__text">Игры</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="10" name="option">
+															<span class="options__label">
+																<span class="options__text">Искусство</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="11" name="option">
+															<span class="options__label">
+																<span class="options__text">История</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="12" name="option">
+															<span class="options__label">
+																<span class="options__text">Кино и Видео</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="13" name="option">
+															<span class="options__label">
+																<span class="options__text">Литература</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="14" name="option">
+															<span class="options__label">
+																<span class="options__text">Музыка</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="15" name="option">
+															<span class="options__label">
+																<span class="options__text">Наука</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="16" name="option">
+															<span class="options__label">
+																<span class="options__text">Образование</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="17" name="option">
+															<span class="options__label">
+																<span class="options__text">Подкасты</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="18" name="option">
+															<span class="options__label">
+																<span class="options__text">Политика</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="19" name="option">
+															<span class="options__label">
+																<span class="options__text">Психология</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="20" name="option">
+															<span class="options__label">
+																<span class="options__text">Путешествия</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="21" name="option">
+															<span class="options__label">
+																<span class="options__text">Спорт</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="22" name="option">
+															<span class="options__label">
+																<span class="options__text">Техника</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="23" name="option">
+															<span class="options__label">
+																<span class="options__text">Технологии</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="24" name="option">
+															<span class="options__label">
+																<span class="options__text">Финансы</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="25" name="option">
+															<span class="options__label">
+																<span class="options__text">Фото</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="26" name="option">
+															<span class="options__label">
+																<span class="options__text">Юмор</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+														<label class="options__item">
+															<input hidden class="options__input" type="radio" value="27" name="option">
+															<span class="options__label">
+																<span class="options__text">Прочее</span>
+																<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+															</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-payments">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Платежи</h2>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-tariffs">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Тарифы</h2>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">Бесплатная подписка</div>
+														<form action="#" class="design-myclub-subscription">
+															<div class="design-myclub-subscription__column">
+																<div class="design-myclub-subscription__title">Название:
+																</div>
+																<p>
+																	Максимум 22 символа
+																</p>
+																<input autocomplete="off" type="text" name="form[]" placeholder="Название клуба" value="Бесплатная подписка" class="input">
+															</div>
+															<div class="design-myclub-subscription__column">
+																<div class="design-myclub-subscription__title">
+																	Описание:
+																</div>
+																<p>
+																	Напишите сплошным текстом или списком преимущества этого
+																	тарифа
+																</p>
+																<textarea class="input textarea" placeholder="Введите текст"></textarea>
+															</div>
+															<div class="design-myclub__buttons">
+																<button type="button" class="button-red btn disabled">Сохранить</button>
+																<button type="button" class="button btn">Отменить</button>
+															</div>
+														</form>
+													</div>
+												</div>
+
+											</div>
+											<div class="tarrifs-design-myclub">
+												<div class="design-myclub__title">
+													Тариф 1
+													<label data-popup="#tariff-deactivation2" class="toggle-switch">
+														<input checked type="checkbox">
+														<div class="toggle-switch-background">
+															<div class="toggle-switch-handle"></div>
+														</div>
+													</label>
+												</div>
+												<form action="#" class="design-myclub-subscription">
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">Название:
+														</div>
+														<p>
+															Максимум 22 символа
+														</p>
+														<input autocomplete="off" type="text" name="form[]" placeholder="Название клуба" value="Тариф 1" class="input">
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Описание:
+														</div>
+														<p>
+															Напишите сплошным текстом или списком преимущества этого тарифа
+														</p>
+														<textarea class="input textarea">Самый лучший тариф</textarea>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Стоимость:
+														</div>
+														<div class="design-myclub-subscription__inputs">
+															<div class="design-myclub-subscription__input1">
+																<span>За месяц:</span>
+																<div class="design-myclub-subscription__input2 input">
+																	<input autocomplete="off" type="text" name="form[]" placeholder="0">
+																	<div class="design-myclub-subscription__currency">₽
+																	</div>
+																</div>
+															</div>
+															<div class="design-myclub-subscription__input1">
+																<span>За год:</span>
+																<div class="design-myclub-subscription__input2 input">
+																	<input autocomplete="off" type="text" name="form[]" placeholder="0">
+																	<div class="design-myclub-subscription__currency">₽
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Выделить тариф цветом
+															<label class="toggle-switch">
+																<input type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															3-дневный бесплатный период
+															<label class="toggle-switch">
+																<input checked="" type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+														<p>
+															При выборе платного тарифа читателю будет доступен бесплатный
+															период длительностью 3 дня, после которого начнёт сниматься
+															плата в соответствии с выбранным тарифом
+														</p>
+													</div>
+													<div class="design-myclub__buttons">
+														<button type="button" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+											</div>
+											<div class="tarrifs-design-myclub">
+												<div class="design-myclub__title">
+													Тариф 2
+													<label class="toggle-switch">
+														<input type="checkbox">
+														<div class="toggle-switch-background">
+															<div class="toggle-switch-handle"></div>
+														</div>
+													</label>
+												</div>
+												<form action="#" class="design-myclub-subscription">
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">Название:
+														</div>
+														<p>
+															Максимум 22 символа
+														</p>
+														<input autocomplete="off" type="text" name="form[]" placeholder="Название клуба" value="Тариф 1" class="input">
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Описание:
+														</div>
+														<p>
+															Напишите сплошным текстом или списком преимущества этого тарифа
+														</p>
+														<textarea class="input textarea">Самый лучший тариф</textarea>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Стоимость:
+														</div>
+														<div class="design-myclub-subscription__inputs">
+															<div class="design-myclub-subscription__input1">
+																<span>За месяц:</span>
+																<div class="design-myclub-subscription__input2 input">
+																	<input autocomplete="off" type="text" name="form[]" placeholder="0">
+																	<div class="design-myclub-subscription__currency">₽
+																	</div>
+																</div>
+															</div>
+															<div class="design-myclub-subscription__input1">
+																<span>За год:</span>
+																<div class="design-myclub-subscription__input2 input">
+																	<input autocomplete="off" type="text" name="form[]" placeholder="0">
+																	<div class="design-myclub-subscription__currency">₽
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Выделить тариф цветом
+															<label class="toggle-switch">
+																<input type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															3-дневный бесплатный период
+															<label class="toggle-switch">
+																<input checked="" type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+														<p>
+															При выборе платного тарифа читателю будет доступен бесплатный
+															период длительностью 3 дня, после которого начнёт сниматься
+															плата в соответствии с выбранным тарифом
+														</p>
+													</div>
+													<div class="design-myclub__buttons">
+														<button type="button" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+											</div>
+											<div class="tarrifs-design-myclub">
+												<div class="design-myclub__title">
+													Тариф 3
+													<label class="toggle-switch">
+														<input type="checkbox">
+														<div class="toggle-switch-background">
+															<div class="toggle-switch-handle"></div>
+														</div>
+													</label>
+												</div>
+												<form action="#" class="design-myclub-subscription">
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">Название:
+														</div>
+														<p>
+															Максимум 22 символа
+														</p>
+														<input autocomplete="off" type="text" name="form[]" placeholder="Название клуба" value="Тариф 1" class="input">
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Описание:
+														</div>
+														<p>
+															Напишите сплошным текстом или списком преимущества этого тарифа
+														</p>
+														<textarea class="input textarea">Самый лучший тариф</textarea>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Стоимость:
+														</div>
+														<div class="design-myclub-subscription__inputs">
+															<div class="design-myclub-subscription__input1">
+																<span>За месяц:</span>
+																<div class="design-myclub-subscription__input2 input">
+																	<input autocomplete="off" type="text" name="form[]" placeholder="0">
+																	<div class="design-myclub-subscription__currency">₽
+																	</div>
+																</div>
+															</div>
+															<div class="design-myclub-subscription__input1">
+																<span>За год:</span>
+																<div class="design-myclub-subscription__input2 input">
+																	<input autocomplete="off" type="text" name="form[]" placeholder="0">
+																	<div class="design-myclub-subscription__currency">₽
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															Выделить тариф цветом
+															<label class="toggle-switch">
+																<input type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+													</div>
+													<div class="design-myclub-subscription__column">
+														<div class="design-myclub-subscription__title">
+															3-дневный бесплатный период
+															<label class="toggle-switch">
+																<input checked="" type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+														<p>
+															При выборе платного тарифа читателю будет доступен бесплатный
+															период длительностью 3 дня, после которого начнёт сниматься
+															плата в соответствии с выбранным тарифом
+														</p>
+													</div>
+													<div class="design-myclub__buttons">
+														<button type="button" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-referral-program">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Реферальная программа</h2>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Настройки реферальной программы
+														</div>
+														<p>
+															Поощряйте подписчиков за то, что они делятся ссылкой на ваш клуб
+														</p>
+													</div>
+													<a href="#" data-popup="#referral-program" class="button-site"><span>Изменить</span></a>
+												</div>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-emails">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Электронные письма</h2>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">Имя отправителя</div>
+														<p>
+															Имя, которое отображается в поле "от кого" ваших электронных
+															писем
+														</p>
+													</div>
+												</div>
+												<form action="#">
+													<input autocomplete="off" type="text" name="form[]" placeholder="Введите имя" class="input">
+													<div class="design-myclub__buttons">
+														<button type="button" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Заголовок и подпись письма
+														</div>
+														<p>
+															Добавляйте контент в верхнюю и нижнюю части каждого сообщения,
+															отправленного по электронной почте
+														</p>
+													</div>
+													<a href="#" class="button-site"><span>Редактировать</span></a>
+												</div>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Страница отказа от подписки
+														</div>
+														<p>
+															Страница, которую люди видят после того, как отказываются
+															от получения электронных писем
+														</p>
+													</div>
+													<a href="#" class="button-site"><span>Редактировать</span></a>
+												</div>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Приветственное письмо новым подписчикам
+														</div>
+														<p>
+															Электронное письмо, отправленное читателям сразу после того, как
+															они подпишутся
+														</p>
+													</div>
+													<a href="#" class="button-site"><span>Редактировать</span></a>
+												</div>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-communication">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Коммуникация</h2>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Разрешить лайки
+															<label class="toggle-switch">
+																<input checked type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Разрешить комментарии
+															<label class="toggle-switch">
+																<input checked type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Порядок комментариев по умолчанию
+														</div>
+														<p>
+															Определяет, как будут сортироваться комментарии к вашим
+															публикациям по умолчанию
+														</p>
+													</div>
+													<div class="select1">
+														<div class="select1__title">
+															<span>Новые сверху</span>
+															<svg aria-hidden="true" width="10" height="6">
+																<use xlink:href="img/sprite.svg#arrow1"></use>
+															</svg>
+														</div>
+														<div class="select1__options">
+															<div class="options__item">
+																<input hidden="" id="o_1" class="options__input" checked="" type="radio" value="1" name="option">
+																<label for="o_1" class="options__label">
+																	<span class="options__text">Новые сверху</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden="" id="o_2" class="options__input" type="radio" value="2" name="option">
+																<label for="o_2" class="options__label">
+																	<span class="options__text">Популярные сверху</span>
+																	<span class="options__icon">
+																		<img src="img/icon/chek1.svg" alt="">
+																	</span>
+																</label>
+															</div>
+															<div class="options__item">
+																<input hidden="" id="o_3" class="options__input" type="radio" value="3" name="option">
+																<label for="o_3" class="options__label">
+																	<span class="options__text">Старые сверху</span>
+																	<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-reports">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Отчёты</h2>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top top1">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">
+															Разрешить лайки
+															<label class="toggle-switch">
+																<input checked type="checkbox">
+																<div class="toggle-switch-background">
+																	<div class="toggle-switch-handle"></div>
+																</div>
+															</label>
+														</div>
+														<p>
+															Получайте отчёт об основных событиях, связанных с вашим
+															аккаунтом
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-socials">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Мои соцсети</h2>
+											</div>
+											<div class="design-myclub-socials">
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/instagram.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт Instagram">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/sound-cloud.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт SoundCloud">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/behance.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт Behance">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/vk.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт VK">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/telegram.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт Telegram">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/dribbble.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт Dribbble">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/OK.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт OK">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/youtube.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт YouTube">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/facebook.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт Facebook">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/twitch.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт Twitch">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/X.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт X ex Twitter">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/tiktok.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на аккаунт TikTok">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+												<form action="#" class="design-myclub-socials__column">
+													<div class="design-myclub-socials__item">
+														<img src="img/icon/other-social.svg" alt="">
+														<input autocomplete="off" type="text" name="form[]" placeholder="Ссылка на другой ресурс">
+													</div>
+													<div style="display:none" class="design-myclub__buttons">
+														<button type="submit" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div data-watch="navigator" class="design-myclub__body club-domain-subdomain">
+											<div class="block-myclub__heading">
+												<h2 class="title3">Домен и поддомен</h2>
+											</div>
+											<div class="design-myclub__column">
+												<div class="design-myclub__top">
+													<div class="design-myclub__titles">
+														<div class="design-myclub__title">Название поддомена</div>
+														<p>
+															Минимальная длина имени поддомена 3 символа (английские буквы и
+															цифры), должен быть уникальным
+														</p>
+													</div>
+												</div>
+												<form action="#">
+													<input autocomplete="off" type="text" name="form[]" placeholder="Введите имя" class="input">
+													<div class="design-myclub__buttons">
+														<button type="button" class="button-red btn">Сохранить</button>
+														<button type="button" class="button btn">Отменить</button>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="design-myclub__body">
+											<div class="myclub-settings__text">
+												У вас есть возможность использовать для клуба свой домен. Разовая стоимость
+												настройки
+												домена 3 000 ₽. Для подключения домена свяжитесь со <a href="#">службой
+													поддержки</a>
 											</div>
 										</div>
 									</div>
@@ -692,14 +1405,253 @@
 					</div>
 				</div>
 
-
+				<div data-lp class="tariffs-error">
+					<img src="img/icon/alert.svg" alt="">
+					<span>Стоимость тарифа не может быть равной нулю</span>
+				</div>
 
 			</main>
 		</div>
-		<script src="js/swiper-10.2.0.min.js"></script>
-		<script src="js/fancybox.umd.js"></script>
-		<script src="js/simplebar.min.js"></script>
-		<script src="js/scripts.js"></script>
+		<div id="referral-program" aria-hidden="true" class="popup popup-referral-program">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#353535" />
+						</svg>
+					</button>
+					<div class="popup-referral-program__content">
+						<div class="popup-referral-program__title">
+							Реферальная программа
+						</div>
+						<p>
+							Поощряйте подписчиков за то, что они делятся ссылкой на ваш клуб и расширяйте
+							свою аудиторию
+						</p>
+						<form action="#" class="popup-referral-program__form">
+							<div class="popup-referral-program__columns">
+								<div class="popup-referral-program__column">
+									<div class="popup-referral-program__name">Награда за бесплатных подписчиков</div>
+									<p>
+										Укажите количество бесплатных подписчиков, требуемое для получения вознаграждения,
+										и получаемую награду. Настройте email для автоматической отправки вознаграждения.
+									</p>
+									<div class="popup-referral-program__inputs">
+										<div class="popup-referral-program__input">
+											<label for="inp1">Название вознаграждения</label>
+											<div class="popup-referral-program__inpt">
+												<input data-required id="inp1" autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="Введите название">
+											</div>
+										</div>
+										<div class="popup-referral-program__input">
+											<label for="inp2">Количество подписчиков</label>
+											<div class="popup-referral-program__inpt">
+												<input data-required id="inp2" autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="0">
+											</div>
+										</div>
+										<div class="popup-referral-program__input input3">
+											<label>Письмо с вознаграждением</label>
+											<a href="#" class="button-site">Редактировать</a>
+										</div>
+									</div>
+								</div>
+								<div class="popup-referral-program__column">
+									<div class="popup-referral-program__name">Награда за платных подписчиков</div>
+									<p>
+										Укажите на сколько процентов от стоимости тарифа нового оплаченного члена вашего
+										клуба
+										увеличится срок того, кто его привлёк. Настройте email для автоматической отправки
+										вознаграждения.
+									</p>
+									<div class="popup-referral-program__inputs">
+										<div class="popup-referral-program__input">
+											<label for="inp3">Размер вознаграждения, % от тарифа</label>
+											<div class="popup-referral-program__inpt inp1">
+												<input data-required id="inp3" autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="0">
+												<div class="popup-referral-program__percent">%</div>
+											</div>
+										</div>
+										<div class="popup-referral-program__input input3">
+											<label>Письмо с вознаграждением</label>
+											<a href="#" class="button-site">Редактировать</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="popup-referral-program__buttons">
+								<button type="submit" class="button-red btn disabled">Применить</button>
+								<button type="button" class="button btn">Отменить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Мой клуб, настройки, увеличение или уменьшение стоимости тарифа
+    к кнопке, которая открывает попап добавить data-popup="#tariff-deactivation"
+    -->
+		<div id="tariff-deactivation" aria-hidden="true" class="popup popup-settings-tariffs">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup-settings-tariffs__content">
+						<div class="popup-settings-tariffs__top">
+							<div class="popup-settings-tariffs__name">
+								Отключение
+								<span>
+									<Название тарифа>
+								</span>
+							</div>
+							<button data-close type="button" class="popup__close">
+								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#353535" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup-settings-tariffs__body">
+							<div class="popup-settings-tariffs__column">
+								<div class="popup-settings-tariffs__title">
+									На этом тарифе есть действующие публикации
+								</div>
+								<div class="popup-settings-tariffs__options">
+									<div class="popup-settings-tariffs__title-options">
+										Выберите куда перенести публикации
+									</div>
+									<div class="options2">
+										<label class="options2__item">
+											<input hidden class="options2__input" checked type="radio" name="option2">
+											<span class="options2__label">
+												<span class="options2__icon"></span>
+												<span class="options2__text">Контент Плюс</span>
+											</span>
+										</label>
+										<label class="options2__item">
+											<input hidden class="options2__input" type="radio" name="option2">
+											<span class="options2__label">
+												<span class="options2__icon"></span>
+												<span class="options2__text">Про Доступ</span>
+											</span>
+										</label>
+										<label class="options2__item">
+											<input hidden class="options2__input" type="radio" name="option2">
+											<span class="options2__label">
+												<span class="options2__icon"></span>
+												<span class="options2__text">Бесплатная подписка</span>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup-settings-tariffs__buttons">
+							<button type="button" class="button-red disabled">Применить</button>
+							<button type="button" class="button">Отменить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="tariff-deactivation2" aria-hidden="true" class="popup popup-settings-tariffs tariff-deactivation2">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup-settings-tariffs__content">
+						<div class="popup-settings-tariffs__top">
+							<div class="popup-settings-tariffs__name">
+								Отключение
+								<span>
+									<Название тарифа>
+								</span>
+							</div>
+							<button data-close type="button" class="popup__close">
+								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#353535" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup-settings-tariffs__body">
+							<div class="popup-settings-tariffs__column">
+								<div class="popup-settings-tariffs__title">
+									Отключение тарифа с активными подписчиками не допускается
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Мой клуб, настройки, увеличение или уменьшение стоимости тарифа
+    к кнопке, которая открывает попап добавить data-popup="#tariff-cost"
+    -->
+		<div id="tariff-cost" aria-hidden="true" class="popup popup-settings-tariffs">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup-settings-tariffs__content">
+						<div class="popup-settings-tariffs__top">
+							<div class="popup-settings-tariffs__name">
+								Увеличение стоимости
+							</div>
+							<button data-close type="button" class="popup__close">
+								<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#353535" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup-settings-tariffs__body">
+							<div class="popup-settings-tariffs__column">
+								<div class="popup-settings-tariffs__title">
+									На тарифе <span>
+										<Название тарифа>
+									</Span> у вас 999 подписчиков.
+									<br>
+									Выберите как лучше поступить
+								</div>
+								<div class="popup-tariff-cost-options options2">
+									<label class="options2__item">
+										<input hidden class="options2__input" checked type="radio" name="option3">
+										<span class="options2__label">
+											<span class="options2__text">
+												<span class="options2__title">
+													Сохранить для текущих подписчиков старую цену
+												</span>
+												<span class="options2__subtitle">
+													Они продолжат видеть весь контент, доступный на этом тарифе. Новая цена
+													будет действовать
+													только для новых подписчиков. Мы продолжим списывать ежемесячные платежи
+													по старой цене,
+													пока подписка не будет отменена.
+												</span>
+											</span>
+										</span>
+									</label>
+									<label class="options2__item">
+										<input hidden class="options2__input" type="radio" name="option3">
+										<span class="options2__label">
+											<span class="options2__text">
+												<span class="options2__title">
+													Предложить подписчикам перейти на новую цену
+												</span>
+												<span class="options2__subtitle">
+													Действующие подписчики получат уведомление об увеличении цены. До тех
+													пор, пока подписчик
+													не согласится с новыми условиями, мы не будем списывать с него
+													ежемесячные платежи, а его
+													подписка будет считаться приостановленной.
+												</span>
+											</span>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="popup-settings-tariffs__buttons">
+							<button type="button" class="button-red disabled">Применить</button>
+							<button type="button" class="button">Отменить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div id="search1" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
@@ -973,6 +1925,10 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/simplebar.min.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 
 </html>

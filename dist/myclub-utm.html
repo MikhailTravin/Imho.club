@@ -2,7 +2,7 @@
 <html lang="ru">
 
 	<head>
-		<title>Все авторы</title>
+		<title>Мой клуб, UTM</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,54 +17,17 @@
 
 	<body class="preload mp">
 		<div class="main-wrapper-outer">
-			<header data-lp class="header">
+			<header data-lp class="header header-myclub">
 				<div class="header__contents">
 					<div class="header__left">
 						<a href="#" class="header__logo">
 							<img src="img/icon/logo.svg" alt="">
 						</a>
-						<div class="header__title">
-							<a href="#" class="arrow-prev2">
-								<svg aria-hidden="true" width="14" height="8">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</a>
-							<span>Все авторы</span>
-						</div>
 					</div>
-					<form data-popup="#search1" class="header__search">
-						<button type="button" class="header__search-icon">
-							<svg aria-hidden="true" width="20" height="21">
-								<use xlink:href="img/sprite.svg#search"></use>
-							</svg>
-						</button>
-						<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
-					</form>
+					<div class="header__title">
+						<span>Мой клуб</span>
+					</div>
 					<div class="header__right">
-						<div class="header__add add-header">
-							<button type="button" class="add-header__plus button-red">
-								<svg aria-hidden="true" width="22" height="21">
-									<use xlink:href="img/sprite.svg#plus"></use>
-								</svg>
-							</button>
-							<div class="add-header__body">
-								<div class="add-header__content">
-									<a href="#" data-popup="#share-thoughts" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#pencel"></use>
-										</svg>
-										<span>Добавить заметку</span>
-									</a>
-									<a href="#" class="add-header__link">
-										<svg aria-hidden="true" width="20" height="21">
-											<use xlink:href="img/sprite.svg#public"></use>
-										</svg>
-										<span>Добавить публикацию</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<a href="#" class="header__club button">Мой клуб</a>
 						<div class="header__notification notification-header">
 							<div class="notification-header__icon">
 								<svg aria-hidden="true" width="28" height="29">
@@ -433,7 +396,7 @@
 				</div>
 				<div class="shadow"></div>
 			</header>
-			<div class="sidebar">
+			<div class="sidebar sidebar-myclub">
 				<a href="#" class="sidebar__logo">
 					<img src="img/icon/logo.svg" alt="">
 				</a>
@@ -474,7 +437,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#" class="_active">
+								<a href="#">
 									<svg class="link" aria-hidden="true" width="32" height="32">
 										<use xlink:href="img/sprite.svg#author"></use>
 									</svg>
@@ -513,176 +476,232 @@
 					</nav>
 				</div>
 			</div>
-			<main class="main main-all-authors">
+			<main class="main main-myclub">
 
-				<div class="block-all-authors">
+				<div class="block-myclub block-myclub-utm">
 					<div class="container">
-						<div class="navigation-category">
-							<div class="navigation-category__slider swiper">
-								<div class="navigation-category__wrapper swiper-wrapper">
-									<a href="#" data-filter="new" class="navigation-category__slide swiper-slide _active">
-										Свежие
-									</a>
-									<a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
-										Популярные
-									</a>
-									<a href="#" data-filter="animation" class="navigation-category__slide swiper-slide">
-										Анимация
-									</a>
-									<a href="#" data-filter="business" class="navigation-category__slide swiper-slide">
-										Бизнес
-									</a>
-									<a href="#" data-filter="charity" class="navigation-category__slide swiper-slide">
-										Благотворительность
-									</a>
-									<a href="#" data-filter="blog" class="navigation-category__slide swiper-slide">
-										Блог
-									</a>
-									<a href="#" data-filter="military-affairs" class="navigation-category__slide swiper-slide">
-										Военное дело
-									</a>
-									<a href="#" data-filter="food" class="navigation-category__slide swiper-slide">
-										Еда
-									</a>
-									<a href="#" data-filter="animals" class="navigation-category__slide swiper-slide">
-										Животные
-									</a>
-									<a href="#" data-filter="health" class="navigation-category__slide swiper-slide">
-										Здоровье
-									</a>
-									<a href="#" data-filter="games" class="navigation-category__slide swiper-slide">
-										Игры
-									</a>
-									<a href="#" data-filter="games" class="navigation-category__slide swiper-slide">
-										Игры
-									</a>
-								</div>
-							</div>
-							<div class="navigation-category__arrow-prev arrow-prev">
-								<svg aria-hidden="true" width="15" height="10">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</div>
-							<div class="navigation-category__arrow-next arrow-next">
-								<svg aria-hidden="true" width="15" height="10">
-									<use xlink:href="img/sprite.svg#arrow1"></use>
-								</svg>
-							</div>
-						</div>
-						<div class="block-all-authors__content">
-							<div data-filter="new" class="right-all-publication__content filter-block">
-								<div class="right-all-publication__filter">
-									<a href="#" class="right-all-publication__filter-title active">По публикациям</a>
-									<a href="#" class="right-all-publication__filter-title">По подписчикам</a>
-								</div>
-								<div class="right-all-publication__body">
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button-red">
-												Подписаться
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
-									</div>
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button">
-												Управление подпиской
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
+						<div class="block-myclub__content">
+							<div class="navigation-category">
+								<div class="navigation-category__slider swiper">
+									<div class="navigation-category__wrapper swiper-wrapper">
+										<a href="#" data-filter="review" class="navigation-category__slide swiper-slide">
+											Обзор
+										</a>
+										<a href="#" data-filter="popular" class="navigation-category__slide swiper-slide">
+											Популярные
+										</a>
+										<a href="#" data-filter="subscribers" class="navigation-category__slide swiper-slide">
+											Подписчики
+										</a>
+										<a href="#" data-filter="statistics" class="navigation-category__slide swiper-slide">
+											Статистика
+										</a>
+										<a href="#" data-filter="UTM" class="navigation-category__slide swiper-slide _active">
+											UTM
+										</a>
+										<a href="#" data-filter="design" class="navigation-category__slide swiper-slide">
+											Дизайн
+										</a>
+										<a href="#" data-filter="settings" class="navigation-category__slide swiper-slide">
+											Настройки
+										</a>
 									</div>
 								</div>
 							</div>
-							<div data-filter="popular" class="right-all-publication__content filter-block">
-								<div class="right-all-publication__filter">
-									<a href="#" class="right-all-publication__filter-title active">По публикациям</a>
-									<a href="#" class="right-all-publication__filter-title">По подписчикам</a>
-									<a href="#" class="right-all-publication__filter-title">Новые авторы</a>
-									<a href="#" class="right-all-publication__filter-title">Случайные авторы</a>
-								</div>
-								<div class="right-all-publication__body">
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button-red">
-												Подписаться
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
-											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
-											</div>
-										</div>
+							<div class="block-myclub__body">
+								<div class="block-myclub__heading">
+									<h1 class="title3">UTM</h1>
+									<div class="block-myclub__buttons">
+										<a href="#" data-popup="#add-utm" class="button-red">
+											<svg aria-hidden="true" width="16" height="16">
+												<use xlink:href="img/sprite.svg#plus"></use>
+											</svg>
+											<span>Добавить</span>
+										</a>
 									</div>
-									<div class="right-all-publication__column">
-										<div class="right-all-publication__top">
-											<div class="right-all-publication__number">1</div>
-											<a href="#" class="right-all-publication__item">
-												<img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
-												<div class="right-all-publication__titles">
-													<div class="right-all-publication__name">Гиперпилот</div>
-													<div class="right-all-publication__subname">Джошуа</div>
-												</div>
-											</a>
-											<button type="button" class="button">
-												Управление подпиской
-											</button>
-										</div>
-										<div class="right-all-publication__bottom">
-											<div class="right-all-publication__icon">
-												<img src="img/icon/list.svg" alt="">
-												<span>5000</span>
+								</div>
+								<div class="utm-myclub">
+									<div class="tables-block-myclub">
+										<div class="tables-block-myclub__table">
+											<div class="tables-block-myclub__item main-title">
+												<span>Активных платных подписок</span>
 											</div>
-											<div class="right-all-publication__icon">
-												<img src="img/icon/person.svg" alt="">
-												<span>1000</span>
+											<div class="tables-block-myclub__item main-title">
+												<span>Активных подписок</span>
+											</div>
+											<div class="tables-block-myclub__item main-title">
+												<span>Отписанные</span>
+											</div>
+											<div class="tables-block-myclub__item main-title">
+												<span>Заработано, ₽</span>
+											</div>
+											<div class="tables-block-myclub__item main-title">
+												<span>Подписок за всё время</span>
+											</div>
+											<div class="tables-block-myclub__item main-title">
+												<span>Общее кол-во посещений</span>
+											</div>
+											<div class="tables-block-myclub__item main-title">
+												<span>Название</span>
+											</div>
+											<div class="tables-block-myclub__item main-title">
+												<span>Ссылка</span>
+											</div>
+										</div>
+										<div class="tables-block-myclub__table">
+											<div class="tables-block-myclub__item">
+												12
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												Реклама вк
+											</div>
+											<div class="tables-block-myclub__item dots-tables">
+												https://rob.projectclub-dev.ru?utm=vk
+												<div class="dots">
+													<svg aria-hidden="true" width="16" height="4">
+														<use xlink:href="img/sprite.svg#dots"></use>
+													</svg>
+													<div class="dropdown">
+														<div class="dropdown__menu-content">
+															<div class="dropdown__top">
+																<button type="button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/copylink2.svg" alt="">
+																	</div>
+																	Копировать
+																</button>
+																<button type="button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/pen2.svg" alt="">
+																	</div>
+																	Редактировать
+																</button>
+																<button type="button" class="chart-button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/chart.svg" alt="">
+																	</div>
+																	График
+																</button>
+															</div>
+															<div class="dropdown__bottom">
+																<button type="button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/trash.svg" alt="">
+																	</div>
+																	Удалить
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="chart-tables-myclub">
+												<div class="chart-tables-myclub__top">
+													<div class="chart-tables-myclub__title">
+														Количество переходов по utm метке
+													</div>
+													<div class="chart-tables-myclub__close">
+														<svg aria-hidden="true" width="12" height="12">
+															<use xlink:href="img/sprite.svg#close"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="chart-tables-myclub__image">
+													<img src="img/image1.webp" alt="">
+												</div>
+											</div>
+										</div>
+										<div class="tables-block-myclub__table">
+											<div class="tables-block-myclub__item">
+												12
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												592
+											</div>
+											<div class="tables-block-myclub__item">
+												Реклама вк
+											</div>
+											<div class="tables-block-myclub__item dots-tables">
+												https://rob.projectclub-dev.ru?utm=vk
+												<div class="dots">
+													<svg aria-hidden="true" width="16" height="4">
+														<use xlink:href="img/sprite.svg#dots"></use>
+													</svg>
+													<div class="dropdown">
+														<div class="dropdown__menu-content">
+															<div class="dropdown__top">
+																<button type="button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/copylink2.svg" alt="">
+																	</div>
+																	Копировать
+																</button>
+																<button type="button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/pen2.svg" alt="">
+																	</div>
+																	Редактировать
+																</button>
+																<button type="button" class="chart-button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/chart.svg" alt="">
+																	</div>
+																	График
+																</button>
+															</div>
+															<div class="dropdown__bottom">
+																<button type="button">
+																	<div class="dropdown__icon">
+																		<img src="img/icon/trash.svg" alt="">
+																	</div>
+																	Удалить
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="chart-tables-myclub">
+												<div class="chart-tables-myclub__top">
+													<div class="chart-tables-myclub__title">
+														Количество переходов по utm метке
+													</div>
+													<div class="chart-tables-myclub__close">
+														<svg aria-hidden="true" width="12" height="12">
+															<use xlink:href="img/sprite.svg#close"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="chart-tables-myclub__image">
+													<img src="img/image1.webp" alt="">
+												</div>
 											</div>
 										</div>
 									</div>
@@ -692,14 +711,30 @@
 					</div>
 				</div>
 
-
-
 			</main>
 		</div>
-		<script src="js/swiper-10.2.0.min.js"></script>
-		<script src="js/fancybox.umd.js"></script>
-		<script src="js/simplebar.min.js"></script>
-		<script src="js/scripts.js"></script>
+		<div id="add-utm" aria-hidden="true" class="popup popup-add-utm">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#353535" />
+						</svg>
+					</button>
+					<form action="#" class="popup-add-utm__form">
+						<div class="popup-add-utm__inputs">
+							<div class="popup-add-utm__input">
+								<input autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="Название">
+							</div>
+							<div class="popup-add-utm__input">
+								<input autocomplete="off" type="text" name="form[]" data-error="Обязательное поле" placeholder="UTM">
+							</div>
+						</div>
+						<button type="submit" class="popup-add-utm__button button-red">Сохранить</button>
+					</form>
+				</div>
+			</div>
+		</div>
 		<div id="search1" aria-hidden="true" class="popup">
 			<div class="popup__wrapper">
 				<div class="popup__content">
@@ -973,6 +1008,10 @@
 				</div>
 			</div>
 		</div>
+		<script src="js/swiper-10.2.0.min.js"></script>
+		<script src="js/fancybox.umd.js"></script>
+		<script src="js/simplebar.min.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 
 </html>
