@@ -1725,56 +1725,55 @@ if (showmoreButtons) {
 //========================================================================================================================================================
 
 //Сортировка
-const selectElements1 = document.querySelectorAll('.select1');
+document.addEventListener('click', function (event) {
+  if (event.target.closest('.select1__title')) {
+    event.preventDefault();
+    event.stopPropagation();
 
-if (selectElements1) {
-  selectElements1.forEach(selectElement => {
-    const selectTitle = selectElement.querySelector('.select1__title');
-    const titleSpan = selectTitle.querySelector('span');
-    const optionsContainer = selectElement.querySelector('.select1__options');
-    const optionInputs = selectElement.querySelectorAll('.options__input');
+    const selectTitle = event.target.closest('.select1__title');
+    const selectElement = selectTitle.closest('.select1');
 
-    selectTitle.addEventListener('click', function (e) {
-      e.stopPropagation();
+    if (!selectElement) return;
 
-      selectElements1.forEach(otherSelect => {
-        if (otherSelect !== selectElement) {
-          otherSelect.classList.remove('active');
-        }
-      });
-
-      const isOpening = !selectElement.classList.contains('active');
-      selectElement.classList.toggle('active');
-
-      if (isOpening) {
-        updateSelectPosition(selectElement);
+    const allSelects = document.querySelectorAll('.select1');
+    allSelects.forEach(otherSelect => {
+      if (otherSelect !== selectElement && otherSelect.classList.contains('active')) {
+        otherSelect.classList.remove('active');
       }
     });
 
-    optionInputs.forEach(input => {
-      input.addEventListener('change', function () {
-        if (this.checked) {
-          const optionText = this.closest('.options__item').querySelector('.options__text').textContent;
-          titleSpan.textContent = optionText;
-          selectElement.classList.remove('active');
-        }
-      });
-    });
+    selectElement.classList.toggle('active');
+    return;
+  }
 
-    function updateSelectPosition(select) {
-      const options = select.querySelector('.select1__options');
-      const rect = select.getBoundingClientRect();
-      const spaceBelow = window.innerHeight - rect.bottom;
-      const optionsHeight = options.scrollHeight;
-    }
+  const clickedItem = event.target.closest('.options__item');
+  if (clickedItem) {
+    const input = clickedItem.querySelector('.options__input');
+    if (!input) return;
 
-    document.addEventListener('click', function (event) {
-      if (!selectElement.contains(event.target)) {
-        selectElement.classList.remove('active');
-      }
+    input.checked = true;
+
+    const selectElement = clickedItem.closest('.select1');
+    if (!selectElement) return;
+
+    const titleSpan = selectElement.querySelector('.select1__title span:first-child');
+    if (!titleSpan) return;
+
+    const optionText = clickedItem.querySelector('.options__text');
+    if (!optionText) return;
+
+    titleSpan.innerHTML = optionText.innerHTML;
+
+    selectElement.classList.remove('active');
+    return;
+  }
+
+  if (!event.target.closest('.select1')) {
+    document.querySelectorAll('.select1.active').forEach(select => {
+      select.classList.remove('active');
     });
-  });
-}
+  }
+});
 
 const selectElements2 = document.querySelectorAll('.select2');
 
@@ -3553,3 +3552,44 @@ if (tablesItems) {
     });
   });
 }
+
+//========================================================================================================================================================
+
+document.addEventListener('click', function (event) {
+  const toggleButton = event.target.closest('.search-popup-filter__button');
+
+  if (toggleButton) {
+    event.stopPropagation();
+    const filterElement = toggleButton.closest('.search-popup-filter');
+
+    if (filterElement) {
+      const filterBody = filterElement.querySelector('.search-popup-filter__body');
+
+      if (filterBody) {
+        const isActive = filterElement.classList.contains('active');
+
+        if (isActive) {
+          // Закрываем блок
+          _slideUp(filterBody, 300);
+          filterElement.classList.remove('active');
+
+          // Поворачиваем иконку обратно
+          const icon = toggleButton.querySelector('svg');
+          if (icon) {
+            icon.style.transform = 'rotate(0deg)';
+          }
+        } else {
+          // Открываем блок
+          _slideDown(filterBody, 300);
+          filterElement.classList.add('active');
+
+          // Поворачиваем иконку
+          const icon = toggleButton.querySelector('svg');
+          if (icon) {
+            icon.style.transform = 'rotate(-180deg)';
+          }
+        }
+      }
+    }
+  }
+});
