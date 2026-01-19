@@ -81,8 +81,6 @@ a {
   }
 }
 
-
-
 .button2 {
   font-weight: 400;
   font-size: 16px;
@@ -1310,11 +1308,20 @@ a {
     width: 100%;
     max-width: 160px;
     span {
+      gap: 5px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       display: inline-block;
       width: 100%;
+      strong {
+        font-weight: 700;
+        flex-shrink: 0; /* если не нужно сжимать strong */
+        /* или */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 0;
+      }
     }
     img {
       width: 16px;
@@ -1340,6 +1347,7 @@ a {
   // .select1__options
 
   &__options {
+    overflow: hidden;
     background: var(--color-base);
     position: absolute;
     top: 100%;
@@ -1497,6 +1505,12 @@ a {
   &__text {
     font-weight: 400;
     font-size: 12px;
+    gap: 5px;
+    span {
+      &.bold {
+        font-weight: 700;
+      }
+    }
   }
 
   // .options__icon
@@ -4687,8 +4701,6 @@ a {
   padding-left: 0px;
 }
 
-
-
 .block-custom-club-welcome {
   position: fixed;
   top: 0;
@@ -4829,15 +4841,11 @@ a {
       color: var(--color-red);
     }
   }
-
-  
 }
 
 .main-custom-club-welcome {
   padding: 0px 0px 0px 0px;
 }
-
-
 
 .button-site {
   display: flex;
