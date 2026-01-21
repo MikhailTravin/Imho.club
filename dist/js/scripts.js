@@ -3593,3 +3593,220 @@ document.addEventListener('click', function (event) {
     }
   }
 });
+
+//========================================================================================================================================================
+
+let cropperInstance = null;
+
+function isCropperLoaded() {
+  return typeof Cropper !== 'undefined' && typeof Cropper === 'function';
+}
+
+function initImageCropper() {
+  if (!isCropperLoaded()) {
+    return false;
+  }
+
+  const imageElement = document.getElementById('image');
+  if (!imageElement) {
+    return false;
+  }
+
+  destroyImageCropper();
+
+  const cropBoxSize = getCropBoxSize();
+
+  cropperInstance = new Cropper(imageElement, {
+    viewMode: 1,
+    aspectRatio: 1,
+    autoCropArea: 1,
+    dragMode: 'none',
+    guides: false,
+    center: false,
+    zoomable: false,
+    highlight: true,
+    cropBoxMovable: true,
+    cropBoxResizable: true,
+    toggleDragModeOnDblclick: false,
+    background: false,
+    modal: true,
+    responsive: true,
+    restore: true,
+    checkCrossOrigin: false,
+    checkOrientation: true,
+    minCropBoxWidth: cropBoxSize.width,
+    minCropBoxHeight: cropBoxSize.height,
+    maxCropBoxWidth: cropBoxSize.width,
+    maxCropBoxHeight: cropBoxSize.height,
+    ready: function () {
+      this.cropper.setCropBoxData({
+        width: cropBoxSize.width,
+        height: cropBoxSize.height
+      });
+      window.addEventListener('resize', handleWindowResize);
+    },
+    crop: function (event) {
+      const currentBox = event.detail;
+      const targetSize = getCropBoxSize();
+
+      if (currentBox.width !== targetSize.width || currentBox.height !== targetSize.height) {
+        cropperInstance.setCropBoxData({
+          width: targetSize.width,
+          height: targetSize.height
+        });
+      }
+    }
+  });
+
+  return true;
+}
+
+function getCropBoxSize() {
+  if (window.innerWidth <= 550) {
+    return { width: 71, height: 71 };
+  } else {
+    return { width: 220, height: 220 };
+  }
+}
+
+function handleWindowResize() {
+  if (!cropperInstance) return;
+
+  const newSize = getCropBoxSize();
+  const currentBox = cropperInstance.getCropBoxData();
+
+  if (currentBox.width !== newSize.width || currentBox.height !== newSize.height) {
+    cropperInstance.setCropBoxData({
+      width: newSize.width,
+      height: newSize.height
+    });
+
+    cropperInstance.setData({
+      width: newSize.width,
+      height: newSize.height
+    });
+  }
+}
+
+function destroyImageCropper() {
+  if (cropperInstance) {
+    window.removeEventListener('resize', handleWindowResize);
+    cropperInstance.destroy();
+    cropperInstance = null;
+  }
+}
+
+function getCroppedImage() {
+  if (!cropperInstance) {
+    return null;
+  }
+
+  try {
+    const finalSize = window.innerWidth <= 768 ? 75 : 300;
+    const canvas = cropperInstance.getCroppedCanvas({
+      width: finalSize,
+      height: finalSize,
+      imageSmoothingEnabled: true,
+      imageSmoothingQuality: 'high'
+    });
+
+    if (!canvas) {
+      return null;
+    }
+
+    return canvas.toDataURL('image/jpeg', 0.9);
+  } catch (error) {
+    return null;
+  }
+}
+
+function updateProfileAvatar(imageData) {
+  const avatarElements = document.querySelectorAll('[data-avatar], .profile-avatar, .user-avatar');
+  avatarElements.forEach(element => {
+    if (element.tagName === 'IMG') {
+      element.src = imageData;
+    } else if (element.style.backgroundImage) {
+      element.style.backgroundImage = `url(${imageData})`;
+    }
+  });
+
+  try {
+    localStorage.setItem('userProfileAvatar', imageData);
+  } catch (e) { }
+}
+
+document.addEventListener('afterPopupOpen', function (e) {
+  const popup = e.detail.popup;
+  const popupElement = popup.previousOpen.element;
+
+  if (!popupElement || popupElement.id !== 'change-photo') {
+    return;
+  }
+
+  setTimeout(() => {
+    if (!initImageCropper()) {
+      return;
+    }
+    setupPopupButtons();
+  }, 100);
+});
+
+document.addEventListener('beforePopupClose', function (e) {
+  const popup = e.detail.popup;
+  const popupElement = popup.previousOpen.element;
+
+  if (popupElement && popupElement.id === 'change-photo') {
+    destroyImageCropper();
+  }
+});
+
+function setupPopupButtons() {
+  const popupElement = document.getElementById('change-photo');
+  if (!popupElement) return;
+
+  const applyButton = popupElement.querySelector('.button-red');
+  if (applyButton) {
+    applyButton.replaceWith(applyButton.cloneNode(true));
+    const newApplyButton = popupElement.querySelector('.button-red');
+
+    newApplyButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const croppedImage = getCroppedImage();
+      if (!croppedImage) {
+        return;
+      }
+
+      updateProfileAvatar(croppedImage);
+      const closeButton = popupElement.querySelector('[data-close]');
+      if (closeButton) {
+        closeButton.click();
+      }
+    });
+  }
+
+  const cancelButton = popupElement.querySelector('.button[data-close]');
+  if (cancelButton) {
+    cancelButton.addEventListener('click', function () { });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  if (!isCropperLoaded()) {
+    loadCropperDynamically();
+  }
+});
+
+function loadCropperDynamically() {
+  if (isCropperLoaded()) return;
+
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css';
+  document.head.appendChild(link);
+
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js';
+  document.head.appendChild(script);
+}

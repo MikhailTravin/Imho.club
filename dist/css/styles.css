@@ -12212,6 +12212,66 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
+.cropper-modal {
+  background-color: #585858 !important;
+  opacity: 0.7 !important;
+}
+
+.cropper-point {
+  width: 10px !important;
+  height: 10px !important;
+  opacity: 1 !important;
+  border: 1px solid var(--color-base);
+  background: var(--color-grey) !important;
+}
+
+.cropper-point.point-nw {
+  left: -5px !important;
+  top: -5px !important;
+}
+
+.cropper-point.point-ne {
+  right: -5px !important;
+  top: -5px !important;
+}
+
+.cropper-point.point-sw {
+  left: -5px !important;
+  bottom: -5px !important;
+}
+
+.cropper-point.point-se {
+  right: -5px !important;
+  bottom: -5px !important;
+}
+
+.cropper-line {
+  display: none !important;
+}
+
+.cropper-view-box {
+  outline: 1px solid transparent !important;
+  outline-color: transparent !important;
+  border-radius: 50% !important;
+}
+
+.cropper-face {
+  background-color: transparent !important;
+  border-radius: 50% !important;
+}
+
+.cropper-point.point-w,
+.cropper-point.point-s,
+.cropper-point.point-n,
+.cropper-point.point-e {
+  display: none !important;
+}
+
+.cropper-crop-box {
+  outline: 1px solid var(--color-base) !important;
+  outline-color: var(--color-base) !important;
+}
+
 .buttons-club-about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17172,6 +17232,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .block-setting-profile__delete img {
   width: 20px;
   height: 20px;
+}
+.block-setting-profile__delete:hover {
+  border: 1px solid transparent;
 }
 .block-setting-profile__delete:hover img {
   -webkit-filter: invert(40%) sepia(68%) saturate(978%) hue-rotate(326deg) brightness(86%) contrast(86%);
