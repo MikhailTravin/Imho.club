@@ -123,6 +123,7 @@
             height: 20px;
         }
         &:hover {
+            border: 1px solid transparent;
             img {
                 filter: invert(40%) sepia(68%) saturate(978%) hue-rotate(326deg) brightness(86%) contrast(86%);
             }
@@ -478,3 +479,4 @@
         }
     }
 }
+
