@@ -30,25 +30,26 @@
   @media (max-width: 480px) {
     padding-top: 69px;
   }
-  &.main-all-publication {
-    overflow: visible;
-    @media (max-width: 992px) {
-      overflow: hidden;
-    }
+}
+
+.main.main-all-publication {
+  overflow: visible;
+  @media (max-width: 992px) {
+    overflow: hidden;
   }
-  &.main-myclub {
-    @media (max-width: 1900px) {
-      padding-left: 0px;
-    }
+}
+.main.main-myclub {
+  @media (max-width: 1900px) {
+    padding-left: 0px;
   }
-  &.main-myclub-design {
-    overflow: visible;
-    @media (max-width: 1900px) {
-      padding-left: 0px;
-    }
-    @media (max-width: 992px) {
-      overflow: hidden;
-    }
+}
+.main.main-myclub-design {
+  overflow: visible !important;
+  @media (max-width: 1900px) {
+    padding-left: 0px;
+  }
+  @media (max-width: 992px) {
+    overflow: hidden !important;
   }
 }
 

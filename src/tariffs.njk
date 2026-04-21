@@ -132,7 +132,37 @@
             <div class="block-tariffs block1">
                 <div class="container">
                     <div class="block-tariffs__content">
-                        <h1 class="title2">Выберите тариф</h1>
+                        <div class="block-tariffs__heading">
+                            <h1 class="title2">Выберите тариф</h1>
+                            <div class="tariffs-info">
+                                <div class="tariffs-info__button">
+                                    <img src="img/icon/info2.svg" alt="" class="tariffs-info__pic1">
+                                    <img src="img/icon/info-active.svg" alt="" class="tariffs-info__pic2">
+                                </div>
+                                <div class="tariffs-info__dropdown">
+                                    <div class="tariffs-info__close">
+                                        <svg aria-hidden="true" width="12" height="12">
+                                            <use xlink:href="img/sprite.svg#close"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="tariffs-info__body">
+                                        <div class="tariffs-info__title">
+                                            Как перейти на другой тариф?
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                На более дорогой — доплатите разницу с учётом использованных дней
+                                                текущего тарифа и получите доступ сразу.
+                                            </li>
+                                            <li>
+                                                На более дешёвый или бесплатный — новый тариф начнёт действовать
+                                                после окончания текущего оплаченного периода.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div data-tabs class="tariffs-tabs">
                             <nav data-tabs-titles class="tariffs-tabs__navigation">
                                 <button type="button" class="tariffs-tabs__title _tab-active">Ежемесячно</button>
@@ -219,8 +249,9 @@
                                                             <span>Закреплённые посты</span>
                                                         </li>
                                                     </ul>
-                                                    <a href="#" class="card-tariffs-tabs__button btn-red">Бесплатный
-                                                        период 3 дня</a>
+                                                    <a href="#" data-popup="#switch-tariff1"
+                                                        class="card-tariffs-tabs__button btn-red">Перейти на
+                                                        этот тариф</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -306,7 +337,9 @@
                                                             <span>Расширенная аналитика аудитории</span>
                                                         </li>
                                                     </ul>
-                                                    <a href="#" class="card-tariffs-tabs__button btn-red">Продлить</a>
+                                                    <a href="#" data-popup="#switch-tariff2"
+                                                        class="card-tariffs-tabs__button btn-red">Перейти на этот
+                                                        тариф</a>
                                                     <div class="card-tariffs-tabs__data">
                                                         Действителен до 30.08.2025
                                                     </div>
@@ -450,6 +483,85 @@
             </div>
 
         </main>
+    </div>
+    <div id="switch-tariff1" aria-hidden="true" class="popup popup-switch-tariff">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg aria-hidden="true" width="12" height="12">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="popup-switch-tariff__body">
+                    <div class="popup-switch-tariff__title">
+                        Подтверждение перехода на тариф <strong>Профи</strong>
+                    </div>
+                    <div class="popup-switch-tariff__text">
+                        <p>
+                            <span>
+                                Вы переходите с тарифа <strong>Креатор+</strong> ( 1299 ₽/мес ) на тариф
+                                <strong>Профи</strong> ( 499
+                                ₽/мес ).
+                            </span>
+                        </p>
+                        <p>
+                            <span>
+                                Новый тариф начнёт действовать после окончания текущего оплаченного периода —
+                                <strong>30.08.2025</strong>.
+                            </span>
+                        </p>
+                        <p>
+                            <span>До этой даты у вас сохраняется текущий тариф <strong>Креатор+</strong>.</span>
+                        </p>
+                    </div>
+                    <div class="popup-switch-tariff__buttons">
+                        <button type="button" class="popup-switch-tariff__button button-red">Изменить тариф</button>
+                        <button data-close type="button" class="popup-switch-tariff__close button">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="switch-tariff2" aria-hidden="true" class="popup popup-switch-tariff">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <button data-close type="button" class="popup__close">
+                    <svg aria-hidden="true" width="12" height="12">
+                        <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="popup-switch-tariff__body">
+                    <div class="popup-switch-tariff__title">
+                        Подтверждение перехода на тариф <strong>Супер</strong>
+                    </div>
+                    <div class="popup-switch-tariff__text">
+                        <p>
+                            <span>
+                                Вы переходите с тарифа <strong>Креатор+</strong> ( 1299 ₽/мес ) на тариф
+                                <strong>Супер</strong> ( 17 999 ₽/мес ).
+                            </span>
+                        </p>
+                        <p>
+                            <span>
+                                Осталось дней текущего тарифа: <strong>12</strong> дней.
+                            </span>
+                        </p>
+                        <p>
+                            <span> Сумма доплаты: <strong>16 200</strong> ₽</span>
+                            <span>(рассчитана пропорционально стоимости уже использованных дней текущего тарифа)</span>
+                        </p>
+                        <p>
+                            <span>После оплаты новый тариф станет активен сразу.</span>
+                            <span>Следующая плановая оплата — <strong>17 сентября 2026 года</strong>.</span>
+                        </p>
+                    </div>
+                    <div class="popup-switch-tariff__buttons">
+                        <button type="button" class="popup-switch-tariff__button button-red">Перейти и оплатить</button>
+                        <button data-close type="button" class="popup-switch-tariff__close button">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     {% include 'blocks/popups.njk' %}
     {% include 'blocks/scripts.njk' %}

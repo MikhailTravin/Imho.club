@@ -580,9 +580,52 @@
             <div class="block-subscription block1">
                 <div class="container2">
                     <div class="right-all-publication__content">
-                        <h1 class="title3">Управление подписками</h1>
+                        <div class="block-subscription-top">
+                            <h1 class="title3">Управление подписками</h1>
+                            <div class="center-block-myclub">
+                                <div class="center-block-myclub__filter subscribers-myclub-filter_button">
+                                    <button type="button" class="center-block-myclub__filter-button">
+                                        <img src="img/icon/filter1.svg" alt="">
+                                        <span>Фильтр</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-subscription-filter">
+                            <div class="block-subscription-filter__options">
+                                <div class="block-subscription-filter__title">Показать:</div>
+                                <div class="options2">
+                                    <label class="options2__item">
+                                        <input data-filter="all" hidden class="options2__input" checked type="radio"
+                                            value="1" name="option1">
+                                        <span class="options2__label">
+                                            <span class="options2__icon"></span>
+                                            <span class="options2__text">Все подписки</span>
+                                        </span>
+                                    </label>
+                                    <label class="options2__item">
+                                        <input data-filter="paid" hidden class="options2__input" type="radio" value="2"
+                                            name="option1">
+                                        <span class="options2__label">
+                                            <span class="options2__icon"></span>
+                                            <span class="options2__text">Платные</span>
+                                        </span>
+                                    </label>
+                                    <label class="options2__item">
+                                        <input data-filter="free" hidden class="options2__input" type="radio" value="3"
+                                            name="option1">
+                                        <span class="options2__label">
+                                            <span class="options2__icon"></span>
+                                            <span class="options2__text">Бесплатные</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <select id="searchSelect">
+                            </select>
+                        </div>
                         <div class="right-all-publication__body">
-                            <div class="right-all-publication__column">
+                            <div data-filter="free" class="right-all-publication__column">
                                 <div class="right-all-publication__top">
                                     <a href="#" class="right-all-publication__item">
                                         <img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
@@ -609,7 +652,7 @@
                                     <a href="#" class="button button3">Улучшить тариф</a>
                                 </div>
                             </div>
-                            <div class="right-all-publication__column">
+                            <div data-filter="paid" class="right-all-publication__column">
                                 <div class="right-all-publication__top">
                                     <a href="#" class="right-all-publication__item">
                                         <img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
@@ -638,10 +681,35 @@
                                             29 сентября 2025 г.
                                         </li>
                                     </ul>
-                                    <a href="#" class="button button3">Улучшить тариф</a>
+                                    <a href="#" class="button button3 disabled">Улучшить тариф</a>
+                                </div>
+                                <div class="publication-new-price">
+                                    <div class="publication-new-price__title title-red">
+                                        Новая стоимость тарифа: 2200 руб./мес.
+                                    </div>
+                                    <p>
+                                        Стоимость тарифа <strong>Креатор+</strong> увеличена. Текущая подписка действует
+                                        до конца
+                                        оплаченного периода без изменений.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Все преимущества сохраняются до окончания текущего периода
+                                        </li>
+                                        <li>
+                                            Новое списание произойдёт только после вашего согласия
+                                        </li>
+                                        <li>
+                                            Для продления подписки на новых условиях нужно подтвердить согласие
+                                        </li>
+                                    </ul>
+                                    <div class="publication-new-price__buttons">
+                                        <a href="./" class="button-red btn">Подтвердить новую цену</a>
+                                        <a href="./" class="button button3">Изменить тариф</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="right-all-publication__column">
+                            <div data-filter="paid" class="right-all-publication__column">
                                 <div class="right-all-publication__top">
                                     <a href="#" class="right-all-publication__item">
                                         <img src="img/avatar2.webp" alt="" class="right-all-publication__pic1">
@@ -671,6 +739,16 @@
                                         </li>
                                     </ul>
                                     <a href="#" class="button button3">Улучшить тариф</a>
+                                </div>
+                                <div class="publication-new-price">
+                                    <div class="publication-new-price__title">
+                                        Новая стоимость тарифа: 1200 руб./мес.
+                                    </div>
+                                    <p>
+                                        Стоимость тарифа <strong>Креатор+</strong> уменьшена. Новая стоимость
+                                        автоматически применится
+                                        после окончания текущего оплаченного периода.
+                                    </p>
                                 </div>
                             </div>
                         </div>

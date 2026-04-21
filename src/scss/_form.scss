@@ -89,7 +89,6 @@
         gap: 20px;
         max-width: 443px;
         margin: 0 auto;
-        padding: 30px 0px 0px 0px;
         p {
             font-family: "Inter", sans-serif;
             font-weight: 400;
@@ -117,7 +116,6 @@
 
     &__code {
         width: 100%;
-        margin: 30px 0px 0px 0px;
         input {
             font-family: "Inter", sans-serif;
             border-radius: 10px;
@@ -144,7 +142,7 @@
     &__column {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 50px;
         align-items: center;
         .button-red {
             text-decoration: none;
@@ -174,6 +172,7 @@
         line-height: 120%;
         font-size: 24px;
         width: 100%;
+        margin-bottom: -30px;
         &.title3 {
             font-size: 28px;
             padding: 0px 0px 0px 0px;
@@ -192,7 +191,7 @@
         height: 1px;
         width: 100%;
         background-color: var(--color-grey);
-        margin: 30px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
     }
 
     // .block-custom-club-about__content
@@ -225,6 +224,54 @@
                 left: 0;
                 transform: translate(0, 0);
             }
+        }
+    }
+}
+.custom-club-about-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 135%;
+        text-align: center;
+        a {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: var(--color-red);
+            transition: opacity 0.3s;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    // .custom-club-about-socials__body
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px; 
+        @media (max-width: 768px) {
+            gap: 10px;
+        }
+    }
+
+    // .custom-club-about-socials__social
+
+    &__social {
+        border: 1px solid var(--color-grey);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        img {
+            width: 24px;
+            height: auto;
         }
     }
 }

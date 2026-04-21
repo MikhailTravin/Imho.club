@@ -286,6 +286,7 @@
 }
 
 .right-tabs-history {
+    z-index: 20;
     @media (min-width: 1921px) {
         position: absolute;
         left: calc(100% + 50px);
