@@ -794,6 +794,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+
+
 //========================================================================================================================================================
 
 //Попап
@@ -1039,6 +1041,64 @@ function menuClose() {
 
 //========================================================================================================================================================
 
+//Три точки
+const dotsList = document.querySelectorAll('.dots');
+
+if (dotsList) {
+  const updateBodyClass = () => {
+    const hasActive = document.querySelector('.dots.active');
+    document.documentElement.classList.toggle('shadow-open', !!hasActive);
+  };
+
+  dotsList.forEach((dots, index) => {
+    dots.addEventListener('click', function (e) {
+      const isDotsIcon = e.target.closest('svg') || e.target === this;
+
+      if (!isDotsIcon) {
+        return;
+      }
+
+      e.stopPropagation();
+
+      dotsList.forEach(other => {
+        if (other !== this) {
+          other.classList.remove('active');
+        }
+      });
+
+      this.classList.toggle('active');
+      updateBodyClass();
+    });
+
+    const dropdownButtons = dots.querySelectorAll('.dropdown button[data-popup]');
+    dropdownButtons.forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        dots.classList.remove('active');
+        updateBodyClass();
+
+        const popupSelector = this.getAttribute('data-popup');
+
+        if (modules_flsModules && modules_flsModules.popup) {
+          modules_flsModules.popup.open(popupSelector);
+        }
+      });
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    dotsList.forEach(dots => {
+      if (!dots.contains(e.target)) {
+        dots.classList.remove('active');
+      }
+    });
+    updateBodyClass();
+  });
+}
+
+//========================================================================================================================================================
+
 const account = document.querySelector('.header__account');
 const author = document.querySelector('.header__author');
 
@@ -1218,41 +1278,7 @@ if (acceptCookies) {
   });
 }
 
-//========================================================================================================================================================
 
-//Три точки
-const dotsList = document.querySelectorAll('.dots');
-
-if (dotsList) {
-  const updateBodyClass = () => {
-    const hasActive = document.querySelector('.dots.active'); // ищем активные dots
-    document.documentElement.classList.toggle('shadow-open', !!hasActive);
-  };
-
-  dotsList.forEach(dots => {
-    dots.addEventListener('click', function (e) {
-      e.stopPropagation();
-
-      dotsList.forEach(other => {
-        if (other !== this) {
-          other.classList.remove('active');
-        }
-      });
-
-      this.classList.toggle('active');
-      updateBodyClass();
-    });
-  });
-
-  document.addEventListener('click', function (e) {
-    dotsList.forEach(dots => {
-      if (!dots.contains(e.target)) {
-        dots.classList.remove('active');
-      }
-    });
-    updateBodyClass();
-  });
-}
 
 //========================================================================================================================================================
 
@@ -1712,12 +1738,49 @@ document.addEventListener('DOMContentLoaded', () => {
 //Показать еще
 let showmoreButtons = document.querySelectorAll('[data-showmore-button]');
 
-if (showmoreButtons) {
+if (showmoreButtons.length) {
   showmoreButtons.forEach(button => {
+    const showmoreBlock = button.closest('[data-showmore]');
+    const content = showmoreBlock.querySelector('.showmore__content');
+    const iframe = content.querySelector('iframe');
+
+    const checkInitialState = () => {
+      const styles = getComputedStyle(content);
+
+      if (styles.maxHeight && styles.maxHeight !== 'none') {
+        const maxHeight = parseInt(styles.maxHeight);
+        const fullHeight = content.scrollHeight;
+
+        if (fullHeight <= maxHeight || iframe) {
+          content.classList.add('_showmore-active');
+          button.classList.add('_showmore-active');
+          button.classList.add('hidden');
+        }
+      } else {
+        button.classList.add('hidden');
+      }
+    };
+
+    const initCheck = () => {
+      checkInitialState();
+    };
+
+    window.addEventListener('load', initCheck);
+    document.addEventListener('DOMContentLoaded', () => {
+      initCheck();
+    });
+
+    if (iframe) {
+      iframe.addEventListener('load', () => {
+        checkInitialState();
+      });
+      content.classList.add('_showmore-active');
+      button.classList.add('_showmore-active');
+    }
+
     button.addEventListener('click', function () {
-      const showmoreBlock = this.closest('[data-showmore]');
-      const content = showmoreBlock.querySelector('.showmore__content');
-      content.classList.toggle('active');
+      content.classList.toggle('_showmore-active');
+      button.classList.toggle('_showmore-active');
     });
   });
 }
@@ -3809,4 +3872,701 @@ function loadCropperDynamically() {
   const script = document.createElement('script');
   script.src = 'https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js';
   document.head.appendChild(script);
+}
+
+//========================================================================================================================================================
+
+function initPublicationScrollObserver() {
+  const textBlock = document.querySelector('.block-view-publication__text');
+  const publicationContent = document.querySelector('.block-view-publication__content');
+  const tarifView = document.querySelector('.tarif-view-publication');
+
+  if (!textBlock || !publicationContent || !tarifView) return;
+
+  publicationContent.classList.remove('tarif');
+  tarifView.classList.remove('active');
+
+  const scrollableElement = document.querySelector('.simplebar-content-wrapper');
+  const simplebarContent = document.querySelector('.simplebar-content');
+
+  if (!scrollableElement || !simplebarContent) return;
+
+  let lastScrollTop = 0;
+  let isTarifShown = false;
+  let isScrollingUp = false;
+  let maxScrollTop = 0;
+  let lastTouchY = 0;
+
+  function limitScrollDown(currentScrollTop) {
+    if (!isTarifShown) return;
+    if (currentScrollTop > maxScrollTop) {
+      scrollableElement.scrollTop = maxScrollTop;
+      return true;
+    }
+    return false;
+  }
+
+  function handleScroll() {
+    const currentScrollTop = scrollableElement.scrollTop;
+    isScrollingUp = currentScrollTop < lastScrollTop;
+
+    const textRect = textBlock.getBoundingClientRect();
+    const containerRect = scrollableElement.getBoundingClientRect();
+    const textBottom = textRect.bottom;
+    const containerBottom = containerRect.bottom;
+    const isTextFullyScrolled = textBottom <= containerBottom;
+
+    if (isTextFullyScrolled && !isTarifShown && !isScrollingUp) {
+      publicationContent.classList.add('tarif');
+      tarifView.classList.add('active');
+      isTarifShown = true;
+      maxScrollTop = currentScrollTop;
+    } else if (isTarifShown && isScrollingUp) {
+      publicationContent.classList.remove('tarif');
+      tarifView.classList.remove('active');
+      isTarifShown = false;
+    } else if (!isTextFullyScrolled && isTarifShown) {
+      publicationContent.classList.remove('tarif');
+      tarifView.classList.remove('active');
+      isTarifShown = false;
+    }
+
+    if (isTarifShown) {
+      limitScrollDown(currentScrollTop);
+    }
+
+    lastScrollTop = scrollableElement.scrollTop;
+  }
+
+  let ticking = false;
+  scrollableElement.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  scrollableElement.addEventListener('wheel', (e) => {
+    if (!isTarifShown) return;
+
+    const currentScrollTop = scrollableElement.scrollTop;
+    const isScrollingDown = e.deltaY > 0;
+
+    if (isScrollingDown && currentScrollTop >= maxScrollTop) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }, { passive: false });
+
+  simplebarContent.addEventListener('wheel', (e) => {
+    if (!isTarifShown) return;
+
+    const currentScrollTop = scrollableElement.scrollTop;
+    const isScrollingDown = e.deltaY > 0;
+
+    if (isScrollingDown && currentScrollTop >= maxScrollTop) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  }, { passive: false });
+
+  scrollableElement.addEventListener('touchstart', (e) => {
+    if (!isTarifShown) return;
+    lastTouchY = e.touches[0].clientY;
+  }, { passive: true });
+
+  scrollableElement.addEventListener('touchmove', (e) => {
+    if (!isTarifShown) return;
+
+    const currentScrollTop = scrollableElement.scrollTop;
+    const touchY = e.touches[0].clientY;
+    const deltaY = touchY - lastTouchY;
+    const isScrollingDown = deltaY < 0;
+
+    if (isScrollingDown && currentScrollTop >= maxScrollTop) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+
+    lastTouchY = touchY;
+  }, { passive: false });
+
+  simplebarContent.addEventListener('touchstart', (e) => {
+    if (!isTarifShown) return;
+    lastTouchY = e.touches[0].clientY;
+  }, { passive: true });
+
+  simplebarContent.addEventListener('touchmove', (e) => {
+    if (!isTarifShown) return;
+
+    const currentScrollTop = scrollableElement.scrollTop;
+    const touchY = e.touches[0].clientY;
+    const deltaY = touchY - lastTouchY;
+    const isScrollingDown = deltaY < 0;
+
+    if (isScrollingDown && currentScrollTop >= maxScrollTop) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+
+    lastTouchY = touchY;
+  }, { passive: false });
+
+  scrollableElement.addEventListener('keydown', (e) => {
+    if (!isTarifShown) return;
+
+    const currentScrollTop = scrollableElement.scrollTop;
+    const isScrollingDown = ['ArrowDown', 'PageDown', 'End', 'Space'].includes(e.key);
+
+    if (isScrollingDown && currentScrollTop >= maxScrollTop) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (isTarifShown) {
+      handleScroll();
+    }
+  });
+
+  const resizeObserver = new ResizeObserver(() => {
+    if (isTarifShown) {
+      handleScroll();
+    }
+  });
+
+  resizeObserver.observe(textBlock);
+  resizeObserver.observe(scrollableElement);
+
+  const observer = new MutationObserver(() => {
+    if (isTarifShown) {
+      const currentScrollTop = scrollableElement.scrollTop;
+      if (currentScrollTop > maxScrollTop) {
+        scrollableElement.scrollTop = maxScrollTop;
+      }
+    }
+  });
+
+  observer.observe(scrollableElement, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['style', 'class']
+  });
+
+  const oldOverlay = document.querySelector('.scroll-block-overlay');
+  if (oldOverlay) {
+    oldOverlay.remove();
+  }
+
+  handleScroll();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPublicationScrollObserver);
+} else {
+  initPublicationScrollObserver();
+}
+
+//========================================================================================================================================================
+
+function initPopupScrollHandler() {
+  const activePopup = document.querySelector('.popup.popup_show');
+
+  if (activePopup) {
+    const popupForm = activePopup.querySelector('.popup-share-thoughts');
+
+    if (popupForm) {
+      const scrollableElement = popupForm.querySelector('.simplebar-content-wrapper');
+
+      if (scrollableElement) {
+        if (popupForm._scrollHandler) {
+          scrollableElement.removeEventListener('scroll', popupForm._scrollHandler);
+        }
+
+        const checkScroll = function () {
+          const { scrollTop, scrollHeight, clientHeight } = scrollableElement;
+
+          if (scrollTop + clientHeight >= scrollHeight - 10) {
+            popupForm.classList.add('scroll-end');
+          } else {
+            popupForm.classList.remove('scroll-end');
+          }
+        };
+
+        popupForm._scrollHandler = checkScroll;
+        scrollableElement.addEventListener('scroll', checkScroll);
+        checkScroll();
+      }
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initPopupScrollHandler();
+
+  const popupObserver = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        const target = mutation.target;
+        if (target.classList && target.classList.contains('popup') &&
+          target.classList.contains('popup_show')) {
+          initPopupScrollHandler();
+        }
+      }
+
+      if (mutation.addedNodes.length) {
+        for (let node of mutation.addedNodes) {
+          if (node.nodeType === 1) {
+            if (node.classList && node.classList.contains('popup')) {
+              initPopupScrollHandler();
+            } else if (node.querySelector) {
+              const popup = node.querySelector('.popup');
+              if (popup && popup.classList.contains('popup_show')) {
+                initPopupScrollHandler();
+              }
+            }
+          }
+        }
+      }
+    });
+  });
+
+  popupObserver.observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['class']
+  });
+});
+
+//========================================================================================================================================================
+
+document.querySelectorAll('textarea[maxlength]').forEach(textarea => {
+  const counter = textarea.nextElementSibling;
+
+  if (counter && counter.classList.contains('counter')) {
+    const maxLength = textarea.getAttribute('maxlength');
+    const span = counter.querySelector('span');
+
+    function updateCounter() {
+      const currentLength = textarea.value.length;
+
+      if (span) {
+        span.textContent = currentLength;
+      } else {
+        counter.textContent = currentLength + '/' + maxLength;
+      }
+    }
+
+    textarea.addEventListener('input', updateCounter);
+
+    updateCounter();
+  }
+});
+
+//========================================================================================================================================================
+
+const filterRadios = document.querySelectorAll('.options2__input');
+const subscriptionCards = document.querySelectorAll('.right-all-publication__column');
+
+if (filterRadios && filterRadios) {
+  function filterSubscriptions(filterValue) {
+    subscriptionCards.forEach(card => {
+      const cardFilter = card.getAttribute('data-filter');
+
+      if (filterValue === 'all') {
+        card.style.display = '';
+      } else {
+        if (cardFilter === filterValue) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    });
+  }
+
+  filterRadios.forEach(radio => {
+    radio.addEventListener('change', function () {
+      if (this.checked) {
+        const filterValue = this.getAttribute('data-filter');
+        filterSubscriptions(filterValue);
+      }
+    });
+  });
+
+  const checkedRadio = document.querySelector('.options2__input:checked');
+  if (checkedRadio) {
+    const defaultFilter = checkedRadio.getAttribute('data-filter');
+    filterSubscriptions(defaultFilter);
+  }
+}
+
+//========================================================================================================================================================
+/*
+$(document).ready(function () {
+  // Данные для Select2 с HTML-разметкой
+  var allData = [
+    {
+      id: "",
+      text: "",
+      disabled: false
+    },
+    {
+      id: "1",
+      text: "Гиперпилот",
+      subtext: "Джошуа",
+      image: "img/avatar2.webp"
+    },
+    {
+      id: "2",
+      text: "Джошуа",
+      subtext: "Гиперпилот",
+      image: "img/avatar2.webp"
+    },
+  ];
+
+  // Функция для создания шаблона результата
+  function templateResult(item) {
+    if (!item.id) {
+      return item.text;
+    }
+
+    var $item = $('<div class="right-all-publication__item"></div>');
+
+    if (item.image) {
+      $('<img>', {
+        src: item.image,
+        alt: "",
+        class: "right-all-publication__pic1"
+      }).appendTo($item);
+    } else {
+      $('<div class="right-all-publication__pic1-placeholder"></div>').appendTo($item);
+    }
+
+    var $titles = $('<div class="right-all-publication__titles"></div>');
+    $('<div class="right-all-publication__name"></div>').text(item.text).appendTo($titles);
+
+    if (item.subtext) {
+      $('<div class="right-all-publication__subname"></div>').text(item.subtext).appendTo($titles);
+    }
+
+    $titles.appendTo($item);
+
+    return $item;
+  }
+
+  // Функция для шаблона выбранного элемента
+  function templateSelection(item) {
+    if (!item.id) {
+      return item.text;
+    }
+    return item.text;
+  }
+
+  // Инициализируем Select2
+  function initSelect2(data, selectedValue) {
+    $('#searchSelect').select2({
+      data: data,
+      placeholder: "Поиск...",
+      allowClear: false,
+      width: '100%',
+      minimumResultsForSearch: -1,
+      templateResult: templateResult,
+      templateSelection: templateSelection
+    });
+
+    if (selectedValue) {
+      $('#searchSelect').val(selectedValue).trigger('change');
+    }
+  }
+
+  // Запускаем инициализацию
+  initSelect2(allData, null);
+
+  // Скрываем стандартный поиск в выпадающем списке
+  $('.select2-search--dropdown').remove();
+
+  // Создаем поле поиска внутри selection
+  var $searchInput = $('<input>', {
+    type: 'search',
+    class: 'select2-search__field',
+    placeholder: 'Найти или выбрать из списка',
+    autocomplete: 'off',
+    autocorrect: 'off',
+    autocapitalize: 'off',
+    spellcheck: false
+  });
+
+  // Очищаем rendered и добавляем поле поиска
+  var $rendered = $('#searchSelect').next('.select2').find('.select2-selection__rendered');
+  $rendered.html('').append($searchInput);
+
+  // При фокусе на поле поиска открываем выпадающий список
+  $searchInput.on('focus', function () {
+    $('#searchSelect').select2('open');
+  });
+
+  // Обработка ввода поиска (без перезагрузки всего select2)
+  $searchInput.on('input', function () {
+    var searchTerm = $(this).val().toLowerCase();
+
+    // Фильтруем данные
+    var filteredData = allData.filter(function (item) {
+      if (!item.id) return true;
+      return item.text.toLowerCase().indexOf(searchTerm) > -1 ||
+        (item.subtext && item.subtext.toLowerCase().indexOf(searchTerm) > -1);
+    });
+
+    // Сохраняем текущее выбранное значение
+    var selectedValue = $('#searchSelect').val();
+
+    // Сохраняем позицию скролла
+    var scrollPos = $('.select2-results__options').scrollTop();
+
+    // Обновляем данные без пересоздания всего select2
+    $('#searchSelect').select2('destroy');
+    initSelect2(filteredData, selectedValue);
+
+    // Восстанавливаем поле поиска
+    var $newRendered = $('#searchSelect').next('.select2').find('.select2-selection__rendered');
+    $newRendered.html('').append($searchInput);
+
+    // Возвращаем фокус в поле поиска
+    $searchInput.focus();
+
+    // Восстанавливаем позицию скролла
+    setTimeout(function () {
+      $('.select2-results__options').scrollTop(scrollPos);
+    }, 10);
+
+    // Если список открыт, оставляем его открытым
+    if ($('.select2-container--open').length) {
+      $('#searchSelect').select2('open');
+    }
+  });
+
+  // При выборе элемента
+  $('#searchSelect').on('select2:select', function (e) {
+    var selectedText = e.params.data.text;
+    $searchInput.val(selectedText);
+    $searchInput.css('color', '#495057');
+  });
+
+  // Предотвращаем закрытие при клике на поле поиска
+  $(document).on('click', '.select2-selection__rendered input', function (e) {
+    e.stopPropagation();
+    if (!$('.select2-container--open').length) {
+      $('#searchSelect').select2('open');
+    }
+  });
+
+  // Скрываем стандартный поиск при открытии
+  $('#searchSelect').on('select2:open', function () {
+    $('.select2-search--dropdown').hide();
+    // Возвращаем фокус в наше поле поиска
+    $searchInput.focus();
+  });
+});*/
+
+$(document).ready(function () {
+  var allData = [
+    {
+      id: "",
+      text: "",
+      disabled: false
+    },
+    {
+      id: "1",
+      text: "Гиперпилот",
+      subtext: "Джошуа",
+      image: "img/avatar2.webp"
+    },
+    {
+      id: "2",
+      text: "Джошуа",
+      subtext: "Гиперпилот",
+      image: "img/avatar2.webp"
+    },
+  ];
+
+  var currentSearchTerm = '';
+
+  function highlightText(text, searchTerm) {
+    if (!searchTerm || !text) return text;
+    var escapedTerm = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    var regex = new RegExp('(' + escapedTerm + ')', 'gi');
+    return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+  }
+
+  function templateResult(item) {
+    if (!item.id) {
+      return item.text;
+    }
+
+    var $item = $('<div class="right-all-publication__item"></div>');
+
+    if (item.image) {
+      $('<img>', {
+        src: item.image,
+        alt: "",
+        class: "right-all-publication__pic1"
+      }).appendTo($item);
+    } else {
+      $('<div class="right-all-publication__pic1-placeholder"></div>').appendTo($item);
+    }
+
+    var $titles = $('<div class="right-all-publication__titles"></div>');
+    var highlightedText = highlightText(item.text, currentSearchTerm);
+    $('<div class="right-all-publication__name"></div>').html(highlightedText).appendTo($titles);
+
+    if (item.subtext) {
+      var highlightedSubtext = highlightText(item.subtext, currentSearchTerm);
+      $('<div class="right-all-publication__subname"></div>').html(highlightedSubtext).appendTo($titles);
+    }
+
+    $titles.appendTo($item);
+    return $item;
+  }
+
+  function templateSelection(item) {
+    if (!item.id) {
+      return item.text;
+    }
+    return item.text;
+  }
+
+  function initSelect2(data, selectedValue) {
+    $('#searchSelect').select2({
+      data: data,
+      placeholder: "Поиск...",
+      allowClear: false,
+      width: '100%',
+      minimumResultsForSearch: -1,
+      templateResult: templateResult,
+      templateSelection: templateSelection
+    });
+
+    if (selectedValue) {
+      $('#searchSelect').val(selectedValue).trigger('change');
+    }
+  }
+
+  initSelect2(allData, null);
+
+  $('.select2-search--dropdown').remove();
+
+  var $searchInput = $('<input>', {
+    type: 'search',
+    class: 'select2-search__field',
+    placeholder: 'Найти или выбрать из списка',
+    autocomplete: 'off',
+    autocorrect: 'off',
+    autocapitalize: 'off',
+    spellcheck: false
+  });
+
+  var $rendered = $('#searchSelect').next('.select2').find('.select2-selection__rendered');
+  $rendered.html('').append($searchInput);
+
+  $searchInput.on('focus', function () {
+    $('#searchSelect').select2('open');
+  });
+
+  function updateFilter() {
+    var searchTerm = $searchInput.val().toLowerCase();
+    currentSearchTerm = searchTerm;
+    var selectedValue = $('#searchSelect').val();
+    var scrollPos = $('.select2-results__options').scrollTop();
+    var isOpen = $('.select2-container--open').length > 0;
+
+    var filteredData = allData.filter(function (item) {
+      if (!item.id) return true;
+      return item.text.toLowerCase().indexOf(searchTerm) > -1 ||
+        (item.subtext && item.subtext.toLowerCase().indexOf(searchTerm) > -1);
+    });
+
+    $('#searchSelect').select2('destroy');
+    initSelect2(filteredData, selectedValue);
+
+    var $newRendered = $('#searchSelect').next('.select2').find('.select2-selection__rendered');
+    $newRendered.html('').append($searchInput);
+    $searchInput.focus();
+    $searchInput.val(searchTerm);
+
+    setTimeout(function () {
+      $('.select2-results__options').scrollTop(scrollPos);
+    }, 10);
+
+    if (isOpen) {
+      setTimeout(function () {
+        $('#searchSelect').select2('open');
+      }, 5);
+    }
+  }
+
+  $searchInput.on('input', function () {
+    updateFilter();
+  });
+
+  $('#searchSelect').on('select2:select', function (e) {
+    var selectedText = e.params.data.text;
+    $searchInput.val(selectedText);
+    currentSearchTerm = '';
+    $searchInput.css('color', '#495057');
+    updateFilter();
+  });
+
+  $(document).on('click', '.select2-selection__rendered input', function (e) {
+    e.stopPropagation();
+    if (!$('.select2-container--open').length) {
+      $('#searchSelect').select2('open');
+    }
+  });
+
+  $('#searchSelect').on('select2:open', function () {
+    $('.select2-search--dropdown').hide();
+    $searchInput.focus();
+  });
+});
+
+//========================================================================================================================================================
+
+const tariffsInfoBlocks = document.querySelectorAll('.tariffs-info');
+
+if (tariffsInfoBlocks) {
+  tariffsInfoBlocks.forEach(block => {
+    const button = block.querySelector('.tariffs-info__button');
+    const closeBtn = block.querySelector('.tariffs-info__close');
+
+    if (button) {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        block.classList.add('active');
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        block.classList.remove('active');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (block.classList.contains('active') && !block.contains(e.target)) {
+        block.classList.remove('active');
+      }
+    });
+  });
 }

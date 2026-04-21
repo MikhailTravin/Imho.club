@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="css/swiper.min.css" />
+		<link rel="stylesheet" href="css/select2.min.css" />
 		<link rel="stylesheet" href="css/fancybox.min.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 
@@ -606,9 +607,9 @@
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
 																	</a>
-																	<div class="left-tabs-history__pic">
+																	<a href="./" class="left-tabs-history__pic">
 																		<img src="img/image/image11.webp" alt="">
-																	</div>
+																	</a>
 																</div>
 																<div class="post__footer">
 																	<div class="post__like post-icon _active">
@@ -693,9 +694,9 @@
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
 																	</a>
-																	<div class="left-tabs-history__pic">
+																	<a href="./" class="left-tabs-history__pic">
 																		<img src="img/image/image12.webp" alt="">
-																	</div>
+																	</a>
 																</div>
 																<div class="post__footer">
 																	<div class="post__like post-icon">
@@ -791,9 +792,9 @@
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
 																	</a>
-																	<div class="left-tabs-history__pic">
+																	<a href="./" class="left-tabs-history__pic">
 																		<img src="img/image/image11.webp" alt="">
-																	</div>
+																	</a>
 																</div>
 																<div class="post__footer">
 																	<div class="post__like post-icon">
@@ -878,9 +879,9 @@
 																			Софи Кери <span>- 6м чтения</span>
 																		</div>
 																	</a>
-																	<div class="left-tabs-history__pic">
+																	<a href="./" class="left-tabs-history__pic">
 																		<img src="img/image/image12.webp" alt="">
-																	</div>
+																	</a>
 																</div>
 																<div class="post__footer">
 																	<div class="post__like post-icon">
@@ -983,9 +984,9 @@
 																					Софи Кери <span>- 6м чтения</span>
 																				</div>
 																			</a>
-																			<div class="left-tabs-history__pic">
+																			<a href="./" class="left-tabs-history__pic">
 																				<img src="img/image/image11.webp" alt="">
-																			</div>
+																			</a>
 																		</div>
 																		<div class="post__footer noclick">
 																			<div class="post__like post-icon _active">
@@ -1074,9 +1075,9 @@
 																					Софи Кери <span>- 6м чтения</span>
 																				</div>
 																			</a>
-																			<div class="left-tabs-history__pic">
+																			<a href="./" class="left-tabs-history__pic">
 																				<img src="img/image/image12.webp" alt="">
-																			</div>
+																			</a>
 																		</div>
 																		<div class="post__footer">
 																			<div class="post__like post-icon">
@@ -1670,6 +1671,8 @@
 		<script src="js/fancybox.umd.js"></script>
 		<script src="js/cropper.min.js"></script>
 		<script src="js/simplebar.min.js"></script>
+		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/select2..min.js"></script>
 		<script src="js/scripts.js"></script>
 		<div id="search1" aria-hidden="true" class="popup search-popup1">
 			<div class="popup__wrapper">
@@ -2267,6 +2270,251 @@
 										<use xlink:href="img/sprite.svg#arrow1"></use>
 									</svg>
 								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div id="creation-club" aria-hidden="true" class="popup creation-club-popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7.06131 6.00015L11.7802 1.28112C11.8499 1.21147 11.9052 1.12876 11.9429 1.03771C11.9807 0.946671 12.0001 0.849083 12.0001 0.750529C12.0001 0.651975 11.9807 0.554387 11.9429 0.463345C11.9052 0.372302 11.8499 0.289591 11.7802 0.219938C11.7105 0.150214 11.6278 0.0949015 11.5368 0.057163C11.4457 0.0194245 11.3481 0 11.2496 0C11.151 0 11.0535 0.0194245 10.9624 0.057163C10.8714 0.0949015 10.7887 0.150214 10.719 0.219938L6.00017 4.93897L1.28107 0.219938C1.21142 0.150214 1.12871 0.0949015 1.03767 0.057163C0.946635 0.0194245 0.849051 0 0.750501 0C0.65195 0 0.554366 0.0194245 0.463327 0.057163C0.372288 0.0949015 0.28958 0.150214 0.21993 0.219938C0.150208 0.289591 0.094898 0.372302 0.0571609 0.463345C0.0194238 0.554387 0 0.651975 0 0.750529C0 0.849083 0.0194238 0.946671 0.0571609 1.03771C0.094898 1.12876 0.150208 1.21147 0.21993 1.28112L4.93903 6.00015L0.21993 10.7192C0.150271 10.7889 0.0950175 10.8716 0.0573245 10.9626C0.0196316 11.0536 0.000237243 11.1512 0.000248856 11.2497C0.000260468 11.3483 0.0196778 11.4458 0.0573922 11.5368C0.0951066 11.6279 0.150379 11.7106 0.220055 11.7802C0.289731 11.8499 0.372444 11.9052 0.463473 11.9428C0.554502 11.9805 0.652065 11.9999 0.750589 11.9999C0.849113 11.9999 0.946671 11.9805 1.03769 11.9428C1.12871 11.9051 1.21141 11.8498 1.28107 11.7801L6.00017 7.06108L10.719 11.7801C10.8656 11.9267 11.0577 12 11.2496 12C11.4415 12 11.6336 11.9267 11.7802 11.7801C11.8499 11.7105 11.9052 11.6277 11.9429 11.5367C11.9807 11.4457 12.0001 11.3481 12.0001 11.2495C12.0001 11.151 11.9807 11.0534 11.9429 10.9623C11.9052 10.8713 11.8499 10.7886 11.7802 10.7189L7.06131 6.00015Z" fill="#9E9E9E" />
+						</svg>
+					</button>
+					<form action="#">
+						<div class="form">
+							<div class="form__title">
+								Создайте свой клуб
+							</div>
+							<div class="form__input">
+								<label for="name-club1">Название клуба</label>
+								<!--
+                            если поле заполнено то добавляем класс filled
+                            если ошибка то добавляем класс _form-error
+                            при фокусе _form-focus
+                            -->
+								<input id="name-club1" data-required autocomplete="off" type="text" name="form[]" placeholder="Название" class="input">
+								<div class="form__error">В названии клуба должно быть 5-50 символов</div>
+							</div>
+							<div class="form__input">
+								<label>Категория клуба</label>
+								<div class="select1">
+									<div class="select1__title">
+										<span>Выберите категорию</span>
+										<svg aria-hidden="true" width="14" height="8">
+											<use xlink:href="img/sprite.svg#arrow1"></use>
+										</svg>
+									</div>
+									<div class="select1__options">
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="1" name="option">
+											<span class="options__label">
+												<span class="options__text">Анимация</span>
+												<span class="options__icon">
+													<img src="img/icon/chek1.svg" alt="">
+												</span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="2" name="option">
+											<span class="options__label">
+												<span class="options__text">Бизнес</span>
+												<span class="options__icon">
+													<img src="img/icon/chek1.svg" alt="">
+												</span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="3" name="option">
+											<span class="options__label">
+												<span class="options__text">Благотворительность</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="4" name="option">
+											<span class="options__label">
+												<span class="options__text">Блог</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="5" name="option">
+											<span class="options__label">
+												<span class="options__text">Военное дело</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="6" name="option">
+											<span class="options__label">
+												<span class="options__text">Еда</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="7" name="option">
+											<span class="options__label">
+												<span class="options__text">Животные</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="8" name="option">
+											<span class="options__label">
+												<span class="options__text">Здоровье</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="9" name="option">
+											<span class="options__label">
+												<span class="options__text">Игры</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="10" name="option">
+											<span class="options__label">
+												<span class="options__text">Искусство</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="11" name="option">
+											<span class="options__label">
+												<span class="options__text">История</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="12" name="option">
+											<span class="options__label">
+												<span class="options__text">Кино и Видео</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="13" name="option">
+											<span class="options__label">
+												<span class="options__text">Литература</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="14" name="option">
+											<span class="options__label">
+												<span class="options__text">Музыка</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="15" name="option">
+											<span class="options__label">
+												<span class="options__text">Наука</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="16" name="option">
+											<span class="options__label">
+												<span class="options__text">Образование</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="17" name="option">
+											<span class="options__label">
+												<span class="options__text">Подкасты</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="18" name="option">
+											<span class="options__label">
+												<span class="options__text">Политика</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="19" name="option">
+											<span class="options__label">
+												<span class="options__text">Психология</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="20" name="option">
+											<span class="options__label">
+												<span class="options__text">Путешествия</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="21" name="option">
+											<span class="options__label">
+												<span class="options__text">Спорт</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="22" name="option">
+											<span class="options__label">
+												<span class="options__text">Техника</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="23" name="option">
+											<span class="options__label">
+												<span class="options__text">Технологии</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="24" name="option">
+											<span class="options__label">
+												<span class="options__text">Финансы</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="25" name="option">
+											<span class="options__label">
+												<span class="options__text">Фото</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="26" name="option">
+											<span class="options__label">
+												<span class="options__text">Юмор</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+										<label class="options__item">
+											<input hidden class="options__input" type="radio" value="27" name="option">
+											<span class="options__label">
+												<span class="options__text">Прочее</span>
+												<span class="options__icon"><img src="img/icon/chek1.svg" alt=""></span>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form__input _form-error">
+								<label for="subdomain-club1">Название поддомена</label>
+								<input id="subdomain-club1" data-required autocomplete="off" type="text" name="form[]" placeholder="Название" value="ит" class="input">
+								<div class="form__error">В названии поддомена должно быть 3 и более символов (английские буквы и цифры)</div>
+								<div class="form__error">Должен быть уникальным</div>
+							</div>
+							<div class="form__bottom">
+								<button type="submit" class="form__button button-red">Создать клуб</button>
+								<button type="button" class="form__button button">Отменить</button>
 							</div>
 						</div>
 					</form>
